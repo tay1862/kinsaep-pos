@@ -1,0 +1,19 @@
+{
+  "account": {
+    "title": "บัญชี",
+    "profile": "โปรไฟล์",
+    "security": "ความปลอดภัย",
+    "preferences": "ความชอบ",
+    "notifications": "การแจ้งเตือน",
+    "editProfile": "แก้ไขโปรไฟล์",
+    "displayName": "ชื่อที่แสดง",
+    "email": "อีเมล",
+    "phone": "เบอร์โทร",
+    "language": "ภาษา",
+    "theme": "ธีม",
+    "darkMode": "โหมดมืด",
+    "lightMode": "โหมดสว่าง",
+    "systemDefault": "ตามระบบ",
+    "saveChanges": "บันทึกการเปลี่ยนแปลง"
+  }
+}

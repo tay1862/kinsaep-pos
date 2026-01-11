@@ -1,0 +1,9 @@
+{
+  "app": {
+    "name": "bnos.space",
+    "tagline": "ລະບົບຂາຍໜ້າຮ້ານດ້ວຍ Lightning",
+    "copyright": "bnos.space. ເຮັດວຽກດ້ວຍ ⚡ Lightning",
+    "privacyPolicy": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ",
+    "termsOfService": "ເງື່ອນໄຂການໃຊ້ບໍລິການ"
+  }
+}

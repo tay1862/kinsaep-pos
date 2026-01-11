@@ -1,0 +1,42 @@
+{
+  "memberships": {
+    "title": "Memberships",
+    "subtitle": "Manage member subscriptions and check-ins",
+    "members": "Members",
+    "plans": "Plans",
+    "active": "Active",
+    "expired": "Expired",
+    "expiringSoon": "Expiring Soon",
+    "total": "Total",
+    "checkIn": "Check In",
+    "checkIns": "check-ins",
+    "quickCheckIn": "Quick Check-in",
+    "renew": "Renew",
+    "daysLeft": "days left",
+    "addMember": "Add Member",
+    "addFirstMember": "Add Your First Member",
+    "noMembers": "No members yet",
+    "searchPlaceholder": "Search by name...",
+    "searchToCheckIn": "Search member name...",
+    "selectCustomer": "Select customer",
+    "selectPlan": "Select plan",
+    "selectCustomerAndPlan": "Please select customer and plan",
+    "plan": "Plan",
+    "notesPlaceholder": "Optional notes...",
+    "added": "Membership Added",
+    "renewed": "Membership Renewed",
+    "checkedIn": "Checked In!",
+    "notActive": "Membership Not Active",
+    "cannotCheckIn": "This membership is not active",
+    "maxReached": "Check-in Limit Reached",
+    "planInUse": "Plan In Use",
+    "cannotDeletePlan": "This plan has active memberships",
+    "status": {
+      "active": "Active",
+      "expired": "Expired",
+      "cancelled": "Cancelled",
+      "suspended": "Suspended",
+      "pending": "Pending"
+    }
+  }
+}

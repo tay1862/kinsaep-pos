@@ -1,0 +1,19 @@
+{
+  "loyalty": {
+    "title": "ໂປຣແກຣມຄວາມສັດຊື່",
+    "member": "ສະມາຊິກ",
+    "members": "ສະມາຊິກ",
+    "points": "ຄະແນນ",
+    "totalPoints": "ຄະແນນທັງໝົດ",
+    "bronze": "ບຣອນ",
+    "silver": "ເງິນ",
+    "gold": "ຄຳ",
+    "platinum": "ແພລັດຕິນັ່ມ",
+    "tier": "ລະດັບ",
+    "rewards": "ລາງວັນ",
+    "stats": "ສະຖິຕິຄວາມສັດຊື່",
+    "sendReward": "ສົ່ງລາງວັນ",
+    "viewHistory": "ເບິ່ງປະຫວັດ",
+    "loginNostr": "ເຂົ້າສູ່ລະບົບດ້ວຍ Nostr"
+  }
+}

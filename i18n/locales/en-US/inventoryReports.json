@@ -1,0 +1,33 @@
+{
+  "inventoryReports": {
+    "title": "Inventory Analytics",
+    "description": "Stock valuation, aging analysis, and ABC classification",
+    "valuation": "Valuation",
+    "aging": "Stock Aging",
+    "abcAnalysis": "ABC Analysis",
+    "turnover": "Turnover",
+    "totalInventoryValue": "Total Inventory Value",
+    "valuationMethodHint": "Select valuation method to calculate",
+    "valuationByCategory": "Valuation by Category",
+    "deadStock": "Dead Stock",
+    "deadStockAlert": "Dead Stock Alert",
+    "lotsNoMovement": "lots with no movement in 90+ days",
+    "stockValue": "Stock Value",
+    "stockAgingChart": "Stock Aging Distribution",
+    "abcPie": "ABC Distribution",
+    "highValue": "High Value",
+    "mediumValue": "Medium Value",
+    "lowValue": "Low Value",
+    "valueDistribution": "Value Distribution",
+    "topAClassProducts": "Top A-Class Products",
+    "ofTotalValue": "of total value",
+    "turnoverRatio": "Turnover Ratio",
+    "daysInInventory": "Days in Inventory",
+    "totalSold": "Total Units Sold",
+    "avgInventory": "Avg Inventory",
+    "understandingTurnover": "Understanding Inventory Turnover",
+    "turnoverHint1": "Higher turnover = faster-selling inventory (typically 4-6x is healthy for retail)",
+    "turnoverHint2": "Days in Inventory shows how long stock sits before being sold",
+    "turnoverHint3": "Low turnover may indicate overstocking or slow-moving items"
+  }
+}

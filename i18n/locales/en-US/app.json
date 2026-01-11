@@ -1,0 +1,9 @@
+{
+  "app": {
+    "name": "bnos.space",
+    "tagline": "Lightning-powered Point of Sale",
+    "copyright": "bnos.space. Powered by ⚡ Lightning",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
+}

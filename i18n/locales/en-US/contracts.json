@@ -1,0 +1,252 @@
+{
+  "contracts": {
+    "title": "Contracts & Rentals",
+    "description": "Manage contracts, assets, and bookings",
+    "newContract": "New Contract",
+    "editContract": "Edit Contract",
+    "addAsset": "Add Asset",
+    "editAsset": "Edit Asset",
+    "newBooking": "New Booking",
+    "contracts": "Contracts",
+    "assets": "Assets",
+    "bookings": "Bookings",
+    "contractNumber": "Contract #",
+    "customer": "Customer",
+    "customerName": "Customer Name",
+    "customerPhone": "Customer Phone",
+    "customerEmail": "Customer Email",
+    "type": "Type",
+    "asset": "Asset",
+    "amount": "Amount",
+    "deposit": "Deposit",
+    "depositAmount": "Deposit Amount",
+    "depositStatus": "Deposit Status",
+    "collectDeposit": "Collect Deposit",
+    "returnDeposit": "Return Deposit",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "autoRenew": "Auto Renew",
+    "autoRenewDesc": "Auto-renew when expired",
+    "paymentSchedule": "Payment Schedule",
+    "notes": "Notes",
+    "terms": "Terms",
+    "noAsset": "No asset",
+    "contractType": "Contract Type",
+    "types": {
+      "rental": "Rental",
+      "lease": "Lease",
+      "service": "Service",
+      "subscription": "Subscription"
+    },
+    "status": {
+      "draft": "Draft",
+      "pending": "Pending",
+      "active": "Active",
+      "expired": "Expired",
+      "terminated": "Terminated",
+      "cancelled": "Cancelled"
+    },
+    "schedules": {
+      "once": "One-time",
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    },
+    "assetTypes": {
+      "room": "Room",
+      "equipment": "Equipment",
+      "vehicle": "Vehicle",
+      "locker": "Locker",
+      "space": "Space",
+      "other": "Other"
+    },
+    "assetFields": {
+      "name": "Asset Name",
+      "nameEnglish": "Name (English)",
+      "nameLao": "Name (Lao)",
+      "hourlyRate": "Hourly Rate",
+      "dailyRate": "Daily Rate",
+      "monthlyRate": "Monthly Rate",
+      "location": "Location",
+      "locationPlaceholder": "e.g. Building A, Floor 2",
+      "capacity": "Capacity",
+      "capacityPlaceholder": "e.g. 10 people"
+    },
+    "bookingStatus": {
+      "reserved": "Reserved",
+      "checkedOut": "Checked Out",
+      "returned": "Returned",
+      "cancelled": "Cancelled",
+      "noShow": "No Show"
+    },
+    "actions": {
+      "activate": "Activate",
+      "terminate": "Terminate",
+      "renew": "Renew",
+      "checkOut": "Check Out",
+      "return": "Return",
+      "edit": "Edit",
+      "delete": "Delete",
+      "book": "Book"
+    },
+    "stats": {
+      "active": "Active",
+      "expiring": "Expiring Soon",
+      "assets": "Total Assets",
+      "todayBookings": "Today's Bookings",
+      "monthlyRevenue": "Monthly Revenue",
+      "overdue": "Overdue",
+      "pendingDeposits": "Pending Deposits",
+      "utilization": "Utilization Rate"
+    },
+    "filters": {
+      "searchPlaceholder": "Search contracts...",
+      "allStatus": "All Status"
+    },
+    "table": {
+      "contractNumber": "Contract #",
+      "customer": "Customer",
+      "type": "Type",
+      "asset": "Asset",
+      "amount": "Amount",
+      "deposit": "Deposit",
+      "status": "Status",
+      "ends": "Ends",
+      "actions": "Actions"
+    },
+    "booking": {
+      "bookingNumber": "Booking #",
+      "asset": "Asset",
+      "customer": "Customer",
+      "start": "Start",
+      "end": "End",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "amount": "Amount",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "assetCard": {
+      "hourly": "Hourly",
+      "daily": "Daily",
+      "monthly": "Monthly",
+      "deposit": "Deposit",
+      "available": "Available",
+      "inUse": "In Use"
+    },
+    "confirmations": {
+      "terminateContract": "Terminate this contract?",
+      "deleteContract": "Delete this contract?",
+      "deleteAsset": "Delete this asset?"
+    },
+    "messages": {
+      "contractCreated": "Contract created",
+      "contractUpdated": "Contract updated",
+      "contractActivated": "Contract activated",
+      "contractTerminated": "Contract terminated",
+      "contractRenewed": "Contract renewed",
+      "contractDeleted": "Contract deleted",
+      "depositCollected": "Deposit collected",
+      "assetAdded": "Asset added",
+      "assetUpdated": "Asset updated",
+      "assetDeleted": "Asset deleted",
+      "bookingCreated": "Booking created",
+      "checkedOut": "Checked out",
+      "assetReturned": "Asset returned"
+    },
+    "validation": {
+      "customerNameRequired": "Customer name and amount are required",
+      "assetNameRequired": "Asset name is required",
+      "assetCustomerRequired": "Asset and customer name are required"
+    },
+    "empty": {
+      "noContracts": "No contracts yet",
+      "createFirst": "Create your first contract",
+      "noAssets": "No assets yet",
+      "addFirst": "Add your first rental asset",
+      "noBookings": "No bookings yet",
+      "bookFirst": "Book an asset to get started"
+    },
+    "modal": {
+      "saveContract": "Save Contract",
+      "saveAsset": "Save Asset",
+      "createBooking": "Create Booking"
+    },
+    "sync": {
+      "synced": "Synced",
+      "syncing": "Syncing...",
+      "error": "Sync Error",
+      "idle": "Not synced",
+      "lastSync": "Last synced",
+      "manualSync": "Sync Now"
+    },
+    "history": {
+      "title": "History",
+      "viewHistory": "View History",
+      "created": "Created",
+      "updated": "Updated",
+      "activated": "Activated",
+      "terminated": "Terminated",
+      "renewed": "Renewed",
+      "deleted": "Deleted",
+      "depositCollected": "Deposit Collected",
+      "depositReturned": "Deposit Returned",
+      "checkedOut": "Checked Out",
+      "returned": "Returned",
+      "by": "by",
+      "noHistory": "No history yet"
+    },
+    "detail": {
+      "title": "Contract Details",
+      "overview": "Overview",
+      "payments": "Payments",
+      "renewals": "Renewals",
+      "history": "History",
+      "backToList": "Back to Contracts",
+      "balance": "Outstanding Balance",
+      "totalPaid": "Total Paid",
+      "daysRemaining": "Days Remaining",
+      "daysOverdue": "Days Overdue",
+      "nextPayment": "Next Payment Due",
+      "recordPayment": "Record Payment",
+      "noPayments": "No payments recorded yet",
+      "contractInfo": "Contract Information",
+      "customerInfo": "Customer Information",
+      "assetInfo": "Asset Information",
+      "billingInfo": "Billing Information",
+      "timeline": "Timeline",
+      "print": "Print",
+      "renewNow": "Renew Now"
+    },
+    "payment": {
+      "title": "Record Payment",
+      "amount": "Amount",
+      "enterAmount": "Enter Amount",
+      "fullBalance": "Full Balance",
+      "method": "Payment Method",
+      "date": "Payment Date",
+      "reference": "Reference",
+      "period": "Payment Period",
+      "periodStart": "Period Start",
+      "periodEnd": "Period End",
+      "notes": "Notes",
+      "save": "Save Payment",
+      "methods": {
+        "cash": "Cash",
+        "card": "Card",
+        "bank": "Bank Transfer",
+        "qr": "QR Payment",
+        "crypto": "Crypto"
+      }
+    },
+    "renewal": {
+      "title": "Renewal History",
+      "renewedFrom": "Renewed from",
+      "renewedTo": "to",
+      "autoRenew": "Auto-Renew",
+      "noRenewals": "No renewals yet",
+      "nextRenewal": "Next Renewal"
+    }
+  }
+}

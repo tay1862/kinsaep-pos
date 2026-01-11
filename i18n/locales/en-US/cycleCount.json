@@ -1,0 +1,31 @@
+{
+  "cycleCount": {
+    "title": "Cycle Counting",
+    "description": "Physical inventory verification",
+    "newCount": "New Count",
+    "pending": "Pending",
+    "completed": "Completed",
+    "noPending": "No pending counts",
+    "noCompleted": "No completed counts",
+    "createFirst": "Create First Count",
+    "countName": "Count Name",
+    "countNamePlaceholder": "e.g. Q1 2024 Count",
+    "scheduledDate": "Scheduled Date",
+    "selectProducts": "Select Products",
+    "notesPlaceholder": "Additional notes...",
+    "fillRequired": "Please fill all required fields",
+    "created": "Cycle count created",
+    "started": "Counting started",
+    "submitted": "Submitted for review",
+    "approved": "Count approved and stock adjusted",
+    "progress": "Progress",
+    "itemsWithVariance": "items with variance",
+    "startCounting": "Start Counting",
+    "submitReview": "Submit for Review",
+    "approve": "Approve & Adjust Stock",
+    "expected": "Expected",
+    "actualCount": "Actual Count",
+    "variance": "Variance",
+    "countNotesPlaceholder": "Reason for variance..."
+  }
+}

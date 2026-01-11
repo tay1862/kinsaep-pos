@@ -1,0 +1,25 @@
+{
+  "receipt": {
+    "title": "E-Receipt",
+    "print": "Print Receipt",
+    "sendNostr": "Send via Nostr",
+    "paymentProof": "Payment Proof",
+    "thankYou": "Thank you for your purchase!",
+    "options": "Receipt Options",
+    "eBill": "E-Bill",
+    "sendEmail": "Email",
+    "preview": "Preview",
+    "newOrder": "New Order",
+    "printing": "Printing...",
+    "thermalPaper": "Thermal / Paper",
+    "showQRToCustomer": "Show QR to customer",
+    "sendToCustomer": "Send to customer",
+    "viewReceipt": "View receipt",
+    "sendReceiptToEmail": "Send Receipt to Email",
+    "autoContinuing": "Auto-continuing in {seconds} seconds...",
+    "scanForEBill": "Scan for E-Bill",
+    "scanDescription": "Customer can scan this QR to view their digital receipt",
+    "eBillLink": "E-Bill Link:",
+    "cardExternal": "Card/External"
+  }
+}

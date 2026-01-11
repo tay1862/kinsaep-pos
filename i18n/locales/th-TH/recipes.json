@@ -1,0 +1,22 @@
+{
+  "recipes": {
+    "title": "สูตร",
+    "subtitle": "จัดการสูตรและวัตถุดิบ",
+    "recipe": "สูตร",
+    "addRecipe": "เพิ่มสูตร",
+    "editRecipe": "แก้ไขสูตร",
+    "ingredients": "วัตถุดิบ",
+    "addIngredient": "เพิ่มวัตถุดิบ",
+    "servings": "จำนวนที่เสิร์ฟ",
+    "prepTime": "เวลาเตรียม",
+    "cookTime": "เวลาทำ",
+    "totalTime": "เวลารวม",
+    "cost": "ราคาทุน",
+    "price": "ราคาขาย",
+    "profit": "กำไร",
+    "margin": "อัตรากำไร",
+    "steps": "ขั้นตอน",
+    "noRecipes": "ยังไม่มีสูตร",
+    "searchPlaceholder": "ค้นหาสูตร..."
+  }
+}

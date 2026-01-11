@@ -1,0 +1,25 @@
+{
+  "kitchen": {
+    "title": "Kitchen Display",
+    "noOrders": "No Orders",
+    "noOrdersDesc": "New orders will appear here automatically",
+    "new": "New",
+    "preparing": "Preparing",
+    "ready": "Ready",
+    "served": "Served",
+    "start": "Start",
+    "recall": "Recall",
+    "bump": "Bump",
+    "lastUpdate": "Last update",
+    "statusUpdated": "Kitchen status updated",
+    "markedAs": "Order marked as {status}",
+    "newOrder": "🔔 New Order!",
+    "status": {
+      "title": "Kitchen Status",
+      "new": "🆕 New",
+      "preparing": "👨‍🍳 Preparing",
+      "ready": "✅ Ready",
+      "served": "🍽️ Served"
+    }
+  }
+}

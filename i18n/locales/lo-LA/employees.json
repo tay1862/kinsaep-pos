@@ -1,0 +1,230 @@
+{
+  "employees": {
+    "title": "ພະນັກງານ",
+    "total": "ທັງໝົດ",
+    "employee": "ພະນັກງານ",
+    "addEmployee": "ເພີ່ມພະນັກງານ",
+    "editEmployee": "ແກ້ໄຂພະນັກງານ",
+    "addFirstEmployee": "ເພີ່ມພະນັກງານທຳອິດ",
+    "searchPlaceholder": "ຄົ້ນຫາພະນັກງານ...",
+    "noEmployees": "ຍັງບໍ່ມີພະນັກງານ",
+    "noEmployeesDescription": "ເລີ່ມຕົ້ນໂດຍການເພີ່ມສະມາຊິກທີມທຳອິດຂອງທ່ານ",
+    "noPosition": "ບໍ່ມີຕຳແໜ່ງ",
+    "createSuccess": "ເພີ່ມພະນັກງານສຳເລັດແລ້ວ",
+    "updateSuccess": "ອັບເດດພະນັກງານສຳເລັດແລ້ວ",
+    "deleteSuccess": "ຢຸດການເຮັດວຽກສຳເລັດແລ້ວ",
+    "hardDeleteSuccess": "ລຶບພະນັກງານຖາວອນແລ້ວ",
+
+    "status": {
+      "label": "ສະຖານະ",
+      "all": "ທຸກສະຖານະ",
+      "active": "ເຮັດວຽກ",
+      "inactive": "ບໍ່ເຮັດວຽກ",
+      "on-leave": "ພັກຜ່ອນ",
+      "onLeave": "ພັກຜ່ອນ",
+      "terminated": "ຢຸດເຮັດວຽກ"
+    },
+
+    "type": {
+      "fullTime": "ເຕັມເວລາ",
+      "partTime": "ເຄິ່ງເວລາ",
+      "contract": "ສັນຍາ",
+      "intern": "ນັກສຶກສາຝຶກງານ",
+      "freelance": "ຟຣີແລນ"
+    },
+
+    "salaryType": {
+      "label": "ປະເພດເງິນເດືອນ",
+      "hourly": "ຊົ່ວໂມງ",
+      "daily": "ມື້",
+      "weekly": "ອາທິດ",
+      "monthly": "ເດືອນ"
+    },
+
+    "paymentMethod": {
+      "cash": "ເງິນສົດ",
+      "bank": "ໂອນທະນາຄານ",
+      "lightning": "ໄລທ໌ນິງ"
+    },
+
+    "gender": {
+      "label": "ເພດ",
+      "male": "ຊາຍ",
+      "female": "ຍິງ",
+      "other": "ອື່ນໆ"
+    },
+
+    "tabs": {
+      "basic": "ຂໍ້ມູນພື້ນຖານ",
+      "employment": "ການຈ້າງງານ",
+      "compensation": "ຄ່າຕອບແທນ",
+      "access": "ການເຂົ້າເຖິງ"
+    },
+
+    "firstName": "ຊື່",
+    "firstNamePlaceholder": "ປ້ອນຊື່",
+    "lastName": "ນາມສະກຸນ",
+    "lastNamePlaceholder": "ປ້ອນນາມສະກຸນ",
+    "displayName": "ຊື່ເອີ້ນ",
+    "displayNamePlaceholder": "ຊື່ຫຼິ້ນ ຫຼື ນາມແຝງ",
+    "email": "ອີເມວ",
+    "phone": "ເບີໂທ",
+    "dateOfBirth": "ວັນເດືອນປີເກີດ",
+    "nationalId": "ເລກບັດປະຈຳຕົວ",
+    "nationalIdPlaceholder": "ເລກບັດປະຈຳຕົວ",
+    "address": "ທີ່ຢູ່",
+
+    "emergencyContact": "ຕິດຕໍ່ສຸກເສີນ",
+    "contactName": "ຊື່",
+    "contactPhone": "ເບີໂທ",
+    "contactRelation": "ຄວາມສຳພັນ",
+
+    "department": "ພະແນກ",
+    "departmentPlaceholder": "ເຊັ່ນ: ຂາຍ, ເຮືອນຄົວ",
+    "position": "ຕຳແໜ່ງ",
+    "positionPlaceholder": "ເຊັ່ນ: ຜູ້ຈັດການ, ພະນັກງານຂາຍ",
+    "employmentType": "ປະເພດການຈ້າງ",
+    "hireDate": "ວັນທີເຂົ້າເຮັດວຽກ",
+    "notes": "ໝາຍເຫດ",
+    "notesPlaceholder": "ໝາຍເຫດເພີ່ມເຕີມ...",
+
+    "salary": "ເງິນເດືອນ",
+    "baseSalary": "ເງິນເດືອນພື້ນຖານ",
+    "currency": "ສະກຸນເງິນ",
+    "overtimeRate": "ອັດຕາລ່ວງເວລາ",
+    "paymentInfo": "ຂໍ້ມູນການຈ່າຍເງິນ",
+    "preferredPayment": "ວິທີທີ່ຕ້ອງການ",
+    "bankName": "ຊື່ທະນາຄານ",
+    "bankAccount": "ເລກບັນຊີ",
+    "lightningAddress": "ທີ່ຢູ່ Lightning",
+
+    "commission": "ຄ່ານາຍໜ້າ",
+    "commissionRate": "ອັດຕາຄ່ານາຍໜ້າ",
+
+    "leaveBalances": "ວັນພັກທີ່ເຫຼືອ",
+    "annualLeave": "ພັກປະຈຳປີ",
+    "sickLeave": "ພັກເຈັບປ່ວຍ",
+    "personalLeave": "ພັກສ່ວນຕົວ",
+    "leaveType": "ປະເພດວັນພັກ",
+    "adjustmentAmount": "ຈຳນວນທີ່ປັບປ່ຽນ",
+    "adjustmentHelp": "ບວກເພື່ອເພີ່ມ, ລົບເພື່ອຫຼຸດ",
+    "leaveUpdated": "ອັບເດດວັນພັກສຳເລັດ",
+    "leaveAdjustedBy": "ວັນພັກປັບປ່ຽນ",
+    "monthlyEstimate": "ຄາດຄະເນລາຍເດືອນ",
+    "calculatedMonthly": "ຄຳນວນລາຍເດືອນ",
+    "perSale": "ຕໍ່ການຂາຍ",
+
+    "posAccess": "ເຂົ້າເຖິງ POS",
+    "posAccessDescription": "ອະນຸຍາດໃຫ້ພະນັກງານເຂົ້າເຖິງລະບົບ POS",
+    "posAccessDesc": "ອະນຸຍາດໃຫ້ພະນັກງານເຂົ້າເຖິງລະບົບ POS ແລະ ສ້າງໃບສັ່ງ",
+    "posAccessEnabled": "ເປີດໃຊ້ POS ສຳເລັດ",
+    "posAccessDisabled": "ປິດໃຊ້ POS ສຳເລັດ",
+    "credentialsSaved": "ບັນທຶກ credentials POS ສຳເລັດ",
+    "pin": "ລະຫັດ PIN",
+    "pinPlaceholder": "PIN 4-6 ຕົວເລກ",
+    "pinHelp": "ພະນັກງານສາມາດເຂົ້າຕາມ PIN",
+    "npub": "ຄີສາຘາລະນະ Nostr (npub)",
+    "npubPlaceholder": "npub1...",
+    "npubHelp": "ສຳລັບການພິສູດຕົວຕົນທີ່ໃຊ້ Nostr",
+    "pinHint": "ໃຊ້ສຳລັບ clock in ແລະ ເຂົ້າເຖິງ POS",
+    "storeUserAccount": "ບັນຊີ StoreUser",
+    "linkedToUser": "ເຊື່ອມຕໍ່ກັບຜູ້ໃຊ້",
+    "noUserLinked": "ບໍ່ມີບັນຊີ StoreUser ທີ່ເຊື່ອມຕໍ່",
+    "createAccount": "ສ້າງບັນຊີ",
+    "userCreated": "ສ້າງ StoreUser ສຳເລັດ",
+    "userCreatedWithRole": "ສ້າງຜູ້ໃຊ້ກັບບົດບາດ",
+    "failedCreateUser": "ສ້າງຜູ້ໃຊ້ລົ້ມເຫລວ",
+    "creationFailed": "ສ້າງລົ້ມເຫລວ",
+    "nostrSync": "ຊິງຂໍ້ມູນ Nostr",
+    "nostrSyncDesc": "ຊິງຂໍ້ມູນພະນັກງານໄປຍັງ relays Nostr ເພື່ອເຂົ້າເຖິງຈາກທຸກອຸປະກອນ",
+    "syncedToNostr": "ຊິງໄປຍັງ Nostr ສຳເລັດ",
+    "dataPublishedToRelays": "ເຜີຍແຜ່ຂໍ້ມູນພະນັກງານໄປຍັງ relays",
+    "syncFailed": "ຊິງລົ້ມເຫລວ",
+    "synced": "ຊິງແລ້ວ",
+    "notSynced": "ຍັງບໍ່ໄດ້ຊິງ",
+    "syncNow": "ຊິງເດືອນ",
+    "encryptedBeforeSync": "ຂໍ້ມູນພະນັກງານຖືກເຂົ້າລະຫັດກ່ອນຊິງ",
+    "accessibleAnyDevice": "ສາມາດເຂົ້າເຖິງໄດ້ຈາກທຸກອຸປະກອນດ້ວຍລະຫັດບໍລິษັດ",
+    "autoSyncsOnUpdate": "ຊິງອັດຕະໂນມັດໃນກໍລະນີສ້າງແລະ ອັບເດດ",
+    "howToLogin": "ວິທີທີ່ພະນັກງານສາມາດເຂົ້າຄົວ",
+    "withPin": "ໂດຍໃຊ້ PIN",
+    "pinLoginInstructions": "ປ້ອນລະຫັດພະນັກງານ ຫຼື ເລືອກຊື່ພະນັກງານ ແລະວ ສະຫຼັບປະລະກັນ PIN",
+    "withNsec": "ໂດຍໃຊ້ nsec",
+    "nsecLoginInstructions": "ພະນັກງານປ້ອນຄີສ່ວນຕົວ Nostr (nsec1...) ເພື່ອເຂົ້າ",
+    "withNIP07": "ໂດຍໃຊ້ NIP-07",
+    "nip07Instructions": "ໃຊ້ Alby ຫຼື nos2x browser extension ສຳລັບເຂົ້າດ້ວຍຄລິກດຽວ",
+
+    "access": {
+      "title": "ຈັດການການເຂົ້າເຖິງ",
+      "active": "ໃຊ້ງານໄດ້",
+      "revoked": "ຖືກຍົກເລີກ",
+      "expired": "ໝົດອາຍຸແລ້ວ",
+      "none": "ບໍ່ມີການເຂົ້າເຖິງ",
+      "noNostrKey": "ບໍ່ມີຄີ Nostr",
+      "nostrPublicKey": "ຄີສາຘາລະນະ Nostr (npub)",
+      "expiryDate": "ວັນຫມົດອາຍຸ",
+      "noExpiry": "ບໍ່ຫມົດອາຍຸ (ຖາວອນ)",
+      "expiryHint": "ປະໄວ້ວ່າງສຳລັບການເຂົ້າເຖິງຖາວອນ, ຫຼື ກຳໝນດວັນເພື່ອຫມົດອາຍຸອັດຕະໂນມັດ",
+      "expiresOn": "ຫມົດອາຍຸ",
+      "expiredOn": "ໝົດອາຍຸແລ້ວ",
+      "reason": "ເຫດຜົນ",
+      "revokeReason": "ເຫດຜົນການຍົກເລີກ (ບໍ່ຈຳເປັນ)",
+      "revokeReasonPlaceholder": "ຕົວຢ່າງ: ອອກຈາກງານ, ຄວາມົ່ນຄົງດ້ານຄວາມປອດພັຍ",
+      "revoke": "ຍົກເລີກການເຂົ້າເຖິງ",
+      "restore": "ຄືນຄ່າການເຂົ້າເຖິງ",
+      "saveSettings": "ບັນທຶກການຕັ້ງຄ່າ",
+      "manageAccess": "ຈັດການການເຂົ້າເຖິງ",
+      "granted": "ອະນຸຍາດແລ້ວ",
+      "grantSuccess": "ບັນທຶກການຕັ້ງຄ່າສຳເລັດ",
+      "revokedSuccess": "ຍົກເລີກສຳເລັດ",
+      "restoreSuccess": "ຄືນຄ່າສຳເລັດ",
+      "restored": "ຄືນຄ່າແລ້ວ"
+    },
+
+    "employmentInfo": "ຂໍ້ມູນການຈ້າງງານ",
+    "contactInfo": "ຂໍ້ມູນຕິດຕໍ່",
+    "tenure": "ໄລຍະເວລາເຮັດວຽກ",
+
+    "actions": {
+      "view": "ເບິ່ງລາຍລະອຽດ",
+      "edit": "ແກ້ໄຂພະນັກງານ",
+      "duplicate": "ສຳເນົາ",
+      "terminate": "ຢຸດເຮັດວຽກ",
+      "deletePermanently": "ລຶບຖາວອນ",
+      "export": "ສົ່ງອອກເປັນ Excel"
+    },
+
+    "confirm": {
+      "terminateTitle": "ຢຸດການເຮັດວຽກພະນັກງານ",
+      "terminateMessage": "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການໃຫ້ {name} ຢຸດເຮັດວຽກ? ນີ້ຈະໝາຍເຖິງການຢຸດເຮັດວຽກແຕ່ຍັງເກັບຮັກສາຂໍ້ມູນໄວ້.",
+      "deleteTitle": "ລຶບຖາວອນ",
+      "deleteMessage": "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບ {name} ຖາວອນ? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.",
+      "confirm": "ຢືນຢັນ",
+      "cancel": "ຍົກເລີກ"
+    },
+
+    "stats": {
+      "totalEmployees": "ພະນັກງານທັງໝົດ",
+      "activeEmployees": "ເຮັດວຽກ",
+      "onLeaveEmployees": "ພັກຜ່ອນ",
+      "newThisMonth": "ໃໝ່ເດືອນນີ້"
+    },
+
+    "sort": {
+      "name": "ຊື່",
+      "position": "ຕຳແໜ່ງ",
+      "department": "ພະແນກ",
+      "status": "ສະຖານະ",
+      "salary": "ເງິນເດືອນ",
+      "hireDate": "ວັນທີເຂົ້າເຮັດວຽກ"
+    },
+
+    "export": {
+      "title": "ສົ່ງອອກພະນັກງານ",
+      "fileName": "ພະນັກງານ",
+      "success": "ສົ່ງອອກລາຍຊື່ພະນັກງານສຳເລັດແລ້ວ"
+    },
+
+    "duplicateSuccess": "ສຳເນົາພະນັກງານສຳເລັດແລ້ວ"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "memberships": {
+    "title": "ສະມາຊິກ",
+    "subtitle": "ຈັດການການສະໝັກສະມາຊິກ ແລະ ເຊັກອິນ",
+    "members": "ສະມາຊິກ",
+    "plans": "ແຜນ",
+    "active": "ກຳລັງໃຊ້ງານ",
+    "expired": "ໝົດອາຍຸ",
+    "expiringSoon": "ໃກ້ໝົດອາຍຸ",
+    "total": "ທັງໝົດ",
+    "checkIn": "ເຊັກອິນ",
+    "checkIns": "ເຊັກອິນ",
+    "quickCheckIn": "ເຊັກອິນດ່ວນ",
+    "renew": "ຕໍ່ອາຍຸ",
+    "daysLeft": "ວັນທີ່ເຫຼືອ",
+    "addMember": "ເພີ່ມສະມາຊິກ",
+    "addFirstMember": "ເພີ່ມສະມາຊິກຄົນທຳອິດ",
+    "noMembers": "ຍັງບໍ່ມີສະມາຊິກ",
+    "searchPlaceholder": "ຄົ້ນຫາຕາມຊື່...",
+    "searchToCheckIn": "ຄົ້ນຫາຊື່ສະມາຊິກ...",
+    "selectCustomer": "ເລືອກລູກຄ້າ",
+    "selectPlan": "ເລືອກແຜນ",
+    "selectCustomerAndPlan": "ກະລຸນາເລືອກລູກຄ້າ ແລະ ແຜນ",
+    "plan": "ແຜນ",
+    "notesPlaceholder": "ບັນທຶກເພີ່ມເຕີມ...",
+    "added": "ເພີ່ມສະມາຊິກແລ້ວ",
+    "renewed": "ຕໍ່ອາຍຸສະມາຊິກແລ້ວ",
+    "checkedIn": "ເຊັກອິນແລ້ວ!",
+    "notActive": "ສະມາຊິກບໍ່ໄດ້ໃຊ້ງານ",
+    "cannotCheckIn": "ສະມາຊິກນີ້ບໍ່ໄດ້ໃຊ້ງານ",
+    "maxReached": "ຮອດຂີດຈຳກັດເຊັກອິນ",
+    "planInUse": "ແຜນກຳລັງໃຊ້ງານ",
+    "cannotDeletePlan": "ແຜນນີ້ມີສະມາຊິກໃຊ້ງານ",
+    "status": {
+      "active": "ກຳລັງໃຊ້ງານ",
+      "expired": "ໝົດອາຍຸ",
+      "cancelled": "ຍົກເລີກ",
+      "suspended": "ລະງັບ",
+      "pending": "ລໍຖ້າ"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Noto Sans Lao Looped";
+  src: url("NotoSansLaoLooped-Medium.woff2") format("woff2"),
+    url("NotoSansLaoLooped-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Lao Looped";
+  src: url("NotoSansLaoLooped-Bold.woff2") format("woff2"),
+    url("NotoSansLaoLooped-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Lao Looped";
+  src: url("NotoSansLaoLooped-Regular.woff2") format("woff2"),
+    url("NotoSansLaoLooped-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Lao Looped";
+  src: url("NotoSansLaoLooped-SemiBold.woff2") format("woff2"),
+    url("NotoSansLaoLooped-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Lao Looped";
+  src: url("NotoSansLaoLooped-Thin.woff2") format("woff2"),
+    url("NotoSansLaoLooped-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Chanthavong';
+    src: url('Chanthavong.woff2') format('woff2'),
+        url('Chanthavong.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

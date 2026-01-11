@@ -1,0 +1,13 @@
+{
+  "analytics": {
+    "title": "AI Insights",
+    "insights": "insights",
+    "noInsights": "No insights yet",
+    "positiveTrends": "Positive Trends",
+    "alerts": "Alerts",
+    "topSeller": "Top Seller",
+    "peakHours": "Peak Hours",
+    "lowStock": "Low Stock Alert",
+    "upsell": "Upsell Opportunity"
+  }
+}

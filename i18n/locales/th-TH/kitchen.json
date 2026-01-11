@@ -1,0 +1,13 @@
+{
+  "kitchen": {
+    "title": "ครัว",
+    "display": "หน้าจอครัว",
+    "orders": "คำสั่งซื้อ",
+    "pending": "รอดำเนินการ",
+    "inProgress": "กำลังทำ",
+    "ready": "พร้อมเสิร์ฟ",
+    "completed": "เสร็จสิ้น",
+    "markReady": "พร้อมแล้ว",
+    "startPreparing": "เริ่มทำ"
+  }
+}

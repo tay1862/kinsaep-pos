@@ -1,0 +1,178 @@
+{
+  "promotions": {
+    "title": "โปรโมชั่น",
+    "subtitle": "จัดการ BOGO, ส่วนลด และข้อเสนอพิเศษ",
+    "promotion": "โปรโมชั่น",
+    "addPromotion": "เพิ่มโปรโมชั่น",
+    "editPromotion": "แก้ไขโปรโมชั่น",
+    "create": "สร้างโปรโมชั่น",
+    "searchPlaceholder": "ค้นหาโปรโมชั่น...",
+    "noPromotions": "ยังไม่มีโปรโมชั่น",
+    "noPromotionsDescription": "สร้างโปรโมชั่นแรกของคุณเพื่อเพิ่มยอดขาย",
+    "createSuccess": "สร้างโปรโมชั่นสำเร็จ",
+    "createSuccessDesc": "โปรโมชั่นของคุณถูกสร้างสำเร็จแล้ว",
+    "updateSuccess": "อัปเดตโปรโมชั่นสำเร็จ",
+    "updateSuccessDesc": "การตั้งค่าโปรโมชั่นถูกบันทึกแล้ว",
+    "deleteSuccess": "ลบโปรโมชั่นสำเร็จ",
+    "deleteSuccessDesc": "โปรโมชั่นถูกลบออกแล้ว",
+    "statusUpdated": "อัปเดตสถานะแล้ว",
+    "statusUpdatedDesc": "สถานะโปรโมชั่นถูกเปลี่ยนแล้ว",
+    "preselected": "ผลิตภัณฑ์ถูกเลือกแล้ว",
+    "activePromotions": "โปรโมชั่นที่ใช้งาน",
+    "manage": "จัดการโปรโมชั่น",
+
+    "type": {
+      "label": "ประเภทโปรโมชั่น",
+      "bogo": "ซื้อ 1 แถม 1",
+      "discount": "ส่วนลด",
+      "bundle": "ชุดพิเศษ",
+      "freebie": "ของแถมฟรี",
+      "tiered": "ส่วนลดแบบขั้นบันได",
+      "bogoDesc": "ซื้อ X แถม Y ฟรี",
+      "discountDesc": "ส่วนลดเป็นเปอร์เซ็นต์ หรือจำนวนเงิน",
+      "bundleDesc": "ส่วนลดเมื่อซื้อหลายผลิตภัณฑ์พร้อมกัน",
+      "freebieDesc": "สินค้าฟรีเมื่อซื้อตามเงื่อนไข",
+      "tieredDesc": "ซื้อมาก ลดมาก"
+    },
+
+    "scope": {
+      "label": "ใช้กับ",
+      "product": "ผลิตภัณฑ์เฉพาะ",
+      "category": "หมวดหมู่สินค้า",
+      "order": "ทั้งหมดในคำสั่งซื้อ"
+    },
+
+    "discountType": {
+      "label": "ประเภทส่วนลด",
+      "percentage": "ส่วนลดเป็นเปอร์เซ็นต์",
+      "fixed": "ส่วนลดเป็นจำนวนเงิน"
+    },
+
+    "status": {
+      "label": "สถานะ",
+      "active": "ใช้งานอยู่",
+      "inactive": "ไม่ใช้งาน",
+      "scheduled": "กำหนดการแล้ว",
+      "expired": "หมดอายุ"
+    },
+
+    "fields": {
+      "name": "ชื่อโปรโมชั่น",
+      "namePlaceholder": "ตัวอย่าง: ซื้อกาแฟ 1 แถม 1",
+      "description": "รายละเอียด",
+      "descriptionPlaceholder": "รายละเอียดโปรโมชั่น...",
+      "triggerProducts": "สินค้าที่กระตุ้น",
+      "triggerProductsHint": "สินค้าที่เปิดใช้โปรโมชั่นนี้",
+      "triggerCategories": "หมวดหมู่ที่กระตุ้น",
+      "triggerQuantity": "จำนวนที่กระตุ้น",
+      "triggerQuantityHint": "ต้องซื้อกี่ชิ้นเพื่อเปิดใช้",
+      "rewardProducts": "สินค้าฟรี/รางวัล",
+      "rewardProductsHint": "สินค้าที่ได้เป็นรางวัล",
+      "rewardQuantity": "จำนวนรางวัล",
+      "rewardQuantityHint": "จำนวนสินค้าฟรี",
+      "discountValue": "มูลค่าส่วนลด",
+      "discountPercent": "เปอร์เซ็นต์ส่วนลด",
+      "discountAmount": "จำนวนเงินส่วนลด",
+      "priority": "ลำดับความสำคัญ",
+      "priorityHint": "โปรโมชั่นที่มีลำดับสูงกว่าจะใช้ก่อน",
+      "badgeText": "ข้อความป้าย",
+      "badgeTextPlaceholder": "ตัวอย่าง: ซื้อ 1 แถม 1 ฟรี",
+      "badgeColor": "สีป้าย"
+    },
+
+    "conditions": {
+      "title": "เงื่อนไข",
+      "minOrderValue": "มูลค่าคำสั่งซื้อขั้นต่ำ",
+      "minOrderValueHint": "ตะกร้าต้องมีมูลค่าอย่างน้อย",
+      "minQuantity": "จำนวนขั้นต่ำ",
+      "minQuantityHint": "ต้องซื้ออย่างน้อย",
+      "customerTier": "ระดับลูกค้า",
+      "customerTierHint": "จำกัดเฉพาะระดับลูกค้า",
+      "allCustomers": "ลูกค้าทั้งหมด",
+      "firstOrderOnly": "คำสั่งแรกเท่านั้น",
+      "firstOrderOnlyHint": "ใช้ได้กับลูกค้าใหม่เท่านั้น",
+      "maxItemsAffected": "สินค้าสูงสุดที่ได้รับผล",
+      "maxItemsAffectedHint": "จำนวนสูงสุดที่โปรโมชั่นนี้ใช้ได้"
+    },
+
+    "tiers": {
+      "title": "ระดับชั้น",
+      "addTier": "เพิ่มระดับ",
+      "removeTier": "ลบระดับ",
+      "quantity": "ซื้อ",
+      "discount": "ได้รับ",
+      "example": "ตัวอย่าง: ซื้อ 2 ลด 10%, ซื้อ 3 ลด 20%"
+    },
+
+    "schedule": {
+      "title": "กำหนดการ",
+      "startDate": "วันที่เริ่ม",
+      "endDate": "วันที่สิ้นสุด",
+      "daysOfWeek": "วันในสัปดาห์",
+      "allDays": "ทุกวัน",
+      "specificDays": "วันที่กำหนด",
+      "timeRange": "ช่วงเวลา",
+      "startTime": "เวลาเริ่ม",
+      "endTime": "เวลาสิ้นสุด",
+      "allDay": "ตลอดวัน"
+    },
+
+    "limits": {
+      "title": "ข้อจำกัดการใช้งาน",
+      "perOrder": "ใช้สูงสุดต่อคำสั่ง",
+      "perCustomer": "ใช้สูงสุดต่อลูกค้า",
+      "total": "จำกัดการใช้ทั้งหมด",
+      "unlimited": "ไม่จำกัด",
+      "usageCount": "ครั้งที่ใช้"
+    },
+
+    "stacking": {
+      "title": "กฎการรวมกัน",
+      "stackable": "สามารถรวมกันได้",
+      "stackableHint": "สามารถใช้ร่วมกับโปรโมชั่นอื่นได้",
+      "exclusive": "ใช้เดี่ยว",
+      "exclusiveHint": "ไม่สามารถใช้ร่วมกับโปรโมชั่นอื่นได้",
+      "excludePromotions": "ยกเว้นโปรโมชั่น",
+      "excludePromotionsHint": "ไม่สามารถใช้ร่วมกับโปรโมชั่นเหล่านี้"
+    },
+
+    "display": {
+      "title": "ตัวเลือกการแสดง",
+      "highlightOnPOS": "ไฮไลท์ใน POS",
+      "highlightOnPOSHint": "แสดงป้ายโปรโมชั่นในตารางสินค้า"
+    },
+
+    "trigger": "กระตุ้น",
+    "reward": "รางวัล",
+    "uses": "การใช้งาน",
+    "totalUses": "ใช้ทั้งหมด",
+    "bogo": "ซื้อ 1 แถม 1",
+    "bogoFree": "ซื้อ 1 แถม 1 ฟรี",
+    "triggerProduct": "เมื่อซื้อ",
+    "rewardProduct": "ได้ฟรี",
+    "freeProduct": "ได้ฟรี",
+    "applied": "ใช้โปรโมชั่นแล้ว!",
+    "free": "ฟรี",
+    "savings": "คุณประหยัด",
+    "deleteConfirmation": "คุณแน่ใจหรือไม่ว่าต้องการลบ \"{name}\"?",
+
+    "form": {
+      "basicInfo": "ข้อมูลพื้นฐาน",
+      "typeSetup": "เลือกประเภท",
+      "setupSetup": "ตั้งค่า",
+      "conditionsSetup": "เงื่อนไข",
+      "displaySetup": "การแสดง",
+      "triggerSetup": "ตั้งค่ากระตุ้น",
+      "rewardSetup": "ตั้งค่ารางวัล",
+      "discountSetup": "ตั้งค่าส่วนลด",
+      "tierSetup": "ตั้งค่าระดับ",
+      "scheduleSetup": "กำหนดการ",
+      "limitsSetup": "ข้อจำกัด"
+    },
+
+    "confirm": {
+      "deleteTitle": "ลบโปรโมชั่น",
+      "deleteMessage": "คุณแน่ใจหรือไม่ว่าต้องการลบโปรโมชั่นนี้? การกระทำนี้ไม่สามารถยกเลิกได้"
+    }
+  }
+}

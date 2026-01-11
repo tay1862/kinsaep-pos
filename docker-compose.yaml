@@ -1,0 +1,35 @@
+services:
+  # database:
+  #   image: postgres:15
+  #   restart: always
+  #   environment:
+  #     POSTGRES_PASSWORD: password
+  #     POSTGRES_USER: nostr
+  #     POSTGRES_DB: nostr
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - ./pg_data:/var/lib/postgresql/data
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U nostr"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+
+  nostr_relay:
+    image: scsibug/nostr-rs-relay:latest
+    restart: always
+    # network_mode: "host"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nostr_data:/usr/src/app/db
+      # - ./config.toml:/usr/src/app/config.toml
+    environment:
+      RUST_LOG: info
+    # depends_on:
+    #   database:
+    #     condition: service_healthy
+
+volumes:
+  nostr_data:

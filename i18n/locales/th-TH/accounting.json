@@ -1,0 +1,20 @@
+{
+  "accounting": {
+    "title": "บัญชี",
+    "subtitle": "จัดการบัญชีและรายงานการเงิน",
+    "accounts": "บัญชี",
+    "journal": "สมุดบัญชี",
+    "transactions": "ธุรกรรม",
+    "reports": "รายงาน",
+    "incomeStatement": "งบกำไรขาดทุน",
+    "balanceSheet": "งบดุล",
+    "cashFlow": "งบกระแสเงินสด",
+    "revenue": "รายได้",
+    "expenses": "ค่าใช้จ่าย",
+    "profit": "กำไร",
+    "loss": "ขาดทุน",
+    "assets": "สินทรัพย์",
+    "liabilities": "หนี้สิน",
+    "equity": "ส่วนของเจ้าของ"
+  }
+}

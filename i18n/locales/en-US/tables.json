@@ -1,0 +1,56 @@
+{
+  "tables": {
+    "title": "Table Management",
+    "subtitle": "Tables & seating",
+    "description": "Manage tables, seating, and reservations",
+    "addTable": "Add Table",
+    "editTable": "Edit Table",
+    "totalTables": "Total Tables",
+    "totalCapacity": "Total Capacity",
+    "qrEnabled": "QR Enabled",
+    "occupancy": "Occupancy",
+    "scanToOrder": "Scan to view menu & order",
+    "orderingUrl": "Menu URL",
+    "status": {
+      "available": "Available",
+      "occupied": "Occupied",
+      "reserved": "Reserved",
+      "cleaning": "Cleaning",
+      "unavailable": "Unavailable"
+    },
+    "shapes": {
+      "square": "Square",
+      "round": "Round",
+      "rectangle": "Rectangle",
+      "oval": "Oval"
+    },
+    "capacity": "Capacity",
+    "minCapacity": "Min Capacity",
+    "shape": "Shape",
+    "qrOrdering": "QR Ordering",
+    "qrOrderingDesc": "Allow customers to order by scanning QR",
+    "active": "Active",
+    "activeDesc": "Inactive tables are hidden from floor plan",
+    "tableNumber": "Table Number",
+    "tableName": "Table Name (optional)",
+    "namePlaceholder": "e.g. Window Seat",
+    "zone": "Zone",
+    "manageZones": "Manage Zones",
+    "floorSettings": "Zone Settings",
+    "noTables": "No tables yet",
+    "noTablesDesc": "Create tables to enable QR code ordering",
+    "createDemo": "Create Demo Tables",
+    "confirmDelete": "Delete this table?",
+    "numberRequired": "Table number is required",
+    "updated": "Table updated",
+    "created": "Table created",
+    "deleted": "Table deleted",
+    "demoCreated": "Demo tables created",
+    "timer": {
+      "occupiedFor": "Occupied for",
+      "longWait": "Long wait",
+      "quickTurn": "Quick turnaround",
+      "normalPace": "Normal pace"
+    }
+  }
+}

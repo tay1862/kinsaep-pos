@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bnos.space - Lightning POS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+      }
+
+      .splash-container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          #0f0f23 0%,
+          #1a1a35 50%,
+          #0f0f23 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Animated background grid */
+      .splash-container::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(245, 158, 11, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: gridMove 20s linear infinite;
+        opacity: 0.3;
+      }
+
+      @keyframes gridMove {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(50px, 50px);
+        }
+      }
+
+      /* Radial glow effect */
+      .splash-container::after {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(245, 158, 11, 0.15) 0%,
+          transparent 70%
+        );
+        animation: radialPulse 3s ease-in-out infinite;
+      }
+
+      @keyframes radialPulse {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 0.3;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.6;
+        }
+      }
+
+      .logo-container {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Lightning bolt logo with electric effect - Xiaomi-style squircle */
+      .logo {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow:
+          0 0 60px rgba(245, 158, 11, 0.5),
+          0 0 100px rgba(245, 158, 11, 0.3),
+          0 25px 50px rgba(0, 0, 0, 0.4);
+        animation: logoGlow 2s ease-in-out infinite;
+      }
+
+      @keyframes logoGlow {
+        0%, 100% {
+          box-shadow:
+            0 0 60px rgba(245, 158, 11, 0.5),
+            0 0 100px rgba(245, 158, 11, 0.3),
+            0 25px 50px rgba(0, 0, 0, 0.4);
+          transform: scale(1);
+        }
+        50% {
+          box-shadow:
+            0 0 80px rgba(245, 158, 11, 0.8),
+            0 0 140px rgba(245, 158, 11, 0.5),
+            0 25px 50px rgba(0, 0, 0, 0.4);
+          transform: scale(1.05);
+        }
+      }
+
+      /* Electric particles around logo */
+      .logo::before,
+      .logo::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 32px;
+        border: 2px solid rgba(245, 158, 11, 0.5);
+        animation: electricRing 2s ease-in-out infinite;
+      }
+
+      .logo::after {
+        animation-delay: 1s;
+      }
+
+      @keyframes electricRing {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1.5);
+          opacity: 0;
+        }
+      }
+
+      /* Lightning bolt SVG with flash animation */
+      .logo svg {
+        width: 70px;
+        height: 70px;
+        fill: white;
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+        animation: lightningFlash 2s ease-in-out infinite;
+      }
+
+      @keyframes lightningFlash {
+        0%, 100% {
+          opacity: 1;
+          filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+        }
+        10%, 30% {
+          opacity: 1;
+          filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+        }
+        20%, 40% {
+          opacity: 0.8;
+          filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+        }
+        50% {
+          opacity: 1;
+          filter: drop-shadow(0 0 30px rgba(255, 255, 255, 1))
+                  drop-shadow(0 0 60px rgba(245, 158, 11, 0.8));
+        }
+      }
+
+      /* Sparks around the logo */
+      .spark {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #fbbf24;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #fbbf24;
+        animation: sparkFloat 3s ease-in-out infinite;
+      }
+
+      .spark:nth-child(1) {
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+      }
+
+      .spark:nth-child(2) {
+        top: 20%;
+        right: 15%;
+        animation-delay: 0.5s;
+      }
+
+      .spark:nth-child(3) {
+        bottom: 15%;
+        left: 20%;
+        animation-delay: 1s;
+      }
+
+      .spark:nth-child(4) {
+        bottom: 10%;
+        right: 10%;
+        animation-delay: 1.5s;
+      }
+
+      @keyframes sparkFloat {
+        0%, 100% {
+          transform: translate(0, 0) scale(1);
+          opacity: 1;
+        }
+        25% {
+          transform: translate(-10px, -15px) scale(1.5);
+          opacity: 0.8;
+        }
+        50% {
+          transform: translate(5px, -25px) scale(1);
+          opacity: 0.5;
+        }
+        75% {
+          transform: translate(15px, -15px) scale(1.5);
+          opacity: 0.8;
+        }
+      }
+
+      .brand-name {
+        font-size: 32px;
+        font-weight: 800;
+        color: white;
+        letter-spacing: 3px;
+        text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+        animation: textGlow 2s ease-in-out infinite;
+      }
+
+      @keyframes textGlow {
+        0%, 100% {
+          text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+        }
+        50% {
+          text-shadow: 0 0 30px rgba(245, 158, 11, 0.8),
+                       0 0 40px rgba(245, 158, 11, 0.6);
+        }
+      }
+
+      .brand-name span {
+        color: #f59e0b;
+        animation: colorPulse 2s ease-in-out infinite;
+      }
+
+      @keyframes colorPulse {
+        0%, 100% {
+          color: #f59e0b;
+        }
+        50% {
+          color: #fbbf24;
+        }
+      }
+
+      .brand-name small {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        margin-top: 4px;
+        color: rgba(255, 255, 255, 0.6);
+        font-style: italic;
+      }
+
+      .tagline {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        max-width: 300px;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+
+      .tagline::before {
+        content: "⚡ ";
+        color: #f59e0b;
+      }
+
+      .tagline::after {
+        content: " ⚡";
+        color: #f59e0b;
+      }
+
+      /* Advanced loading spinner */
+      .loader {
+        margin-top: 48px;
+        width: 60px;
+        height: 60px;
+        position: relative;
+      }
+
+      .loader::before,
+      .loader::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 4px solid transparent;
+      }
+
+      .loader::before {
+        border-top-color: #f59e0b;
+        border-right-color: #f59e0b;
+        animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      }
+
+      .loader::after {
+        border-bottom-color: rgba(245, 158, 11, 0.3);
+        border-left-color: rgba(245, 158, 11, 0.3);
+        animation: spin 0.8s cubic-bezier(0.5, 0, 0.5, 1) infinite reverse;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Inner spinning circle */
+      .loader-inner {
+        position: absolute;
+        inset: 10px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top-color: #fbbf24;
+        animation: spin 1.5s linear infinite;
+      }
+
+      .loading-text {
+        margin-top: 20px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.6);
+        animation: loadingBlink 1.5s ease-in-out infinite;
+        font-weight: 500;
+        letter-spacing: 2px;
+      }
+
+      @keyframes loadingBlink {
+        0%, 100% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      /* Loading dots animation */
+      .loading-text::after {
+        content: "";
+        animation: loadingDots 1.5s steps(4, end) infinite;
+      }
+
+      @keyframes loadingDots {
+        0% { content: ""; }
+        25% { content: "."; }
+        50% { content: ".."; }
+        75% { content: "..."; }
+      }
+
+      /* Bottom branding with fade in */
+      .footer {
+        position: absolute;
+        bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        animation: fadeIn 1s ease-out 0.5s both;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .footer-text {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+
+      .footer-icons {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .footer-icons svg {
+        width: 24px;
+        height: 24px;
+        fill: rgba(245, 158, 11, 0.6);
+        transition: all 0.3s ease;
+        animation: iconFloat 3s ease-in-out infinite;
+      }
+
+      .footer-icons svg:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      .footer-icons svg:nth-child(2) {
+        animation-delay: 1.5s;
+      }
+
+      @keyframes iconFloat {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 640px) {
+        .logo {
+          width: 100px;
+          height: 100px;
+          border-radius: 28px;
+        }
+
+        .logo::before,
+        .logo::after {
+          border-radius: 28px;
+        }
+
+        .logo svg {
+          width: 60px;
+          height: 60px;
+        }
+
+        .brand-name {
+          font-size: 26px;
+        }
+
+        .tagline {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="splash-container">
+      <div class="logo-container">
+        <!-- Lightning bolt logo with sparks -->
+        <div class="logo">
+          <span class="spark"></span>
+          <span class="spark"></span>
+          <span class="spark"></span>
+          <span class="spark"></span>
+
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+        </div>
+
+        <h1 class="brand-name">
+          bnos.<span>space</span>
+          <small>BUSINESS OS</small>
+        </h1>
+
+        <p class="tagline">Lightning-Powered Point of Sale</p>
+
+        <div class="loader">
+          <div class="loader-inner"></div>
+        </div>
+        <p class="loading-text">LOADING</p>
+      </div>
+
+      <div class="footer">
+        <div class="footer-icons">
+          <!-- Nostr icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+            />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+
+          <!-- Bitcoin/Lightning icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+        </div>
+        <p class="footer-text">Powered by Nostr & Bitcoin Lightning</p>
+      </div>
+    </div>
+  </body>
+</html>

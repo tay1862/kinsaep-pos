@@ -1,0 +1,13 @@
+# robots.txt for bnos.space
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://bnos.space/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin/private areas (if any in future)
+# Disallow: /admin/

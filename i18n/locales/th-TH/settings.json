@@ -1,0 +1,163 @@
+{
+    "settings": {
+        "title": "ตั้งค่า",
+        "sectionBusiness": "ธุรกิจ",
+        "sectionSystem": "ระบบ",
+        "about": {
+            "title": "เกี่ยวกับ",
+            "subtitle": "ข้อมูลแอปและเวอร์ชัน",
+            "description": "ข้อมูลแอปพลิเคชันและรายละเอียดเวอร์ชัน",
+            "tagline": "ระบบ POS ที่ขับเคลื่อนด้วย Lightning และ Business OS",
+            "versionInfo": "ข้อมูลเวอร์ชัน",
+            "version": "เวอร์ชัน",
+            "buildDate": "วันที่ Build",
+            "framework": "Framework",
+            "platform": "แพลตฟอร์ม",
+            "keyFeatures": "คุณสมบัติหลัก",
+            "features": {
+                "lightning": "ชำระเงิน Lightning",
+                "lightningDesc": "รับ Bitcoin ผ่าน Lightning Network",
+                "nostr": "Nostr Protocol",
+                "nostrDesc": "เก็บข้อมูลแบบกระจายศูนย์",
+                "offline": "ออฟไลน์ก่อน",
+                "offlineDesc": "ใช้งานได้โดยไม่ต้องมีอินเทอร์เน็ต",
+                "encrypted": "เข้ารหัสทั้งหมด",
+                "encryptedDesc": "เข้ารหัส NIP-04/44",
+                "pwa": "Progressive Web App",
+                "pwaDesc": "ติดตั้งบนทุกอุปกรณ์",
+                "i18n": "หลายภาษา",
+                "i18nDesc": "รองรับภาษาไทย อังกฤษ ลาว และเวียดนาม"
+            },
+            "techStack": "เทคโนโลยีที่ใช้",
+            "links": "ลิงก์และทรัพยากร",
+            "helpCenter": "ศูนย์ช่วยเหลือ",
+            "supportProject": "สนับสนุนโครงการ",
+            "github": "GitHub",
+            "nostrProtocol": "Nostr Protocol",
+            "credits": "เครดิต",
+            "builtWith": "สร้างด้วย ⚡ โดย",
+            "sovereignBusiness": "ธุรกิจอิสระ. กระจายศูนย์.",
+            "openSource": "โครงการนี้เป็น open source และสร้างขึ้นบน protocol เปิด",
+            "license": "ได้รับอนุญาตภายใต้ MIT License"
+        },
+        "security": {
+            "title": "ความปลอดภัย",
+            "subtitle": "คีย์และการรักษาความปลอดภัย",
+            "dataEncryption": "การเข้ารหัสข้อมูล",
+            "dataEncryptionDesc": "เข้ารหัสข้อมูลที่ละเอียดอ่อนเช่น API key ด้วยรหัสผ่านหลักเพื่อความปลอดภัยที่ดีขึ้น",
+            "setupMasterPassword": "รหัสผ่านหลัก",
+            "confirmPassword": "ยืนยันรหัสผ่าน",
+            "confirmPasswordHint": "ใส่รหัสผ่านหลักอีกครั้ง",
+            "enableEncryption": "เปิดใช้งานการเข้ารหัส",
+            "encryptionEnabled": "เปิดใช้งานการเข้ารหัสข้อมูลแล้ว",
+            "enterMasterPassword": "ใส่รหัสผ่านหลัก",
+            "masterPasswordHint": "รหัสผ่านนี้จะใช้เพื่อเข้ารหัสข้อมูลของคุณ",
+            "wrongPassword": "รหัสผ่านไม่ถูกต้อง",
+            "passwordRequired": "ต้องใส่รหัสผ่าน",
+            "unlock": "ปลดล็อค",
+            "lock": "ล็อค",
+            "locked": "ถูกล็อค",
+            "unlocked": "ปลดล็อคแล้ว",
+            "disableEncryption": "ปิดการเข้ารหัส",
+            "disableWarning": "คำเตือน",
+            "disableWarningDesc": "การปิดการเข้ารหัสจะลบข้อมูลที่เข้ารหัสทั้งหมด คุณจะต้องใส่ API key ใหม่หลังจากนี้",
+            "confirmWithPassword": "ยืนยันด้วยรหัสผ่านของคุณ",
+            "enterPassword": "ใส่รหัสผ่าน",
+            "encryptionDisabled": "ปิดการเข้ารหัสแล้ว กรุณาใส่ API key ของคุณใหม่",
+            "encryptionStatus": "สถานะการเข้ารหัส",
+            "encrypted": "เข้ารหัสแล้ว",
+            "notEncrypted": "ไม่ได้เข้ารหัส"
+        },
+        "relays": {
+            "title": "Relays",
+            "subtitle": "จัดการ Nostr relays"
+        },
+        "lightning": {
+            "title": "กระเป๋า",
+            "subtitle": "การตั้งค่า Lightning"
+        },
+        "customization": {
+            "title": "ปรับแต่ง",
+            "subtitle": "ธีมและการแสดงผล"
+        },
+        "chat": {
+            "title": "แชท",
+            "subtitle": "การตั้งค่าข้อความ",
+            "description": "กำหนดค่าการตั้งค่าแชทและข้อความ",
+            "general": "การตั้งค่าทั่วไป",
+            "enableChat": "เปิดใช้งานแชท",
+            "enableChatDescription": "เปิดใช้งานแชทเพื่อส่งและรับข้อความกับทีมของคุณ",
+            "disabledNotice": "แชทถูกปิดใช้งาน",
+            "disabledNoticeDescription": "เปิดใช้งานแชทเพื่อเข้าถึงฟีเจอร์ข้อความและสื่อสารกับสมาชิกในทีมของคุณ",
+            "enabled": "เปิดใช้งานแชทแล้ว",
+            "disabled": "ปิดใช้งานแชทแล้ว"
+        },
+        "general": {
+            "title": "ทั่วไป",
+            "subtitle": "ตั้งค่าร้านค้า",
+            "shop_tags": "แท็กร้านค้า & การวิเคราะห์",
+            "shop_tags_desc": "เพิ่มแท็กเพื่อจัดหมวดหมู่ร้านค้าของคุณและช่วยในการวิเคราะห์",
+            "tags": "แท็ก",
+            "tag_placeholder": "เช่น กาแฟ, อาหารไทย, ค้าปลีก",
+            "tags_hint": "กด Enter หรือคลิก + เพื่อเพิ่มแท็ก",
+            "platform_tag": "แพลตฟอร์ม",
+            "platform_tag_hint": "ขับเคลื่อนโดย bnos.space"
+        },
+        "currency": "สกุลเงิน",
+        "language": "ภาษา",
+        "timezone": "เขตเวลา",
+        "taxRate": "อัตราภาษี (%)",
+        "taxRatePlaceholder": "0",
+        "enableTips": "เปิดใช้งานทิป",
+        "enableTipsDescription": "อนุญาตให้ลูกค้าเพิ่มทิปในคำสั่งซื้อ",
+        "receiptFooter": "ท้ายใบเสร็จ",
+        "receiptFooterPlaceholder": "ขอบคุณที่ใช้บริการ!",
+        "tax": {
+            "title": "ภาษี",
+            "subtitle": "อัตราภาษี"
+        },
+        "receipt": {
+            "title": "ใบเสร็จ",
+            "subtitle": "ปรับแต่งใบเสร็จ"
+        },
+        "bankAccounts": {
+            "title": "บัญชีธนาคาร",
+            "subtitle": "โอนเงินผ่านธนาคาร",
+            "description": "จัดการบัญชีธนาคาร"
+        },
+        "users": {
+            "title": "ผู้ใช้",
+            "subtitle": "จัดการผู้ใช้และสิทธิ์"
+        },
+        "backup": {
+            "title": "สำรองข้อมูล",
+            "subtitle": "สำรองและกู้คืนข้อมูล"
+        },
+        "auditLog": {
+            "title": "บันทึกการตรวจสอบ",
+            "subtitle": "ดูประวัติการดำเนินการ"
+        },
+        "features": {
+            "title": "คุณสมบัติ",
+            "subtitle": "เปิด/ปิดคุณสมบัติ",
+            "enterprise": "องค์กร",
+            "enterpriseEnabled": "โหมดองค์กร",
+            "enterpriseEnabledDesc": "เปิดใช้งานคุณสมบัติทั้งหมดที่พร้อมใช้งาน"
+        },
+        "integrations": {
+            "title": "การเชื่อมต่อ",
+            "subtitle": "Cloudinary, API keys"
+        },
+        "marketplace": {
+            "title": "Marketplace",
+            "subtitle": "การมองเห็นร้านและการค้นหา",
+            "goPublic": "เป็นสาธารณะ!",
+            "goPublicDesc": "ทำให้ร้านของคุณค้นหาได้ ลูกค้าสามารถค้นหาคุณและชำระเงินด้วย Lightning",
+            "publishNow": "เผยแพร่ไป Marketplace",
+            "published": "เผยแพร่แล้ว!",
+            "publishedDesc": "ร้านของคุณสามารถค้นหาได้แล้ว",
+            "unpublished": "โหมดส่วนตัว",
+            "unpublishedDesc": "ร้านของคุณเป็นส่วนตัวแล้ว"
+        }
+    }
+}

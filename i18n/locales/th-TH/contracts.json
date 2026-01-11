@@ -1,0 +1,22 @@
+{
+  "contracts": {
+    "title": "สัญญา",
+    "contract": "สัญญา",
+    "addContract": "เพิ่มสัญญา",
+    "editContract": "แก้ไขสัญญา",
+    "contractNumber": "เลขที่สัญญา",
+    "startDate": "วันเริ่มต้น",
+    "endDate": "วันสิ้นสุด",
+    "value": "มูลค่า",
+    "contractType": "ประเภทสัญญา",
+    "status": {
+      "active": "ใช้งาน",
+      "expired": "หมดอายุ",
+      "pending": "รอดำเนินการ"
+    },
+    "payment": {
+      "enterAmount": "ใส่จำนวนเงิน",
+      "fullBalance": "จ่ายทั้งหมด"
+    }
+  }
+}

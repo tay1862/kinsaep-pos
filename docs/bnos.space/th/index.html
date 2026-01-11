@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      BNOS - ระบบปฏิบัติการธุรกิจ Bitcoin Nostr | ระบบจุดขาย Lightning
+    </title>
+    <meta
+      name="description"
+      content="BNOS เป็นระบบจุดขายที่ใช้พลัง Lightning และระบบปฏิบัติการธุรกิจที่สร้างด้วยโปรโตคอล Nostr แบบกระจายอำนาจ เป็นเจ้าของเอง และให้ความสำคัญกับความเป็นส่วนตัว"
+    />
+    <meta
+      name="keywords"
+      content="BNOS, POS, Bitcoin, Lightning, Nostr, ระบบจุดขาย, ระบบปฏิบัติการธุรกิจ, กระจายอำนาจ"
+    />
+    <meta
+      property="og:title"
+      content="BNOS - ระบบปฏิบัติการธุรกิจ Bitcoin Nostr"
+    />
+    <meta
+      property="og:description"
+      content="ระบบจุดขายที่ใช้พลัง Lightning สร้างด้วยโปรโตคอล Nostr แบบกระจายอำนาจ เป็นเจ้าของเอง และให้ความสำคัญกับความเป็นส่วนตัว"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bnos.space/th/" />
+    <meta property="og:image" content="https://bnos.space/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="th_TH" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="lo_LA" />
+    <meta
+      property="og:site_name"
+      content="BNOS - ระบบปฏิบัติการธุรกิจ Bitcoin Nostr"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="BNOS - ระบบปฏิบัติการธุรกิจ Bitcoin Nostr"
+    />
+    <meta
+      name="twitter:description"
+      content="ระบบจุดขายที่ใช้พลัง Lightning สร้างด้วยโปรโตคอล Nostr แบบกระจายอำนาจ เป็นเจ้าของเอง และให้ความสำคัญกับความเป็นส่วนตัว"
+    />
+    <meta name="twitter:image" content="https://bnos.space/og-image.png" />
+    <meta name="twitter:site" content="@bnos_space" />
+
+    <!-- Language Alternates -->
+    <link rel="canonical" href="https://bnos.space/th/" />
+    <link rel="alternate" hreflang="en" href="https://bnos.space/en/" />
+    <link rel="alternate" hreflang="lo" href="https://bnos.space/lo/" />
+    <link rel="alternate" hreflang="th" href="https://bnos.space/th/" />
+    <link rel="alternate" hreflang="x-default" href="https://bnos.space/en/" />
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="BNOS Team" />
+    <meta name="theme-color" content="#f59e0b" />
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      /* Thai-specific font override */
+      body {
+        font-family: "Noto Sans Thai", "Inter", -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+    </style>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "BNOS",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, PWA",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "description": "ระบบจุดขายที่ใช้พลัง Lightning สร้างด้วยโปรโตคอล Nostr แบบกระจายอำนาจ เป็นเจ้าของเอง และให้ความสำคัญกับความเป็นส่วนตัวสำหรับธุรกิจสมัยใหม่",
+          "url": "https://bnos.space",
+          "screenshot": "https://bnos.space/screenshot.png",
+          "featureList": [
+            "การชำระเงิน Lightning Network",
+            "กระเป๋าเงินแบบไม่ต้องฝากเก็บ",
+            "การเชื่อมต่อโปรโตคอล Nostr",
+            "สถาปัตยกรรมแบบออฟไลน์ก่อน",
+            "การวิเคราะห์แบบเรียลไทม์",
+            "การจัดการทีมงาน"
+          ],
+          "inLanguage": ["en", "lo", "th"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "ratingCount": "1"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "BNOS Team",
+            "url": "https://bnos.space"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "BNOS",
+          "url": "https://bnos.space",
+          "logo": "https://bnos.space/icon-192.png",
+          "sameAs": [
+            "https://github.com/locobit-space",
+            "https://twitter.com/bnos_space",
+            "https://yakihonne.com/profile/bnos@nostrcheck.me"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "BNOS คืออะไร?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BNOS (Bitcoin Nostr Operating System) คือระบบจุดขาย (POS) และระบบปฏิบัติการธุรกิจแบบกระจายอำนาจที่ขับเคลื่อนด้วย Lightning Network ช่วยให้ธุรกิจรับการชำระเงินด้วย Bitcoin และจัดการการดำเนินงานได้โดยไม่ต้องผ่านคนกลาง"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "BNOS ใช้งานฟรีหรือไม่?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ใช่ BNOS เป็นซอฟต์แวร์โอเพ่นซอร์ส คุณสามารถใช้คุณสมบัติพื้นฐานได้ฟรี เราไม่เรียกเก็บค่าธรรมเนียมการทำธุรกรรมจากการชำระเงินของคุณ"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "ฉันจำเป็นต้องมีบัญชีธนาคารหรือไม่?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ไม่ คุณไม่จำเป็นต้องมีบัญชีธนาคารแบบเดิม BNOS ทำงานบน Bitcoin Lightning Network ช่วยให้คุณควบคุมเงินของคุณได้อย่างเต็มที่"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "โหมดออฟไลน์ทำงานอย่างไร?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BNOS ใช้สถาปัตยกรรม 'Local-First' ข้อมูลจะถูกเก็บไว้ในอุปกรณ์ของคุณก่อน คุณสามารถดำเนินการขายแบบออฟไลน์ได้ และข้อมูลจะถูกซิงค์กับ Nostr relays เมื่อคุณเชื่อมต่อออนไลน์อีกครั้ง"
+              }
+            }
+          ]
+        }
+      ]
+    </script>
+  </head>
+  <body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+      <a href="../en/index.html">EN</a>
+      <a href="../lo/index.html">ລາວ</a>
+      <a href="../th/index.html" class="active">ไทย</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-content">
+        <a href="#" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+          </div>
+          <span class="nav-logo-text">BNOS</span>
+        </a>
+        <div class="nav-mobile-toggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li>
+              <a href="#features" onclick="closeMobileMenu()">คุณสมบัติ</a>
+            </li>
+            <li>
+              <a href="#how-it-works" onclick="closeMobileMenu()"
+                >วิธีการทำงาน</a
+              >
+            </li>
+            <li>
+              <a href="#technology" onclick="closeMobileMenu()">เทคโนโลยี</a>
+            </li>
+            <li>
+              <a href="manual.html" onclick="closeMobileMenu()">เอกสาร</a>
+            </li>
+          </ul>
+          <a href="https://app.bnos.space" class="nav-cta post-launch"
+            >เริ่มต้นใช้งาน</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-content">
+        <!-- Pre-launch: Show countdown -->
+        <div class="pre-launch">
+          <div class="hero-badge">
+            <div class="hero-badge-dot"></div>
+            <span class="hero-badge-text">กำลังจะมาถึง</span>
+          </div>
+          <h1 class="hero-title">
+            อนาคตของ<br />
+            <span>การดำเนินธุรกิจ</span>
+          </h1>
+          <p class="hero-subtitle">
+            ระบบจุดขายที่ใช้พลัง Lightning สร้างด้วยโปรโตคอล Nostr
+            แบบกระจายอำนาจ เป็นเจ้าของเอง
+            และให้ความสำคัญกับความเป็นส่วนตัวสำหรับธุรกิจสมัยใหม่
+          </p>
+          <!-- Countdown -->
+          <div class="countdown-section">
+            <p class="countdown-label">กำลังเปิดตัวในอีก</p>
+            <div class="countdown" id="countdown">
+              <div class="countdown-item">
+                <span class="countdown-value" id="days">--</span>
+                <span class="countdown-unit">วัน</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="hours">--</span>
+                <span class="countdown-unit">ชั่วโมง</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="minutes">--</span>
+                <span class="countdown-unit">นาที</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="seconds">--</span>
+                <span class="countdown-unit">วินาที</span>
+              </div>
+            </div>
+            <div class="launch-date">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"
+                />
+              </svg>
+              <span>1 มกราคม 2026 • 09:09 น.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post-launch: Show landing content -->
+        <div class="post-launch">
+          <div class="hero-badge">
+            <div class="hero-badge-dot"></div>
+            <span class="hero-badge-text">🚀 เปิดตัวแล้ว!</span>
+          </div>
+          <h1 class="hero-title">
+            อนาคตของ<br />
+            <span>การดำเนินธุรกิจ</span>
+          </h1>
+          <p class="hero-subtitle">
+            ระบบจุดขายที่ใช้พลัง Lightning สร้างด้วยโปรโตคอล Nostr
+            แบบกระจายอำนาจ เป็นเจ้าของเอง
+            และให้ความสำคัญกับความเป็นส่วนตัวสำหรับธุรกิจสมัยใหม่
+          </p>
+        </div>
+        <div class="hero-buttons post-launch">
+          <a href="https://app.bnos.space" class="btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+            เริ่มต้นใช้งาน
+          </a>
+          <a href="manual.html" class="btn-secondary">อ่านเอกสาร</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">คุณสมบัติ</span>
+          <h2 class="section-title">ทุกสิ่งที่คุณต้องการ</h2>
+          <p class="section-subtitle">
+            ระบบปฏิบัติการธุรกิจที่ออกแบบมาสำหรับอนาคตของการค้า
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon">⚡</div>
+            <h3 class="feature-title">การชำระเงิน Lightning</h3>
+            <p class="feature-desc">
+              รับชำระด้วย Bitcoin ทันทีผ่าน Lightning Network
+              ค่าธรรมเนียมเกือบศูนย์ และชำระเงินแบบทันที
+            </p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon">🔐</div>
+            <h3 class="feature-title">ไม่ต้องฝากเก็บ</h3>
+            <p class="feature-desc">
+              กุญแจของคุณ เหรียญของคุณ เราไม่เคยถือเงินของคุณ
+              อธิปไตยทางการเงินอย่างสมบูรณ์
+            </p>
+          </div>
+          <div class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon">🌐</div>
+            <h3 class="feature-title">กระจายอำนาจแบบสมบูรณ์</h3>
+            <p class="feature-desc">
+              สร้างบนโปรโตคอล Nostr ไม่มีเซิร์ฟเวอร์กลาง ข้อมูลของคุณอยู่กับคุณ
+            </p>
+          </div>
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon">📱</div>
+            <h3 class="feature-title">ใช้งานแบบออฟไลน์</h3>
+            <p class="feature-desc">
+              ทำงานได้โดยไม่มีการเชื่อมต่ออินเทอร์เน็ต
+              ซิงค์เมื่อคุณออนไลน์อีกครั้ง ไม่พลาดการขายใดๆ
+            </p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon">📊</div>
+            <h3 class="feature-title">การวิเคราะห์แบบเรียลไทม์</h3>
+            <p class="feature-desc">
+              ข้อมูลเชิงลึกเชิงธุรกิจ ติดตามการขาย สินค้าคงคลัง และ
+              พฤติกรรมของลูกค้าแบบสดๆ
+            </p>
+          </div>
+          <div class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon">👥</div>
+            <h3 class="feature-title">การจัดการทีมงาน</h3>
+            <p class="feature-desc">
+              การสนับสนุนผู้ใช้หลายคนด้วยสิทธิ์ตามบทบาท
+              จัดการทีมของคุณอย่างมีประสิทธิภาพ
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">วิธีการทำงาน</span>
+          <h2 class="section-title">เริ่มต้นภายในไม่กี่นาที</h2>
+          <p class="section-subtitle">
+            กระบวนการตั้งค่าง่ายๆ เพื่อเริ่มธุรกิจของคุณใน BNOS
+          </p>
+        </div>
+        <div class="steps">
+          <div class="step reveal reveal-delay-1">
+            <div class="step-number">1</div>
+            <h3 class="step-title">สร้างบัญชี</h3>
+            <p class="step-desc">
+              ลงทะเบียนด้วยกุญแจ Nostr ของคุณ หรือสร้างใหม่ ไม่จำเป็นต้องมีอีเมล
+              หรือข้อมูลส่วนตัว
+            </p>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step-number">2</div>
+            <h3 class="step-title">ตั้งค่าร้านค้าของคุณ</h3>
+            <p class="step-desc">
+              ตั้งค่าโปรไฟล์ธุรกิจของคุณ เพิ่มสินค้า และ ตั้งค่ากระเป๋าเงิน
+              Lightning
+            </p>
+          </div>
+          <div class="step reveal reveal-delay-3">
+            <div class="step-number">3</div>
+            <h3 class="step-title">เริ่มขาย</h3>
+            <p class="step-desc">
+              รับการชำระเงิน จัดการสินค้าคงคลัง และ ขยายธุรกิจของคุณอย่างราบรื่น
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-stack" id="technology">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">เทคโนโลยี</span>
+          <h2 class="section-title">สร้างด้วย</h2>
+          <p class="section-subtitle">
+            สร้างด้วยเทคโนโลยีแบบกระจายอำนาจที่ทันสมัย
+          </p>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-item reveal reveal-delay-1">
+            <div class="tech-icon">₿</div>
+            <span class="tech-name">Bitcoin</span>
+          </div>
+          <div class="tech-item reveal reveal-delay-2">
+            <div class="tech-icon">⚡</div>
+            <span class="tech-name">Lightning Network</span>
+          </div>
+          <div class="tech-item reveal reveal-delay-3">
+            <div class="tech-icon">🟣</div>
+            <span class="tech-name">Nostr Protocol</span>
+          </div>
+          <div class="tech-item reveal reveal-delay-4">
+            <div class="tech-icon">💾</div>
+            <span class="tech-name">พื้นฐานท้องถิ่น</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">ถาม-ตอบ</span>
+          <h2 class="section-title">คำถามที่พบบ่อย (FAQ)</h2>
+          <p class="section-subtitle">คำถามทั่วไปเกี่ยวกับ BNOS</p>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item reveal reveal-delay-1">
+            <h3 class="faq-question">BNOS คืออะไร?</h3>
+            <p class="faq-answer">
+              BNOS (Bitcoin Nostr Operating System) คือระบบจุดขาย (POS)
+              และระบบปฏิบัติการธุรกิจแบบกระจายอำนาจที่ขับเคลื่อนด้วย Lightning
+              Network ช่วยให้ธุรกิจรับการชำระเงินด้วย Bitcoin
+              และจัดการการดำเนินงานได้โดยไม่ต้องผ่านคนกลาง
+            </p>
+          </div>
+          <div class="faq-item reveal reveal-delay-2">
+            <h3 class="faq-question">BNOS ใช้งานฟรีหรือไม่?</h3>
+            <p class="faq-answer">
+              ใช่ BNOS เป็นซอฟต์แวร์โอเพ่นซอร์ส
+              คุณสามารถใช้คุณสมบัติพื้นฐานได้ฟรี
+              เราไม่เรียกเก็บค่าธรรมเนียมการทำธุรกรรมจากการชำระเงินของคุณ
+            </p>
+          </div>
+          <div class="faq-item reveal reveal-delay-3">
+            <h3 class="faq-question">ฉันจำเป็นต้องมีบัญชีธนาคารหรือไม่?</h3>
+            <p class="faq-answer">
+              ไม่ คุณไม่จำเป็นต้องมีบัญชีธนาคารแบบเดิม BNOS ทำงานบน Bitcoin
+              Lightning Network ช่วยให้คุณควบคุมเงินของคุณได้อย่างเต็มที่
+            </p>
+          </div>
+          <div class="faq-item reveal reveal-delay-4">
+            <h3 class="faq-question">โหมดออฟไลน์ทำงานอย่างไร?</h3>
+            <p class="faq-answer">
+              BNOS ใช้สถาปัตยกรรม 'Local-First'
+              ข้อมูลจะถูกเก็บไว้ในอุปกรณ์ของคุณก่อน
+              คุณสามารถดำเนินการขายแบบออฟไลน์ได้ และข้อมูลจะถูกซิงค์กับ Nostr
+              relays เมื่อคุณเชื่อมต่อออนไลน์อีกครั้ง
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="cta">
+      <div class="cta-orb"></div>
+      <div class="cta-content reveal">
+        <h2 class="cta-title">พร้อมที่จะเริ่มต้นแล้วหรือไม่?</h2>
+        <p class="cta-subtitle">
+          เข้าร่วมรายชื่อรอ และ เป็นคนแรกที่ได้สัมผัสกับอนาคตของการดำเนินธุรกิจ
+        </p>
+        <a href="#" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+          เข้าร่วมรายชื่อรอ
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <span class="footer-logo-text">BNOS</span>
+          </div>
+          <p class="footer-desc">
+            ระบบจุดขายที่ใช้พลัง Lightning สร้างด้วยโปรโตคอล Nostr
+            แบบกระจายอำนาจ เป็นเจ้าของเอง
+            และให้ความสำคัญกับความเป็นส่วนตัวสำหรับธุรกิจสมัยใหม่
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4>ผลิตภัณฑ์</h4>
+          <ul class="footer-links">
+            <li><a href="#features">คุณสมบัติ</a></li>
+            <li><a href="#how-it-works">วิธีการทำงาน</a></li>
+            <li><a href="#technology">เทคโนโลยี</a></li>
+            <!-- <li><a href="#">Pricing</a></li> -->
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>แหล่งข้อมูล</h4>
+          <ul class="footer-links">
+            <li><a href="docs.bnos.space">เอกสาร</a></li>
+            <!-- <li><a href="#">API Reference</a></li> -->
+            <li><a href="#">สนับสนุน</a></li>
+            <li><a href="#">บล็อก</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>บริษัท</h4>
+          <ul class="footer-links">
+            <li><a href="#">เกี่ยวกับเรา</a></li>
+            <li><a href="#">ติดต่อ</a></li>
+            <li><a href="#">นโยบายความเป็นส่วนตัว</a></li>
+            <li><a href="#">เงื่อนไขการใช้บริการ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2026 BNOS. สงวนลิขสิทธิ์ทั้งหมด Powered by Nostr & Bitcoin Lightning
+          Network.
+        </p>
+        <div class="footer-social">
+          <!-- discord -->
+          <a
+            href="https://discord.gg/aNwEQQF3w8"
+            target="_blank"
+            rel="noopener"
+            title="Discord"
+          >
+            <svg
+              viewBox="0 -28.5 256 256"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              preserveAspectRatio="xMidYMid"
+              fill="#000000"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <path
+                    d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+                    fill="#5865F2"
+                    fill-rule="nonzero"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a
+            href="https://github.com/locobit-space"
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+          >
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://yakihonne.com/profile/bnos@nostrcheck.me"
+            target="_blank"
+            rel="noopener"
+            title="Nostr"
+          >
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="Bitcoin">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-1h-1v-2h1v-4H9v-2h2V7h2v1h1v2h-1v4h2v2h-2v1z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const navRight = document.querySelector(".nav-right");
+        const mobileToggle = document.querySelector(".nav-mobile-toggle");
+        navRight.classList.toggle("active");
+        mobileToggle.classList.toggle("active");
+      }
+
+      function closeMobileMenu() {
+        const navRight = document.querySelector(".nav-right");
+        const mobileToggle = document.querySelector(".nav-mobile-toggle");
+        navRight.classList.remove("active");
+        mobileToggle.classList.remove("active");
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const navRight = document.querySelector(".nav-right");
+        const mobileToggle = document.querySelector(".nav-mobile-toggle");
+        const nav = document.querySelector(".nav");
+
+        if (
+          navRight.classList.contains("active") &&
+          !nav.contains(event.target)
+        ) {
+          closeMobileMenu();
+        }
+      });
+
+      // Launch date: 1 มกราคม 2026 09:09:00 น. (local time)
+      const launchDate = new Date("2026-01-01T09:09:00").getTime();
+
+      function checkLaunchStatus() {
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        if (distance < 0) {
+          // Post-launch
+          document.body.classList.remove("is-pre-launch");
+          document.body.classList.add("is-post-launch");
+          return true;
+        } else {
+          // Pre-launch
+          document.body.classList.remove("is-post-launch");
+          document.body.classList.add("is-pre-launch");
+          return false;
+        }
+      }
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        if (distance < 0) {
+          document.getElementById("days").textContent = "00";
+          document.getElementById("hours").textContent = "00";
+          document.getElementById("minutes").textContent = "00";
+          document.getElementById("seconds").textContent = "00";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = String(days).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("hours").textContent = String(hours).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("minutes").textContent = String(
+          minutes
+        ).padStart(2, "0");
+        document.getElementById("seconds").textContent = String(
+          seconds
+        ).padStart(2, "0");
+      }
+
+      // Initial check
+      checkLaunchStatus();
+      updateCountdown();
+
+      // Update every second
+      setInterval(() => {
+        checkLaunchStatus();
+        updateCountdown();
+      }, 1000);
+
+      // Scroll Reveal Animation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target); // Only animate once
+          }
+        });
+      }, observerOptions);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>

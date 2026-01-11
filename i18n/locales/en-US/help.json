@@ -1,0 +1,175 @@
+{
+  "helpContent": {
+    "dashboard": {
+      "title": "Dashboard",
+      "description": "Overview of your business performance",
+      "sections": {
+        "stats": {
+          "title": "Statistics Cards",
+          "content": "View key metrics like total sales, orders, and revenue at a glance."
+        },
+        "quickActions": {
+          "title": "Quick Actions",
+          "content": "Access frequently used features like New Sale, Add Product, and View Reports."
+        }
+      }
+    },
+    "pos": {
+      "title": "Point of Sale",
+      "description": "Process sales and manage transactions",
+      "sections": {
+        "cart": {
+          "title": "Shopping Cart",
+          "content": "Add products by scanning barcode, searching, or clicking. Adjust quantities and remove items as needed."
+        },
+        "checkout": {
+          "title": "Checkout Process",
+          "content": "Select payment method (Cash, Card, QR, Lightning). Apply discounts if applicable. Complete the transaction."
+        },
+        "tables": {
+          "title": "Table Management",
+          "content": "For restaurants: Select a table, add orders, split bills, and manage seating."
+        }
+      }
+    },
+    "products": {
+      "title": "Products",
+      "description": "Manage your product catalog",
+      "sections": {
+        "addProduct": {
+          "title": "Adding Products",
+          "content": "Click \"Add Product\" to create new items. Fill in name, price, category, and optionally upload an image."
+        },
+        "editProduct": {
+          "title": "Editing Products",
+          "content": "Click on any product to edit its details. You can update prices, stock levels, and descriptions."
+        },
+        "categories": {
+          "title": "Categories",
+          "content": "Organize products into categories for easier navigation and reporting."
+        },
+        "barcode": {
+          "title": "Barcode Generation",
+          "content": "Generate barcodes for products without one. Supports EAN-13, Code128, and QR formats."
+        }
+      }
+    },
+    "inventory": {
+      "title": "Inventory",
+      "description": "Track stock levels and manage suppliers",
+      "sections": {
+        "stockLevels": {
+          "title": "Stock Levels",
+          "content": "View current stock for all products. Items with low stock are highlighted for reordering."
+        },
+        "adjustments": {
+          "title": "Stock Adjustments",
+          "content": "Adjust stock for counts, damages, or returns. All changes are logged for auditing."
+        },
+        "transfers": {
+          "title": "Branch Transfers",
+          "content": "Transfer stock between branches. Select source, destination, and quantities."
+        },
+        "purchaseOrders": {
+          "title": "Purchase Orders",
+          "content": "Create POs to order from suppliers. Track status: Draft → Pending → Ordered → Received."
+        },
+        "suppliers": {
+          "title": "Suppliers",
+          "content": "Manage supplier contacts, payment terms, and order history."
+        }
+      }
+    },
+    "orders": {
+      "title": "Orders",
+      "description": "View and manage sales orders",
+      "sections": {
+        "orderList": {
+          "title": "Order List",
+          "content": "View all orders with filters for date, status, and payment method."
+        },
+        "orderDetails": {
+          "title": "Order Details",
+          "content": "Click an order to view items, payment info, and customer details."
+        },
+        "refunds": {
+          "title": "Refunds",
+          "content": "Process refunds for returned items. Stock is automatically adjusted."
+        }
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Configure your system",
+      "sections": {
+        "account": {
+          "title": "Account Settings",
+          "content": "Update your profile, change password, and manage Nostr identity."
+        },
+        "business": {
+          "title": "Business Settings",
+          "content": "Configure business name, address, tax rates, and receipt settings."
+        },
+        "integrations": {
+          "title": "Integrations",
+          "content": "Connect to Cloudinary for images, configure payment gateways."
+        }
+      }
+    }
+  },
+  "title": "Help",
+  "searchPlaceholder": "Search help...",
+  "resultsFound": "results found",
+  "noResults": "No results found",
+  "noHelpAvailable": "No help available",
+  "noHelpDesc": "Help content for this page is coming soon.",
+  "needMoreHelp": "Need more help?",
+  "reportBug": "Report Bug",
+  "requestFeature": "Request Feature",
+  "openHelp": "Open Help",
+  "pressQuestion": "Press ? for help",
+  "syncing": "Syncing...",
+  "edit": "Edit",
+  "writeHelp": "Write Help Article",
+  "fromNostr": "Synced from Nostr",
+  "browseCommunityDocs": "Browse All Community Docs",
+  "communityDocs": "Community Documentation",
+  "communityDocsDesc": "Browse and contribute documentation written by the community",
+  "allPages": "All Pages",
+  "allLanguages": "All Languages",
+  "searchArticles": "Search articles...",
+  "totalArticles": "Total Articles",
+  "noArticlesYet": "No articles yet",
+  "beFirstToWrite": "Be the first to write a help article for the community!",
+  "writeFirst": "Write First Article",
+  "writeArticle": "Write Article",
+  "writeNew": "Write New Article",
+  "tryDifferentSearch": "Try a different search term",
+  "contributeTitle": "Help the Community!",
+  "contributeDesc": "Your knowledge can help other users. Write documentation in your language and share it via Nostr.",
+  "poweredByNostr": "Powered by Nostr - Decentralized & Censorship-Resistant",
+  "syncComplete": "Sync Complete",
+  "syncedFromNostr": "Articles synced from Nostr relays",
+  "editor": {
+    "createArticle": "Create Help Article",
+    "editArticle": "Edit Help Article",
+    "page": "Page",
+    "language": "Language",
+    "title": "Title",
+    "titlePlaceholder": "e.g. How to use the POS",
+    "description": "Description",
+    "descriptionPlaceholder": "Brief description of this help section",
+    "content": "Content (Markdown)",
+    "write": "Write",
+    "preview": "Preview",
+    "contentPlaceholder": "Write detailed help content here. Supports **markdown** formatting.",
+    "noContent": "No content to preview",
+    "tags": "Tags",
+    "tagsDescription": "Comma-separated tags for search",
+    "tagsPlaceholder": "e.g. sales, checkout, payment",
+    "update": "Update",
+    "publish": "Publish to Nostr",
+    "publishSuccess": "Help published!",
+    "publishedToNostr": "Article saved to Nostr relays"
+  }
+}

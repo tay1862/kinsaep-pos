@@ -1,0 +1,16 @@
+{
+  "ingredients": {
+    "title": "วัตถุดิบ",
+    "subtitle": "จัดการวัตถุดิบและราคาทุน",
+    "ingredient": "วัตถุดิบ",
+    "addIngredient": "เพิ่มวัตถุดิบ",
+    "editIngredient": "แก้ไขวัตถุดิบ",
+    "name": "ชื่อ",
+    "unit": "หน่วย",
+    "costPerUnit": "ราคาต่อหน่วย",
+    "currentStock": "สต็อกปัจจุบัน",
+    "minStock": "สต็อกขั้นต่ำ",
+    "category": "หมวดหมู่",
+    "noIngredients": "ยังไม่มีวัตถุดิบ"
+  }
+}

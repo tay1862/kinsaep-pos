@@ -1,0 +1,18 @@
+{
+  "receipt": {
+    "title": "ใบเสร็จ",
+    "printReceipt": "พิมพ์ใบเสร็จ",
+    "eReceipt": "e-Receipt",
+    "sendToNostr": "ส่งไปยัง Nostr",
+    "qrCode": "QR Code",
+    "thankYou": "ขอบคุณที่ใช้บริการ!",
+    "date": "วันที่",
+    "time": "เวลา",
+    "items": "รายการ",
+    "subtotal": "รวมย่อย",
+    "tax": "ภาษี",
+    "total": "รวม",
+    "paymentMethod": "วิธีชำระเงิน",
+    "orderNumber": "หมายเลขคำสั่งซื้อ"
+  }
+}

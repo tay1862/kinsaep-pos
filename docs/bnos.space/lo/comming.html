@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="lo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BNOS - ລະບົບປະຕິບັດການທຸລະກິດ | ກຳລັງມາເຖິງ</title>
+    <meta
+      name="description"
+      content="ລະບົບຈຸດຂາຍທີ່ໃຊ້ພະລັງງານ Lightning & ລະບົບປະຕິບັດການທຸລະກິດ. ສ້າງຂຶ້ນດ້ວຍໂປຣໂຕຄອນ Nostr. ເປີດຕົວ 1 ມັງກອນ 2026."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect fill='%23f59e0b' width='24' height='24' rx='4'/><path fill='white' d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Lao:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        font-family: "Noto Sans Lao", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .landing-container {
+        min-height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          #0a0a12 0%,
+          #12121f 50%,
+          #0a0a12 100%
+        );
+        position: relative;
+        overflow: hidden;
+        padding: 60px 20px 140px;
+      }
+
+      /* Animated stars background */
+      .stars {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: white;
+        border-radius: 50%;
+        opacity: 0;
+        animation: twinkle var(--duration) ease-in-out infinite;
+        animation-delay: var(--delay);
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        50% {
+          opacity: var(--opacity);
+          transform: scale(1);
+        }
+      }
+
+      /* Grid pattern */
+      .grid-pattern {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(
+            rgba(245, 158, 11, 0.03) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(245, 158, 11, 0.03) 1px, transparent 1px);
+        background-size: 60px 60px;
+        z-index: 1;
+      }
+
+      /* Floating orbs */
+      .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.2;
+        animation: float 10s ease-in-out infinite;
+        z-index: 0;
+      }
+
+      .orb-1 {
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(135deg, #f59e0b, #ea580c);
+        top: -200px;
+        right: -150px;
+      }
+
+      .orb-2 {
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(135deg, #8b5cf6, #6366f1);
+        bottom: -150px;
+        left: -100px;
+        animation-delay: -5s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-40px) rotate(5deg);
+        }
+      }
+
+      .content {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+        max-width: 900px;
+        text-align: center;
+      }
+
+      /* Logo */
+      .logo {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        border-radius: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.3),
+          0 0 60px rgba(245, 158, 11, 0.4), 0 20px 60px rgba(0, 0, 0, 0.5);
+        animation: logoGlow 4s ease-in-out infinite;
+        position: relative;
+      }
+
+      .logo::before {
+        content: "";
+        position: absolute;
+        inset: -3px;
+        border-radius: 30px;
+        background: linear-gradient(
+          135deg,
+          rgba(245, 158, 11, 0.5),
+          transparent,
+          rgba(245, 158, 11, 0.2)
+        );
+        z-index: -1;
+        animation: rotate 8s linear infinite;
+      }
+
+      @keyframes rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes logoGlow {
+        0%,
+        100% {
+          box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.3),
+            0 0 60px rgba(245, 158, 11, 0.3), 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.5),
+            0 0 80px rgba(245, 158, 11, 0.5), 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      .logo svg {
+        width: 55px;
+        height: 55px;
+        fill: white;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+      }
+
+      /* Brand */
+      .brand {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .brand-name {
+        font-size: 56px;
+        font-weight: 800;
+        color: white;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        text-shadow: 0 4px 30px rgba(245, 158, 11, 0.3);
+      }
+
+      .tagline {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 400;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+
+      .subtitle {
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.5);
+        max-width: 550px;
+        line-height: 1.7;
+        font-weight: 300;
+      }
+
+      /* Countdown */
+      .countdown-section {
+        margin-top: 10px;
+      }
+
+      .countdown-label {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 24px;
+        font-weight: 500;
+      }
+
+      .countdown {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .countdown-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 85px;
+        padding: 24px 20px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.06) 0%,
+          rgba(255, 255, 255, 0.02) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .countdown-item:hover {
+        background: linear-gradient(
+          180deg,
+          rgba(245, 158, 11, 0.15) 0%,
+          rgba(245, 158, 11, 0.05) 100%
+        );
+        border-color: rgba(245, 158, 11, 0.3);
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(245, 158, 11, 0.15);
+      }
+
+      .countdown-value {
+        font-size: 44px;
+        font-weight: 700;
+        color: white;
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+        text-shadow: 0 2px 20px rgba(255, 255, 255, 0.1);
+      }
+
+      .countdown-unit {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-top: 10px;
+        font-weight: 500;
+      }
+
+      /* Launch Date Badge */
+      .launch-date {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 28px;
+        background: linear-gradient(
+          135deg,
+          rgba(245, 158, 11, 0.15) 0%,
+          rgba(234, 88, 12, 0.1) 100%
+        );
+        border: 1px solid rgba(245, 158, 11, 0.25);
+        border-radius: 100px;
+        margin-top: 24px;
+        animation: pulse-border 3s ease-in-out infinite;
+      }
+
+      @keyframes pulse-border {
+        0%,
+        100% {
+          border-color: rgba(245, 158, 11, 0.25);
+        }
+        50% {
+          border-color: rgba(245, 158, 11, 0.5);
+        }
+      }
+
+      .launch-date svg {
+        width: 18px;
+        height: 18px;
+        fill: #f59e0b;
+      }
+
+      .launch-date span {
+        color: #fbbf24;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+
+      /* Features */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 24px;
+        width: 100%;
+        max-width: 700px;
+      }
+
+      .feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 24px 16px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .feature:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.12);
+        transform: translateY(-4px);
+      }
+
+      .feature-icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(
+          135deg,
+          rgba(245, 158, 11, 0.2),
+          rgba(234, 88, 12, 0.1)
+        );
+        border: 1px solid rgba(245, 158, 11, 0.2);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+      }
+
+      .feature-text {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 13px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      /* Footer */
+      .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 20px;
+        background: linear-gradient(
+          to top,
+          rgba(10, 10, 18, 0.98),
+          rgba(10, 10, 18, 0.8),
+          transparent
+        );
+        z-index: 100;
+      }
+
+      .footer-icons {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .footer-icons a {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .footer-icons a:hover {
+        background: rgba(245, 158, 11, 0.15);
+        border-color: rgba(245, 158, 11, 0.3);
+        transform: translateY(-3px);
+      }
+
+      .footer-icons svg {
+        width: 20px;
+        height: 20px;
+        fill: rgba(255, 255, 255, 0.5);
+        transition: fill 0.3s ease;
+      }
+
+      .footer-icons a:hover svg {
+        fill: #f59e0b;
+      }
+
+      .footer-text {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.35);
+        letter-spacing: 1px;
+      }
+
+      /* Language Switcher */
+      .lang-switcher {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+        display: flex;
+        gap: 8px;
+      }
+
+      .lang-btn {
+        padding: 8px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .lang-btn:hover,
+      .lang-btn.active {
+        background: rgba(245, 158, 11, 0.15);
+        border-color: rgba(245, 158, 11, 0.3);
+        color: #f59e0b;
+      }
+
+      /* Responsive */
+      @media (max-width: 700px) {
+        .brand-name {
+          font-size: 40px;
+          letter-spacing: 4px;
+        }
+
+        .tagline {
+          font-size: 14px;
+          letter-spacing: 2px;
+        }
+
+        .countdown-item {
+          min-width: 70px;
+          padding: 18px 14px;
+        }
+
+        .countdown-value {
+          font-size: 34px;
+        }
+
+        .features {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 400px) {
+        .countdown {
+          gap: 8px;
+        }
+
+        .countdown-item {
+          min-width: 60px;
+          padding: 14px 10px;
+        }
+
+        .countdown-value {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+      <a href="../en/comming.html" class="lang-btn">EN</a>
+      <a href="../lo/comming.html" class="lang-btn active">ລາວ</a>
+    </div>
+
+    <div class="landing-container">
+      <!-- Stars -->
+      <div class="stars" id="stars"></div>
+
+      <!-- Grid pattern -->
+      <div class="grid-pattern"></div>
+
+      <!-- Orbs -->
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+
+      <div class="content">
+        <!-- Logo -->
+        <div class="logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+        </div>
+
+        <!-- Brand -->
+        <div class="brand">
+          <h1 class="brand-name">BNOS</h1>
+          <p class="tagline">ລະບົບປະຕິບັດການທຸລະກິດ</p>
+        </div>
+
+        <p class="subtitle">
+          ລະບົບຈຸດຂາຍທີ່ໃຊ້ພະລັງງານ Lightning ສ້າງຂຶ້ນດ້ວຍໂປຣໂຕຄອນ Nostr.
+          ແບບກະຈາຍສ່ວນ, ເປັນເຈົ້າຂອງເອງ ແລະ ເອົາໃຈໃສ່ຄວາມເປັນສ່ວນຕົວສຳລັບທຸລະກິດທີ່ທັນສະໄໝ.
+        </p>
+
+        <!-- Countdown -->
+        <div class="countdown-section">
+          <p class="countdown-label">ກຳລັງເປີດຕົວໃນອີກ</p>
+          <div class="countdown" id="countdown">
+            <div class="countdown-item">
+              <span class="countdown-value" id="days">--</span>
+              <span class="countdown-unit">ມື້</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="hours">--</span>
+              <span class="countdown-unit">ຊົ່ວໂມງ</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="minutes">--</span>
+              <span class="countdown-unit">ນາທີ</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="seconds">--</span>
+              <span class="countdown-unit">ວິນາທີ</span>
+            </div>
+          </div>
+
+          <div class="launch-date">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"
+              />
+            </svg>
+            <span>1 ມັງກອນ 2026 • 09:09 ໂມງເຊົ້າ</span>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <span class="feature-text">ການຈ່າຍເງິນ<br />Lightning</span>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🔐</div>
+            <span class="feature-text">ບໍ່ມີ<br />ການຝາກຮັກສາ</span>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🌐</div>
+            <span class="feature-text">ກະຈາຍສ່ວນ<br />ແບບເຕັມຮູບແບບ</span>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📱</div>
+            <span class="feature-text">ໃຊ້ງານ<br />ແບບອອບໄລນ໌</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="footer-icons">
+          <a
+            href="https://github.com/locobit-space"
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+          >
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://nostr.com"
+            target="_blank"
+            rel="noopener"
+            title="Nostr"
+          >
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="Bitcoin">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-1h-1v-2h1v-4H9v-2h2V7h2v1h1v2h-1v4h2v2h-2v1z"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="footer-text">ຂັບເຄື່ອນໂດຍ Nostr ແລະ Bitcoin Lightning Network</p>
+      </div>
+    </div>
+
+    <script>
+      // Generate stars
+      (function () {
+        const starsContainer = document.getElementById("stars");
+        const starCount = 80;
+
+        for (let i = 0; i < starCount; i++) {
+          const star = document.createElement("div");
+          star.className = "star";
+          star.style.left = Math.random() * 100 + "%";
+          star.style.top = Math.random() * 100 + "%";
+          star.style.setProperty("--duration", 2 + Math.random() * 3 + "s");
+          star.style.setProperty("--delay", Math.random() * 3 + "s");
+          star.style.setProperty("--opacity", 0.3 + Math.random() * 0.7);
+          starsContainer.appendChild(star);
+        }
+      })();
+
+      // Countdown to January 1, 2026 09:09:00 AM (local time)
+      (function () {
+        const launchDate = new Date("2026-01-01T09:09:00").getTime();
+
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const distance = launchDate - now;
+
+          if (distance < 0) {
+            document.getElementById("days").textContent = "00";
+            document.getElementById("hours").textContent = "00";
+            document.getElementById("minutes").textContent = "00";
+            document.getElementById("seconds").textContent = "00";
+            document.querySelector(".countdown-label").textContent =
+              "🚀 ເປີດຕົວແລ້ວ!";
+            return;
+          }
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("days").textContent = String(days).padStart(
+            2,
+            "0"
+          );
+          document.getElementById("hours").textContent = String(hours).padStart(
+            2,
+            "0"
+          );
+          document.getElementById("minutes").textContent = String(
+            minutes
+          ).padStart(2, "0");
+          document.getElementById("seconds").textContent = String(
+            seconds
+          ).padStart(2, "0");
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      })();
+    </script>
+  </body>
+</html>

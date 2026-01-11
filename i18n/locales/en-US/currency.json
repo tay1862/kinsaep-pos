@@ -1,0 +1,9 @@
+{
+  "currency": {
+    "lak": "Lao Kip",
+    "thb": "Thai Baht",
+    "usd": "US Dollar",
+    "btc": "Bitcoin",
+    "sats": "Satoshis"
+  }
+}

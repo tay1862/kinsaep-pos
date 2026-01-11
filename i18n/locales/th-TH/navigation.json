@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "dashboard": "แดชบอร์ด",
+    "pos": "ขาย",
+    "products": "สินค้า",
+    "orders": "คำสั่งซื้อ",
+    "customers": "ลูกค้า",
+    "inventory": "คลังสินค้า",
+    "recipes": "สูตรอาหาร",
+    "ingredients": "วัตถุดิบ",
+    "reports": "รายงาน",
+    "accounting": "บัญชี",
+    "invoicing": "ใบแจ้งหนี้",
+    "delivery": "การจัดส่ง",
+    "contracts": "สัญญา",
+    "employees": "พนักงาน",
+    "settings": "ตั้งค่า",
+    "kitchen": "ครัว",
+    "tables": "โต๊ะ",
+    "menu": "เมนู",
+    "main": "หลัก",
+    "business": "ธุรกิจ",
+    "management": "การจัดการ",
+    "more": "เพิ่มเติม"
+  }
+}

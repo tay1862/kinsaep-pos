@@ -1,0 +1,25 @@
+{
+  "receipt": {
+    "title": "ໃບຮັບເງິນ",
+    "print": "ພິມ",
+    "sendNostr": "ສົ່ງຜ່ານ Nostr",
+    "paymentProof": "ຫຼັກຖານການຈ່າຍ",
+    "thankYou": "ຂອບໃຈທີ່ຊື້ສິນຄ້າ!",
+    "options": "ຕົວເລືອກໃບຮັບເງິນ",
+    "eBill": "ໃບບິນອີເລັກໂທຣນິກ",
+    "sendEmail": "ອີເມວ",
+    "preview": "ເບິ່ງກ່ອນ",
+    "newOrder": "ອໍເດີໃໝ່",
+    "printing": "ກຳລັງພິມ...",
+    "thermalPaper": "ເຄື່ອງພິມຄວາມຮ້ອນ",
+    "showQRToCustomer": "ສະແດງ QR ໃຫ້ລູກຄ້າ",
+    "sendToCustomer": "ສົ່ງໃຫ້ລູກຄ້າ",
+    "viewReceipt": "ເບິ່ງໃບຮັບເງິນ",
+    "sendReceiptToEmail": "ສົ່ງໃບຮັບເງິນທາງອີເມວ",
+    "autoContinuing": "ດຳເນີນຕໍ່ອັດຕະໂນມັດໃນ {seconds} ວິນາທີ...",
+    "scanForEBill": "ສະແກນເພື່ອເບິ່ງໃບບິນ",
+    "scanDescription": "ລູກຄ້າສາມາດສະແກນ QR ນີ້ເພື່ອເບິ່ງໃບຮັບເງິນດິຈິຕອນ",
+    "eBillLink": "ລິ້ງໃບບິນ:",
+    "cardExternal": "ບັດ/ອື່ນໆ"
+  }
+}

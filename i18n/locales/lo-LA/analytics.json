@@ -1,0 +1,13 @@
+{
+  "analytics": {
+    "title": "AI ວິເຄາະ",
+    "insights": "ຂໍ້ມູນເຈາະເລິກ",
+    "noInsights": "ບໍ່ມີຂໍ້ມູນເຈາະເລິກ",
+    "positiveTrends": "ແນວໂນ້ມບວກ",
+    "alerts": "ການແຈ້ງເຕືອນ",
+    "topSeller": "ຂາຍດີສຸດ",
+    "peakHours": "ຊົ່ວໂມງສູງສຸດ",
+    "lowStock": "ສິນຄ້າໃກ້ໝົດ",
+    "upsell": "ໂອກາດຂາຍເພີ່ມ"
+  }
+}

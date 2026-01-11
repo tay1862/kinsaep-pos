@@ -1,0 +1,62 @@
+{
+  "ingredients": {
+    "title": "Ingredients",
+    "description": "Manage raw materials and stock levels",
+    "addIngredient": "Add Ingredient",
+    "editIngredient": "Edit Ingredient",
+    "deleteIngredient": "Delete Ingredient",
+    "searchPlaceholder": "Search ingredients...",
+    "noIngredients": "No ingredients found",
+    "name": "Ingredient Name",
+    "category": "Category",
+    "selectCategory": "Select Category",
+    "addCategory": "Add Category",
+    "unit": "Unit",
+    "stock": "Stock",
+    "currentStock": "Current Stock",
+    "minStock": "Min Stock",
+    "maxStock": "Max Stock",
+    "costPerUnit": "Cost per Unit",
+    "totalValue": "Total Value",
+    "supplier": "Supplier",
+    "expiryDate": "Expiry Date",
+    "lowStock": "Low Stock",
+    "outOfStock": "Out of Stock",
+    "inStock": "In Stock",
+    "addStock": "Add Stock",
+    "adjustStock": "Adjust Stock",
+    "stockHistory": "Stock History",
+    "lastUpdated": "Last Updated",
+    "usedInRecipes": "Used in Recipes",
+    "categories": {
+      "title": "Ingredient Categories",
+      "meat": "Meat & Poultry",
+      "seafood": "Seafood",
+      "dairy": "Dairy",
+      "vegetables": "Vegetables",
+      "fruits": "Fruits",
+      "grains": "Grains & Pasta",
+      "spices": "Spices & Herbs",
+      "sauces": "Sauces & Condiments",
+      "beverages": "Beverages",
+      "other": "Other"
+    },
+    "validation": {
+      "nameRequired": "Ingredient name is required",
+      "unitRequired": "Unit is required",
+      "costRequired": "Cost per unit is required"
+    },
+    "messages": {
+      "created": "Ingredient created successfully",
+      "updated": "Ingredient updated successfully",
+      "deleted": "Ingredient deleted successfully",
+      "stockUpdated": "Stock updated successfully",
+      "lowStockAlert": "{count} ingredients are running low"
+    },
+    "alerts": {
+      "title": "Stock Alerts",
+      "lowStockItems": "Low Stock Items",
+      "reorderSuggestion": "Consider reordering these items"
+    }
+  }
+}

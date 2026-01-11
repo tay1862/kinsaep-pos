@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>คู่มือการใช้งาน BNOS | เอกสาร</title>
+    <meta
+      name="description"
+      content="คู่มือการใช้งานฉบับสมบูรณ์สำหรับ BNOS - ระบบปฏิบัติการธุรกิจ จุดขายที่ขับเคลื่อนด้วย Lightning และสร้างด้วยโปรโตคอล Nostr"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../favicon.ico"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Noto Sans Thai", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        background: #0a0a12;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.7;
+        font-size: 16px;
+      }
+
+      /* Navigation */
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 16px 24px;
+        background: rgba(10, 10, 18, 0.95);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .nav-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .nav-logo-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-logo-icon svg {
+        width: 22px;
+        height: 22px;
+        fill: white;
+      }
+
+      .nav-logo-text {
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        letter-spacing: 2px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 24px;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #f59e0b;
+      }
+
+      /* Layout */
+      .layout {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-top: 80px;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        position: fixed;
+        top: 80px;
+        left: max(0px, calc((100vw - 1400px) / 2));
+        width: 280px;
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        padding: 32px 24px;
+        border-right: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(10, 10, 18, 0.5);
+      }
+
+      .sidebar-title {
+        font-size: 12px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 16px;
+      }
+
+      .sidebar-nav {
+        list-style: none;
+      }
+
+      .sidebar-nav li {
+        margin-bottom: 4px;
+      }
+
+      .sidebar-nav a {
+        display: block;
+        padding: 10px 16px;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 8px;
+        transition: all 0.2s;
+      }
+
+      .sidebar-nav a:hover {
+        color: white;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .sidebar-nav a.active {
+        color: #f59e0b;
+        background: rgba(245, 158, 11, 0.1);
+      }
+
+      /* Main Content */
+      .main-content {
+        margin-left: 280px;
+        flex: 1;
+        padding: 48px 64px;
+        max-width: calc(100% - 280px);
+      }
+
+      /* Typography */
+      h1 {
+        font-size: 40px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+
+      h2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: white;
+        margin-top: 56px;
+        margin-bottom: 24px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      h2:first-of-type {
+        margin-top: 32px;
+        border-top: none;
+        padding-top: 0;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        margin-top: 36px;
+        margin-bottom: 16px;
+      }
+
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+        margin-top: 24px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      .lead {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 32px;
+      }
+
+      /* Lists */
+      ul,
+      ol {
+        margin-bottom: 16px;
+        padding-left: 24px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      /* Tables */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 24px 0;
+        font-size: 14px;
+      }
+
+      th {
+        text-align: left;
+        padding: 12px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 600;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      td {
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      /* Code */
+      code {
+        font-family: "SF Mono", Monaco, Consolas, monospace;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 2px 8px;
+        border-radius: 4px;
+        color: #fbbf24;
+      }
+
+      pre {
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 20px;
+        overflow-x: auto;
+        margin: 16px 0;
+      }
+
+      pre code {
+        background: none;
+        padding: 0;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Alerts */
+      .alert {
+        padding: 16px 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+        border-left: 4px solid;
+      }
+
+      .alert-warning {
+        background: rgba(234, 179, 8, 0.1);
+        border-color: #eab308;
+        color: #fde047;
+      }
+
+      .alert-info {
+        background: rgba(59, 130, 246, 0.1);
+        border-color: #3b82f6;
+        color: #93c5fd;
+      }
+
+      .alert-success {
+        background: rgba(34, 197, 94, 0.1);
+        border-color: #22c55e;
+        color: #86efac;
+      }
+
+      /* Feature Cards */
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin: 24px 0;
+      }
+
+      .feature-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        padding: 20px;
+        transition: all 0.3s;
+      }
+
+      .feature-card:hover {
+        border-color: rgba(245, 158, 11, 0.3);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .feature-card-icon {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      .feature-card-title {
+        font-weight: 600;
+        color: white;
+        margin-bottom: 8px;
+      }
+
+      .feature-card-desc {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* Steps */
+      .steps {
+        counter-reset: step;
+        margin: 24px 0;
+      }
+
+      .step {
+        position: relative;
+        padding-left: 48px;
+        margin-bottom: 20px;
+      }
+
+      .step::before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 14px;
+        color: white;
+      }
+
+      /* Links */
+      a {
+        color: #f59e0b;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      a:hover {
+        color: #fbbf24;
+        text-decoration: underline;
+      }
+
+      /* Blockquote */
+      blockquote {
+        border-left: 3px solid #f59e0b;
+        padding-left: 20px;
+        margin: 20px 0;
+        color: rgba(255, 255, 255, 0.7);
+        font-style: italic;
+      }
+
+      /* FAQ */
+      .faq-item {
+        margin-bottom: 24px;
+      }
+
+      .faq-question {
+        font-weight: 600;
+        color: white;
+        margin-bottom: 8px;
+      }
+
+      .faq-answer {
+        color: rgba(255, 255, 255, 0.6);
+        padding-left: 16px;
+        border-left: 2px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Footer */
+      .footer {
+        margin-top: 80px;
+        padding: 40px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        text-align: center;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 14px;
+      }
+
+      .footer a {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .footer a:hover {
+        color: #f59e0b;
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .sidebar {
+          display: none;
+        }
+
+        .main-content {
+          margin-left: 0;
+          max-width: 100%;
+          padding: 32px 24px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        h1 {
+          font-size: 32px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher" style="position:fixed;top:20px;right:20px;z-index:1001;display:flex;gap:8px;">
+      <a href="../en/manual.html" style="padding:8px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;font-weight:500;transition:all 0.3s;">EN</a>
+      <a href="../lo/manual.html" style="padding:8px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;font-weight:500;transition:all 0.3s;">ລາວ</a>
+      <a href="../th/manual.html" style="padding:8px 16px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);border-radius:8px;color:#f59e0b;text-decoration:none;font-size:13px;font-weight:500;">ไทย</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-content">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+          </div>
+          <span class="nav-logo-text">BNOS</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="index.html#features">คุณสมบัติ</a></li>
+          <li><a href="#">เอกสาร</a></li>
+          <li>
+            <a href="https://github.com/locobit-space" target="_blank"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <p class="sidebar-title">Documentation</p>
+        <ul class="sidebar-nav">
+          <li><a href="#introduction" class="active">บทนำ</a></li>
+          <li><a href="#getting-started">เริ่มต้นใช้งาน</a></li>
+          <li><a href="#account-setup">ตั้งค่าบัญชี</a></li>
+          <li><a href="#shop-configuration">ตั้งค่าร้านค้า</a></li>
+          <li><a href="#product-management">จัดการสินค้า</a></li>
+          <li><a href="#point-of-sale">ระบบจุดขาย (POS)</a></li>
+          <li><a href="#payments">การชำระเงิน</a></li>
+          <li><a href="#inventory-management">สต็อกและคลังสินค้า</a></li>
+          <li><a href="#reports-analytics">รายงานและวิเคราะห์</a></li>
+          <li><a href="#settings">การตั้งค่า</a></li>
+          <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+          <li><a href="#support">ช่วยเหลือ</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <h1>BNOS คู่มือการใช้งาน</h1>
+        <p class="lead">
+          Bitcoin Nostr Operating System - Business Operating System - Lightning-Powered ระบบจุดขายสำหรับยุคใหม่
+        </p>
+
+        <!-- Introduction -->
+        <section id="introduction">
+          <h2>บทนำ</h2>
+          <p>
+            <strong>BNOS (Bitcoin Nostr Operating System - Business Operating System)</strong> คือระบบจุดขายและระบบปฏิบัติการธุรกิจยุคใหม่บนเทคโนโลยีกระจายอำนาจ ใช้ Lightning Network สำหรับการชำระเงิน Bitcoin ทันที และโปรโตคอล Nostr เพื่อการจัดการข้อมูลที่ปลอดภัยและไร้การเซ็นเซอร์
+          </p>
+
+          <h3>คุณสมบัติเด่น</h3>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-card-icon">⚡</div>
+              <div class="feature-card-title">Lightning-first</div>
+              <div class="feature-card-desc">รับจ่าย Bitcoin ทันที ค่าธรรมเนียมต่ำ</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-icon">🟣</div>
+              <div class="feature-card-title">Nostr-native</div>
+              <div class="feature-card-desc">โครงสร้างข้อมูลแบบกระจายอำนาจ เป็นเจ้าของข้อมูลเอง</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-icon">📦</div>
+              <div class="feature-card-title">POS + Inventory</div>
+              <div class="feature-card-desc">ขายสินค้า จัดการสต็อก และออกใบเสร็จในที่เดียว</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-icon">📊</div>
+              <div class="feature-card-title">Analytics</div>
+              <div class="feature-card-desc">ดูยอดขาย สินค้าขายดี และแนวโน้มแบบเรียลไทม์</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Getting Started -->
+        <section id="getting-started">
+          <h2>เริ่มต้นใช้งาน</h2>
+
+          <h3>ความต้องการระบบ</h3>
+          <ul>
+            <li>เบราว์เซอร์ที่รองรับ PWA (Chrome, Edge, Safari)</li>
+            <li>การเชื่อมต่ออินเทอร์เน็ต (โหมดออฟไลน์ทำงานได้เมื่อเชื่อมต่ออีกครั้ง)</li>
+            <li>กุญแจ Nostr (npub/nsec) หรือสร้างใหม่ในแอป</li>
+          </ul>
+
+          <h3>Quick Start</h3>
+          <div class="steps">
+            <div class="step">1) เปิด <strong>https://app.bnos.space</strong></div>
+            <div class="step">2) ลงชื่อเข้าใช้หรือสร้างกุญแจ Nostr ใหม่</div>
+            <div class="step">3) ตั้งค่าร้านและกระเป๋า Lightning</div>
+            <div class="step">4) เพิ่มสินค้าแรกและเริ่มขาย</div>
+          </div>
+        </section>
+
+        <!-- Account Setup -->
+        <section id="account-setup">
+          <h2>ตั้งค่าบัญชี</h2>
+
+          <h3>สร้างบัญชีใหม่</h3>
+          <div class="steps">
+            <div class="step">เปิดแอปและเลือก <strong>สร้างกุญแจ</strong></div>
+            <div class="step">บันทึก nsec ไว้อย่างปลอดภัย (ออฟไลน์)</div>
+            <div class="step">ตั้งชื่อร้านและเขตเวลา</div>
+          </div>
+
+          <h3>นำเข้ากุญแจเดิม</h3>
+          <div class="steps">
+            <div class="step">เลือก <strong>นำเข้ากุญแจ</strong></div>
+            <div class="step">วาง nsec หรือสแกน QR</div>
+            <div class="step">ยืนยันและเข้าสู่ระบบ</div>
+          </div>
+
+          <h3>ข้อแนะนำความปลอดภัย</h3>
+          <div class="alert alert-warning">
+            อย่าแชร์ nsec กับใคร สำรองไว้ในที่ปลอดภัย และพิจารณาใช้ฮาร์ดแวร์วอลเล็ต
+          </div>
+          <ul>
+            <li>เปิดใช้งานการล็อกอัตโนมัติในอุปกรณ์</li>
+            <li>ใช้รหัสผ่านอุปกรณ์ที่คาดเดายาก</li>
+            <li>สำรอง seed phrase ในที่ออฟไลน์</li>
+          </ul>
+        </section>
+
+        <!-- Shop Configuration -->
+        <section id="shop-configuration">
+          <h2>ตั้งค่าร้านค้า</h2>
+
+          <h3>ตั้งค่าเริ่มต้น</h3>
+          <p>เลือกประเภทธุรกิจ กำหนดสกุลเงิน ภาษี และโซนเวลาให้ตรงกับพื้นที่ดำเนินการ</p>
+
+          <h4>ตั้งค่ากระเป๋า Lightning</h4>
+          <ol>
+            <li>เชื่อมต่อวอลเล็ตที่รองรับ LNURL หรือ LND Hub</li>
+            <li>ทดสอบรับ/ส่งด้วยจำนวนเล็กน้อย</li>
+            <li>ตั้งค่าเพดานการชำระเงินต่อบิล</li>
+          </ol>
+        </section>
+
+        <!-- Product Management -->
+        <section id="product-management">
+          <h2>จัดการสินค้า</h2>
+
+          <h3>เพิ่มสินค้า</h3>
+          <div class="steps">
+            <div class="step">ไปที่ <strong>สินค้า</strong> > <strong>+ เพิ่มสินค้า</strong></div>
+            <div class="step">ใส่ชื่อ ราคา ภาษี และเปิดติดตามสต็อก</div>
+            <div class="step">อัปโหลดรูปและเลือกหมวดหมู่</div>
+          </div>
+
+          <h3>นำเข้าแบบกลุ่ม (CSV)</h3>
+          <div class="steps">
+            <div class="step">ดาวน์โหลดเทมเพลต CSV</div>
+            <div class="step">กรอกข้อมูลสินค้า</div>
+            <div class="step">อัปโหลดกลับเข้าระบบ</div>
+          </div>
+        </section>
+
+        <!-- POS -->
+        <section id="point-of-sale">
+          <h2>ระบบจุดขาย (POS)</h2>
+
+          <h3>การขาย</h3>
+          <div class="steps">
+            <div class="step">เปิดหน้าจอ POS</div>
+            <div class="step">ค้นหาหรือสแกนบาร์โค้ดเพิ่มสินค้า</div>
+            <div class="step">กด "ชำระเงิน" และเลือกวิธีการ</div>
+          </div>
+
+          <h3>วิธีชำระเงิน</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>วิธี</th>
+                <th>รายละเอียด</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>⚡ Lightning</td>
+                <td>สแกน QR และจ่ายทันที</td>
+              </tr>
+              <tr>
+                <td>💵 เงินสด</td>
+                <td>บันทึกยอดรับและเงินทอน</td>
+              </tr>
+              <tr>
+                <td>💳 บัตร</td>
+                <td>ใช้เครื่องรูดภายนอกแล้วบันทึกยอด</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Payments -->
+        <section id="payments">
+          <h2>การชำระเงิน</h2>
+
+          <h3>Lightning Network</h3>
+          <p>ทุกบิลออก QR Lightning ลูกค้าจ่ายและยืนยันภายใน ~1 วินาที</p>
+
+          <h3>การจัดการวอลเล็ต</h3>
+          <ol>
+            <li>ดูประวัติธุรกรรมทั้งหมด</li>
+            <li>ตรวจสอบสถานะและจำนวนเงิน</li>
+            <li>ส่งออกบันทึกเป็น CSV/PDF ได้</li>
+          </ol>
+        </section>
+
+        <!-- Inventory -->
+        <section id="inventory-management">
+          <h2>สต็อกและคลังสินค้า</h2>
+
+          <h3>ติดตามสต็อก</h3>
+          <ol>
+            <li>เปิดตัวเลือก "ติดตามสต็อก" ในสินค้า</li>
+            <li>ตั้งจำนวนเริ่มต้นและจุดแจ้งเตือนสินค้าใกล้หมด</li>
+          </ol>
+
+          <h3>ปรับสต็อก</h3>
+          <ol>
+            <li>ไปที่เมนูสต็อก</li>
+            <li>เลือกสินค้าและกด "ปรับสต็อก"</li>
+            <li>ระบุจำนวนและเหตุผล (เช่น รับเข้า/เสียหาย)</li>
+          </ol>
+        </section>
+
+        <!-- Reports -->
+        <section id="reports-analytics">
+          <h2>รายงานและวิเคราะห์</h2>
+
+          <h3>แดชบอร์ด</h3>
+          <ul>
+            <li>ยอดขายวันนี้และแนวโน้ม</li>
+            <li>ธุรกรรมล่าสุด</li>
+            <li>สินค้าใกล้หมด</li>
+            <li>ลูกค้ายอดนิยม</li>
+          </ul>
+
+          <h3>การส่งออกรายงาน</h3>
+          <p>ส่งออกเป็น PDF, Excel หรือ CSV ได้จากแต่ละรายงาน</p>
+        </section>
+
+        <!-- Settings -->
+        <section id="settings">
+          <h2>การตั้งค่า</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>หัวข้อ</th>
+                <th>รายละเอียด</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ภาษา</td>
+                <td>เลือกภาษาอินเทอร์เฟซ</td>
+              </tr>
+              <tr>
+                <td>สกุลเงิน</td>
+                <td>ตั้งค่าสกุลเงินแสดงผล</td>
+              </tr>
+              <tr>
+                <td>โซนเวลา</td>
+                <td>ตั้งเขตเวลาให้ตรงกับร้าน</td>
+              </tr>
+              <tr>
+                <td>ใบเสร็จ</td>
+                <td>กำหนดหัวท้าย โลโก้ และรายละเอียดภาษี</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>คำถามที่พบบ่อย</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: ต้องมี Bitcoin ก่อนหรือไม่?</div>
+            <div class="faq-answer">A: ไม่จำเป็น สามารถรับชำระและแปลงสกุลภายหลังได้</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Q: ใช้งานออฟไลน์ได้ไหม?</div>
+            <div class="faq-answer">A: ได้ ระบบบันทึกธุรกรรมไว้และซิงก์เมื่อออนไลน์</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Q: ข้อมูลปลอดภัยแค่ไหน?</div>
+            <div class="faq-answer">A: ข้อมูลถูกเข้ารหัสและคุณถือกุญแจด้วยตนเองผ่าน Nostr</div>
+          </div>
+        </section>
+
+        <!-- Support -->
+        <section id="support">
+          <h2>ช่วยเหลือ</h2>
+          <ul>
+            <li>📖 เอกสาร: <a href="https://docs.bnos.space">docs.bnos.space</a></li>
+            <li>💬 ชุมชน Nostr และ Discord</li>
+            <li>📧 อีเมล: support@bnos.space</li>
+            <li>🐛 รายงานบั๊ก: <a href="https://github.com/locobit-space/bitspace-pos/issues" target="_blank">GitHub Issues</a></li>
+          </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            ⚡ <strong>BNOS - Business Operating System</strong><br />
+            สร้างด้วย ❤️ บน Nostr & Lightning Network<br />
+            <a href="https://github.com/locobit-space">GitHub</a> •
+            <a href="https://bnos.space">Website</a>
+          </p>
+          <p style="margin-top: 16px">© 2026 BNOS. สงวนลิขสิทธิ์ทั้งหมด.</p>
+        </footer>
+      </main>
+    </div>
+
+    <script>
+      // Highlight active sidebar link on scroll
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".sidebar-nav a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

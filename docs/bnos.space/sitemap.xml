@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- English Homepage -->
+  <url>
+    <loc>https://bnos.space/en/</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bnos.space/en/" />
+    <xhtml:link rel="alternate" hreflang="lo" href="https://bnos.space/lo/" />
+    <xhtml:link rel="alternate" hreflang="th" href="https://bnos.space/th/" />
+  </url>
+  
+  <!-- Lao Homepage -->
+  <url>
+    <loc>https://bnos.space/lo/</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bnos.space/en/" />
+    <xhtml:link rel="alternate" hreflang="lo" href="https://bnos.space/lo/" />
+    <xhtml:link rel="alternate" hreflang="th" href="https://bnos.space/th/" />
+  </url>
+  
+  <!-- Thai Homepage -->
+  <url>
+    <loc>https://bnos.space/th/</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bnos.space/en/" />
+    <xhtml:link rel="alternate" hreflang="lo" href="https://bnos.space/lo/" />
+    <xhtml:link rel="alternate" hreflang="th" href="https://bnos.space/th/" />
+  </url>
+  
+</urlset>

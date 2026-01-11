@@ -1,0 +1,13 @@
+{
+  "delivery": {
+    "title": "จัดส่ง",
+    "orders": "คำสั่งส่ง",
+    "pending": "รอรับ",
+    "inProgress": "กำลังจัดส่ง",
+    "completed": "ส่งแล้ว",
+    "address": "ที่อยู่จัดส่ง",
+    "driver": "คนขับ",
+    "assignDriver": "มอบหมายคนขับ",
+    "estimatedTime": "เวลาโดยประมาณ"
+  }
+}

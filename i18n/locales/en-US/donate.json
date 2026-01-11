@@ -1,0 +1,17 @@
+{
+  "donate": {
+    "title": "Support the Developer",
+    "subtitle": "Help keep bnos.space free and open source",
+    "lightning": "Bitcoin Lightning",
+    "lightningDesc": "Scan with any Lightning wallet or click to copy",
+    "noLightning": "No Lightning address available",
+    "bank": "Bank Transfer (BCEL)",
+    "bankName": "Bank",
+    "bankDesc": "Scan with BCEL One or any Lao banking app",
+    "thanks": "Thank you for supporting open source software! ❤️",
+    "tabs": {
+      "lightning": "⚡ Lightning",
+      "bank": "🏦 Bank (BCEL)"
+    }
+  }
+}

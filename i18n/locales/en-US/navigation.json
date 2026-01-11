@@ -1,0 +1,25 @@
+{
+  "navigation": {
+    "dashboard": "Dashboard",
+    "pos": "POS",
+    "kitchen": "Kitchen",
+    "orders": "Orders",
+    "products": "Products",
+    "customers": "Customers",
+    "inventory": "Inventory",
+    "recipes": "Recipes",
+    "ingredients": "Ingredients",
+    "reports": "Reports",
+    "accounting": "Accounting",
+    "invoicing": "Invoicing",
+    "delivery": "Delivery",
+    "contracts": "Contracts",
+    "employees": "Employees",
+    "settings": "Settings",
+    "menu": "Menu",
+    "main": "Main",
+    "business": "Business",
+    "management": "Management",
+    "more": "More"
+  }
+}

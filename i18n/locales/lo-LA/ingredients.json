@@ -1,0 +1,62 @@
+{
+  "ingredients": {
+    "title": "ວັດຖຸດິບ",
+    "description": "ຈັດການວັດຖຸດິບ ແລະ ລະດັບສະຕ໊ອກ",
+    "addIngredient": "ເພີ່ມວັດຖຸດິບ",
+    "editIngredient": "ແກ້ໄຂວັດຖຸດິບ",
+    "deleteIngredient": "ລຶບວັດຖຸດິບ",
+    "searchPlaceholder": "ຄົ້ນຫາວັດຖຸດິບ...",
+    "noIngredients": "ບໍ່ພົບວັດຖຸດິບ",
+    "name": "ຊື່ວັດຖຸດິບ",
+    "category": "ປະເພດ",
+    "selectCategory": "ເລືອກປະເພດ",
+    "addCategory": "ເພີ່ມປະເພດ",
+    "unit": "ຫົວໜ່ວຍ",
+    "stock": "ສະຕ໊ອກ",
+    "currentStock": "ສະຕ໊ອກປັດຈຸບັນ",
+    "minStock": "ສະຕ໊ອກຕ່ຳສຸດ",
+    "maxStock": "ສະຕ໊ອກສູງສຸດ",
+    "costPerUnit": "ລາຄາຕໍ່ຫົວໜ່ວຍ",
+    "totalValue": "ມູນຄ່າລວມ",
+    "supplier": "ຜູ້ສະໜອງ",
+    "expiryDate": "ວັນໝົດອາຍຸ",
+    "lowStock": "ສະຕ໊ອກຕ່ຳ",
+    "outOfStock": "ໝົດສະຕ໊ອກ",
+    "inStock": "ມີສະຕ໊ອກ",
+    "addStock": "ເພີ່ມສະຕ໊ອກ",
+    "adjustStock": "ປັບສະຕ໊ອກ",
+    "stockHistory": "ປະຫວັດສະຕ໊ອກ",
+    "lastUpdated": "ອັບເດດຫຼ້າສຸດ",
+    "usedInRecipes": "ໃຊ້ໃນສູດອາຫານ",
+    "categories": {
+      "title": "ປະເພດວັດຖຸດິບ",
+      "meat": "ຊີ້ນ & ສັດປີກ",
+      "seafood": "ອາຫານທະເລ",
+      "dairy": "ນົມ & ເນີຍ",
+      "vegetables": "ຜັກ",
+      "fruits": "ໝາກໄມ້",
+      "grains": "ເຂົ້າ & ເສັ້ນ",
+      "spices": "ເຄື່ອງເທດ & ສະໝຸນໄພ",
+      "sauces": "ນ້ຳຈິ້ມ & ເຄື່ອງປຸງ",
+      "beverages": "ເຄື່ອງດື່ມ",
+      "other": "ອື່ນໆ"
+    },
+    "validation": {
+      "nameRequired": "ຕ້ອງການຊື່ວັດຖຸດິບ",
+      "unitRequired": "ຕ້ອງການຫົວໜ່ວຍ",
+      "costRequired": "ຕ້ອງການລາຄາຕໍ່ຫົວໜ່ວຍ"
+    },
+    "messages": {
+      "created": "ສ້າງວັດຖຸດິບສຳເລັດ",
+      "updated": "ອັບເດດວັດຖຸດິບສຳເລັດ",
+      "deleted": "ລຶບວັດຖຸດິບສຳເລັດ",
+      "stockUpdated": "ອັບເດດສະຕ໊ອກສຳເລັດ",
+      "lowStockAlert": "{count} ວັດຖຸດິບໃກ້ຈະໝົດ"
+    },
+    "alerts": {
+      "title": "ແຈ້ງເຕືອນສະຕ໊ອກ",
+      "lowStockItems": "ລາຍການສະຕ໊ອກຕ່ຳ",
+      "reorderSuggestion": "ພິຈາລະນາສັ່ງຊື້ລາຍການເຫຼົ່ານີ້"
+    }
+  }
+}

@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="lo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ຄູ່ມືການໃຊ້ງານ BNOS | ເອກະສານ</title>
+    <meta
+      name="description"
+      content="ຄູ່ມືການໃຊ້ງານສົມບູນສຳລັບ BNOS - ລະບົບປະຕິບັດການທຸລະກິດ. ລະບົບຈຸດຂາຍທີ່ໃຊ້ພະລັງງານ Lightning ສ້າງຂຶ້ນດ້ວຍໂປຣໂຕຄອນ Nostr."
+    />
+     <link
+      rel="icon"
+      type="image/x-icon"
+      href="../favicon.ico"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../css/fonts/stylesheet.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family:  "Chanthavong", "Phetsarath OT", "Saysettha OT", "Noto Sans Lao", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        background: #0a0a12;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.7;
+        font-size: 16px;
+      }
+
+      /* Navigation */
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 16px 24px;
+        background: rgba(10, 10, 18, 0.95);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .nav-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .nav-logo-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-logo-icon svg {
+        width: 22px;
+        height: 22px;
+        fill: white;
+      }
+
+      .nav-logo-text {
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        letter-spacing: 2px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 24px;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #f59e0b;
+      }
+
+      /* Layout */
+      .layout {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-top: 80px;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        position: fixed;
+        top: 80px;
+        left: max(0px, calc((100vw - 1400px) / 2));
+        width: 280px;
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        padding: 32px 24px;
+        border-right: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(10, 10, 18, 0.5);
+      }
+
+      .sidebar-title {
+        font-size: 12px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 16px;
+      }
+
+      .sidebar-nav {
+        list-style: none;
+      }
+
+      .sidebar-nav li {
+        margin-bottom: 4px;
+      }
+
+      .sidebar-nav a {
+        display: block;
+        padding: 10px 16px;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 8px;
+        transition: all 0.2s;
+      }
+
+      .sidebar-nav a:hover {
+        color: white;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .sidebar-nav a.active {
+        color: #f59e0b;
+        background: rgba(245, 158, 11, 0.1);
+      }
+
+      /* Main Content */
+      .main-content {
+        margin-left: 280px;
+        flex: 1;
+        padding: 48px 64px;
+        max-width: calc(100% - 280px);
+      }
+
+      /* Typography */
+      h1 {
+        font-size: 40px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+
+      h2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: white;
+        margin-top: 56px;
+        margin-bottom: 24px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      h2:first-of-type {
+        margin-top: 32px;
+        border-top: none;
+        padding-top: 0;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        margin-top: 36px;
+        margin-bottom: 16px;
+      }
+
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+        margin-top: 24px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      .lead {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 32px;
+      }
+
+      /* Lists */
+      ul,
+      ol {
+        margin-bottom: 16px;
+        padding-left: 24px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      /* Tables */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 24px 0;
+        font-size: 14px;
+      }
+
+      th {
+        text-align: left;
+        padding: 12px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 600;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      td {
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      /* Code */
+      code {
+        font-family: "SF Mono", Monaco, Consolas, monospace;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 2px 8px;
+        border-radius: 4px;
+        color: #fbbf24;
+      }
+
+      pre {
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 20px;
+        overflow-x: auto;
+        margin: 16px 0;
+      }
+
+      pre code {
+        background: none;
+        padding: 0;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Alerts */
+      .alert {
+        padding: 16px 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+        border-left: 4px solid;
+      }
+
+      .alert-warning {
+        background: rgba(234, 179, 8, 0.1);
+        border-color: #eab308;
+        color: #fde047;
+      }
+
+      .alert-info {
+        background: rgba(59, 130, 246, 0.1);
+        border-color: #3b82f6;
+        color: #93c5fd;
+      }
+
+      .alert-success {
+        background: rgba(34, 197, 94, 0.1);
+        border-color: #22c55e;
+        color: #86efac;
+      }
+
+      /* Feature Cards */
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin: 24px 0;
+      }
+
+      .feature-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        padding: 20px;
+        transition: all 0.3s;
+      }
+
+      .feature-card:hover {
+        border-color: rgba(245, 158, 11, 0.3);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .feature-card-icon {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      .feature-card-title {
+        font-weight: 600;
+        color: white;
+        margin-bottom: 8px;
+      }
+
+      .feature-card-desc {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* Steps */
+      .steps {
+        counter-reset: step;
+        margin: 24px 0;
+      }
+
+      .step {
+        position: relative;
+        padding-left: 48px;
+        margin-bottom: 20px;
+      }
+
+      .step::before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 14px;
+        color: white;
+      }
+
+      /* Links */
+      a {
+        color: #f59e0b;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      a:hover {
+        color: #fbbf24;
+        text-decoration: underline;
+      }
+
+      /* Blockquote */
+      blockquote {
+        border-left: 3px solid #f59e0b;
+        padding-left: 20px;
+        margin: 20px 0;
+        color: rgba(255, 255, 255, 0.7);
+        font-style: italic;
+      }
+
+      /* ຄຳຖາມທີ່ພົບເລື້ອຍ */
+      .faq-item {
+        margin-bottom: 24px;
+      }
+
+      .faq-question {
+        font-weight: 600;
+        color: white;
+        margin-bottom: 8px;
+      }
+
+      .faq-answer {
+        color: rgba(255, 255, 255, 0.6);
+        padding-left: 16px;
+        border-left: 2px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Footer */
+      .footer {
+        margin-top: 80px;
+        padding: 40px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        text-align: center;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 14px;
+      }
+
+      .footer a {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .footer a:hover {
+        color: #f59e0b;
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .sidebar {
+          display: none;
+        }
+
+        .main-content {
+          margin-left: 0;
+          max-width: 100%;
+          padding: 32px 24px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        h1 {
+          font-size: 32px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher" style="position:fixed;top:20px;right:20px;z-index:1001;display:flex;gap:8px;">
+      <a href="../en/manual.html" style="padding:8px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;font-weight:500;transition:all 0.3s;">EN</a>
+      <a href="../lo/manual.html" style="padding:8px 16px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);border-radius:8px;color:#f59e0b;text-decoration:none;font-size:13px;font-weight:500;">ລາວ</a>
+      <a href="../th/manual.html" style="padding:8px 16px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);border-radius:8px;color:#f59e0b;text-decoration:none;font-size:13px;font-weight:500;">ไทย</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-content">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+          </div>
+          <span class="nav-logo-text">BNOS</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">ຄຸນສົມບັດ</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li>
+            <a href="https://github.com/locobit-space" target="_blank"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <p class="sidebar-title">Documentation</p>
+        <ul class="sidebar-nav">
+          <li><a href="#introduction" class="active">Introduction</a></li>
+          <li><a href="#getting-started">ເລີ່ມຕົ້ນໃຊ້ງານ</a></li>
+          <li><a href="#account-setup">Account Setup</a></li>
+          <li><a href="#shop-configuration">Shop ການຕັ້ງຄ່າ</a></li>
+          <li><a href="#product-management">Product Management</a></li>
+          <li><a href="#point-of-sale">ລະບົບຈຸດຂາຍ</a></li>
+          <li><a href="#payments">Payments</a></li>
+          <li><a href="#inventory-management">ການຈັດການສິນຄ້າຄົງຄັງ</a></li>
+          <li><a href="#reports-analytics">ລາຍງານ ແລະ ການວິເຄາະ</a></li>
+          <li><a href="#settings">ການຕັ້ງຄ່າ</a></li>
+          <li><a href="#faq">ຄຳຖາມທີ່ພົບເລື້ອຍ</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <h1>BNOS ຄູ່ມືການໃຊ້ງານ</h1>
+        <p class="lead">
+          Bitcoin Nostr Operating System - Business Operating System - Lightning-Powered ລະບົບຈຸດຂາຍ
+        </p>
+
+        <!-- Introduction -->
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>
+            <strong>BNOS (Bitcoin Nostr Operating System - Business Operating System)</strong> is a
+            next-generation ລະບົບຈຸດຂາຍ system built on decentralized
+            technologies. Powered by the Lightning Network for instant Bitcoin
+            payments and the Nostr Protocol for secure, censorship-resistant
+            data management.
+          </p>
+
+          <h3>Key ຄຸນສົມບັດ</h3>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-card-icon">⚡</div>
+              <div class="feature-card-title">Lightning Payments</div>
+              <div class="feature-card-desc">
+                Instant Bitcoin payments with near-zero fees
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-icon">🔐</div>
+              <div class="feature-card-title">Non-Custodial</div>
+              <div class="feature-card-desc">
+                You control your keys and funds
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-icon">🌐</div>
+              <div class="feature-card-title">Decentralized</div>
+              <div class="feature-card-desc">
+                Built on Nostr Protocol - no central servers
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-icon">📱</div>
+              <div class="feature-card-title">Offline First</div>
+              <div class="feature-card-desc">
+                Works without internet, syncs when online
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-icon">📊</div>
+              <div class="feature-card-title">Analytics</div>
+              <div class="feature-card-desc">Real-time business insights</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-icon">👥</div>
+              <div class="feature-card-title">Team Management</div>
+              <div class="feature-card-desc">
+                Multi-user with role-based access
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ເລີ່ມຕົ້ນໃຊ້ງານ -->
+        <section id="getting-started">
+          <h2>ເລີ່ມຕົ້ນໃຊ້ງານ</h2>
+
+          <h3>ຄວາມຕ້ອງການຂອງລະບົບ</h3>
+          <ul>
+            <li>
+              <strong>Browser:</strong> Chrome, Firefox, Safari, or Edge (latest
+              version)
+            </li>
+            <li>
+              <strong>Internet:</strong> Required for initial setup and syncing
+            </li>
+            <li>
+              <strong>Device:</strong> Desktop, laptop, tablet, or smartphone
+            </li>
+          </ul>
+
+          <h3>Quick Start</h3>
+          <div class="steps">
+            <div class="step">
+              Visit <a href="https://bnos.space">bnos.space</a>
+            </div>
+            <div class="step">Click <strong>"Get Started"</strong></div>
+            <div class="step">Create or import your Nostr keys</div>
+            <div class="step">Configure your shop</div>
+            <div class="step">Start selling!</div>
+          </div>
+        </section>
+
+        <!-- Account Setup -->
+        <section id="account-setup">
+          <h2>Account Setup</h2>
+
+          <h3>Creating a New Account</h3>
+          <div class="steps">
+            <div class="step">Click <strong>"Create New Account"</strong></div>
+            <div class="step">
+              Your private key (nsec) will be generated automatically
+            </div>
+            <div class="step">
+              <strong>🔴 IMPORTANT: Save your private key securely!</strong>
+              <ul>
+                <li>Write it down on paper</li>
+                <li>Store it in a password manager</li>
+                <li>Never share it with anyone</li>
+              </ul>
+            </div>
+            <div class="step">Complete your profile (optional)</div>
+          </div>
+
+          <h3>Importing Existing Keys</h3>
+          <p>If you already have Nostr keys:</p>
+          <div class="steps">
+            <div class="step">Click <strong>"Import Keys"</strong></div>
+            <div class="step">
+              Enter your private key (nsec) or use a browser extension (nos2x,
+              Alby)
+            </div>
+            <div class="step">Your account will be restored</div>
+          </div>
+
+          <h3>Security Best Practices</h3>
+          <div class="alert alert-warning">
+            <strong>⚠️ Warning:</strong> Your private key is the only way to
+            access your account. If lost, your data cannot be recovered.
+          </div>
+          <ul>
+            <li>✅ Store private key in multiple secure locations</li>
+            <li>✅ Use a hardware security key when possible</li>
+            <li>✅ Enable browser extension for key management</li>
+            <li>❌ Never share your private key</li>
+            <li>❌ Never store keys in plain text files</li>
+          </ul>
+        </section>
+
+        <!-- Shop ການຕັ້ງຄ່າ -->
+        <section id="shop-configuration">
+          <h2>Shop ການຕັ້ງຄ່າ</h2>
+
+          <h3>Initial Setup</h3>
+          <p>
+            After creating your account, you'll be guided through shop setup:
+          </p>
+
+          <h4>Step 1: Shop Type</h4>
+          <p>Select your business type:</p>
+          <ul>
+            <li>🛒 <strong>Retail</strong> - Physical goods</li>
+            <li>🍽️ <strong>Restaurant</strong> - Food & beverages</li>
+            <li>💈 <strong>Service</strong> - Service-based business</li>
+            <li>🏪 <strong>General</strong> - Multi-purpose</li>
+          </ul>
+
+          <h4>Step 2: Shop Details</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Description</th>
+                <th>Required</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Shop Name</td>
+                <td>Your business name</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>Description</td>
+                <td>Brief description of your business</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Logo</td>
+                <td>Upload your logo (recommended: 512x512px)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Currency</td>
+                <td>Primary display currency</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>Tax Rate</td>
+                <td>Default tax percentage</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>Step 3: Payment Setup</h4>
+          <p>Configure your Lightning wallet:</p>
+          <ol>
+            <li>
+              <strong>Connect Lightning Wallet</strong>
+              <ul>
+                <li>
+                  Enter your Lightning Address (e.g.,
+                  <code>shop@getalby.com</code>)
+                </li>
+                <li>Or connect via LNUrl</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Test Connection</strong>
+              <ul>
+                <li>Click "Test Payment" to verify setup</li>
+                <li>A small test invoice will be generated</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Product Management -->
+        <section id="product-management">
+          <h2>Product Management</h2>
+
+          <h3>Adding Products</h3>
+          <div class="steps">
+            <div class="step">
+              Navigate to <strong>Products</strong> from the menu
+            </div>
+            <div class="step">Click <strong>"+ Add Product"</strong></div>
+            <div class="step">Fill in product details</div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td>Product name</td>
+              </tr>
+              <tr>
+                <td>SKU</td>
+                <td>Stock Keeping Unit (auto-generated if blank)</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td>Selling price</td>
+              </tr>
+              <tr>
+                <td>Cost</td>
+                <td>Purchase cost (for profit calculation)</td>
+              </tr>
+              <tr>
+                <td>Category</td>
+                <td>Product category</td>
+              </tr>
+              <tr>
+                <td>Description</td>
+                <td>Product details</td>
+              </tr>
+              <tr>
+                <td>Image</td>
+                <td>Product photo</td>
+              </tr>
+              <tr>
+                <td>Inventory</td>
+                <td>Enable stock tracking</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Product Variants</h3>
+          <p>For products with multiple options (size, color):</p>
+          <ol>
+            <li>Enable <strong>"Has Variants"</strong> toggle</li>
+            <li>
+              Add variant options:
+              <pre><code>Size: Small, Medium, Large
+Color: Red, Blue, Green</code></pre>
+            </li>
+            <li>Set individual prices and stock for each variant</li>
+          </ol>
+
+          <h3>Categories</h3>
+          <p>Organize products with categories:</p>
+          <div class="steps">
+            <div class="step">Go to <strong>Products > Categories</strong></div>
+            <div class="step">Click <strong>"+ Add Category"</strong></div>
+            <div class="step">Enter category name and optional icon</div>
+            <div class="step">Drag products to reorder</div>
+          </div>
+
+          <h3>Bulk Import</h3>
+          <p>Import multiple products via CSV:</p>
+          <div class="steps">
+            <div class="step">
+              Download template:
+              <strong>Products > Import > Download Template</strong>
+            </div>
+            <div class="step">Fill in the CSV file</div>
+            <div class="step">
+              Upload: <strong>Products > Import > Upload CSV</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- ລະບົບຈຸດຂາຍ -->
+        <section id="point-of-sale">
+          <h2>ລະບົບຈຸດຂາຍ</h2>
+
+          <h3>Making a Sale</h3>
+          <div class="steps">
+            <div class="step">Open <strong>POS</strong> from the main menu</div>
+            <div class="step">
+              Add products to cart:
+              <ul>
+                <li>Search by name or scan barcode</li>
+                <li>Click product tile</li>
+                <li>Adjust quantity with +/- buttons</li>
+              </ul>
+            </div>
+            <div class="step">Review cart</div>
+            <div class="step">
+              Click <strong>"Charge"</strong> or <strong>"Pay"</strong>
+            </div>
+          </div>
+
+          <h3>Payment Methods</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>⚡ Lightning</td>
+                <td>Scan QR code for instant payment</td>
+              </tr>
+              <tr>
+                <td>💵 Cash</td>
+                <td>Enter amount received</td>
+              </tr>
+              <tr>
+                <td>💳 Card</td>
+                <td>External terminal integration</td>
+              </tr>
+              <tr>
+                <td>📝 Credit</td>
+                <td>Record payment on account</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Discounts</h3>
+          <p>Apply discounts during checkout:</p>
+          <ol>
+            <li>Click <strong>"Discount"</strong> in cart</li>
+            <li>
+              Choose type:
+              <ul>
+                <li><strong>Percentage:</strong> 10%, 20%, etc.</li>
+                <li><strong>Fixed Amount:</strong> $5, $10, etc.</li>
+              </ul>
+            </li>
+            <li>Apply to entire cart or single item</li>
+          </ol>
+
+          <h3>Receipts</h3>
+          <p>After payment:</p>
+          <ul>
+            <li><strong>Print</strong> - Send to connected printer</li>
+            <li><strong>Email</strong> - Send to customer email</li>
+            <li><strong>Copy Link</strong> - Share receipt link</li>
+            <li><strong>Download</strong> - Save as PDF</li>
+          </ul>
+        </section>
+
+        <!-- Payments -->
+        <section id="payments">
+          <h2>Payments</h2>
+
+          <h3>Lightning Network</h3>
+          <p>BNOS uses the Lightning Network for instant Bitcoin payments:</p>
+          <ol>
+            <li>Customer scans QR code</li>
+            <li>Payment confirms in ~1 second</li>
+            <li>Funds arrive in your wallet immediately</li>
+          </ol>
+
+          <h3>Wallet Management</h3>
+          <p>View your payment history:</p>
+          <ol>
+            <li>Go to <strong>Payments</strong> from menu</li>
+            <li>
+              See all transactions with:
+              <ul>
+                <li>Amount</li>
+                <li>Time</li>
+                <li>Status</li>
+                <li>Invoice details</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3>Withdrawals</h3>
+          <div class="alert alert-success">
+            Funds are deposited directly to your connected Lightning wallet. No
+            withdrawal action needed - you already control the funds!
+          </div>
+        </section>
+
+        <!-- ການຈັດການສິນຄ້າຄົງຄັງ -->
+        <section id="inventory-management">
+          <h2>ການຈັດການສິນຄ້າຄົງຄັງ</h2>
+
+          <h3>Stock Tracking</h3>
+          <p>Enable inventory tracking per product:</p>
+          <ol>
+            <li>Edit product</li>
+            <li>Enable <strong>"Track Inventory"</strong></li>
+            <li>Set <strong>"Stock Quantity"</strong></li>
+          </ol>
+
+          <h3>Low Stock Alerts</h3>
+          <p>Configure alerts for low inventory:</p>
+          <ol>
+            <li>Go to <strong>ການຕັ້ງຄ່າ > Inventory</strong></li>
+            <li>Set <strong>"Low Stock Threshold"</strong> (e.g., 10 units)</li>
+            <li>Enable notifications</li>
+          </ol>
+
+          <h3>Stock Adjustments</h3>
+          <p>Manually adjust stock:</p>
+          <ol>
+            <li>Go to <strong>Inventory</strong></li>
+            <li>Click on product</li>
+            <li>Click <strong>"Adjust Stock"</strong></li>
+            <li>
+              Enter quantity and reason:
+              <ul>
+                <li>Received shipment</li>
+                <li>Damaged goods</li>
+                <li>Stock count correction</li>
+                <li>Other</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3>Purchase Orders</h3>
+          <p>Create orders for suppliers:</p>
+          <div class="steps">
+            <div class="step">
+              Go to <strong>Inventory > Purchase Orders</strong>
+            </div>
+            <div class="step">Click <strong>"+ New Order"</strong></div>
+            <div class="step">Select supplier</div>
+            <div class="step">Add products and quantities</div>
+            <div class="step">Submit order</div>
+          </div>
+        </section>
+
+        <!-- ລາຍງານ ແລະ ການວິເຄາະ -->
+        <section id="reports-analytics">
+          <h2>ລາຍງານ ແລະ ການວິເຄາະ</h2>
+
+          <h3>Dashboard</h3>
+          <p>The main dashboard shows:</p>
+          <ul>
+            <li>📈 Today's sales</li>
+            <li>💰 Revenue trends</li>
+            <li>🛒 Recent transactions</li>
+            <li>📦 Low stock alerts</li>
+            <li>👥 Top customers</li>
+          </ul>
+
+          <h3>Available Reports</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Report</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sales Report</strong></td>
+                <td>Sales by date, product, category</td>
+              </tr>
+              <tr>
+                <td><strong>Product Performance</strong></td>
+                <td>Best/worst sellers</td>
+              </tr>
+              <tr>
+                <td><strong>Inventory Report</strong></td>
+                <td>Stock levels, valuations</td>
+              </tr>
+              <tr>
+                <td><strong>Customer Report</strong></td>
+                <td>Purchase history, loyalty</td>
+              </tr>
+              <tr>
+                <td><strong>Staff Report</strong></td>
+                <td>Sales by employee</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Exporting Data</h3>
+          <p>Export any report:</p>
+          <ol>
+            <li>Open desired report</li>
+            <li>Click <strong>"Export"</strong></li>
+            <li>
+              Choose format:
+              <ul>
+                <li>📄 PDF</li>
+                <li>📊 Excel (XLSX)</li>
+                <li>📋 CSV</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+        <!-- ການຕັ້ງຄ່າ -->
+        <section id="settings">
+          <h2>ການຕັ້ງຄ່າ</h2>
+
+          <h3>General ການຕັ້ງຄ່າ</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Setting</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Language</td>
+                <td>Interface language</td>
+              </tr>
+              <tr>
+                <td>Currency</td>
+                <td>Display currency</td>
+              </tr>
+              <tr>
+                <td>Timezone</td>
+                <td>Local timezone</td>
+              </tr>
+              <tr>
+                <td>Date Format</td>
+                <td>Date display format</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Receipt ການຕັ້ງຄ່າ</h3>
+          <p>Customize receipts:</p>
+          <ul>
+            <li>Header text</li>
+            <li>Footer text</li>
+            <li>Logo</li>
+            <li>Show/hide tax details</li>
+            <li>QR code for returns</li>
+          </ul>
+
+          <h3>Notification ການຕັ້ງຄ່າ</h3>
+          <p>Configure alerts:</p>
+          <ul>
+            <li>Low stock notifications</li>
+            <li>Daily sales summary</li>
+            <li>Payment alerts</li>
+          </ul>
+
+          <h3>Security ການຕັ້ງຄ່າ</h3>
+          <ul>
+            <li>Change password</li>
+            <li>View login history</li>
+            <li>Connected devices</li>
+            <li>API keys</li>
+          </ul>
+        </section>
+
+        <!-- ຄຳຖາມທີ່ພົບເລື້ອຍ -->
+        <section id="faq">
+          <h2>ຄຳຖາມທີ່ພົບເລື້ອຍ</h2>
+
+          <h3>General</h3>
+          <div class="faq-item">
+            <div class="faq-question">Q: Is BNOS free to use?</div>
+            <div class="faq-answer">
+              A: BNOS offers a free tier with basic features. Premium features
+              are available through subscription.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Q: Do I need Bitcoin to use BNOS?</div>
+            <div class="faq-answer">
+              A: You can accept Lightning payments without holding Bitcoin
+              yourself. Payments can be converted to your preferred currency.
+            </div>
+          </div>
+
+          <h3>Technical</h3>
+          <div class="faq-item">
+            <div class="faq-question">Q: What happens if I lose internet?</div>
+            <div class="faq-answer">
+              A: BNOS works offline. Transactions are saved locally and synced
+              when you're back online.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Q: How secure is my data?</div>
+            <div class="faq-answer">
+              A: Your data is encrypted and stored using the Nostr Protocol.
+              Only you can access it with your private key.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Q: Can I use BNOS on multiple devices?
+            </div>
+            <div class="faq-answer">
+              A: Yes! Log in with your Nostr keys on any device to access your
+              shop.
+            </div>
+          </div>
+
+          <h3>Payments</h3>
+          <div class="faq-item">
+            <div class="faq-question">Q: How fast are Lightning payments?</div>
+            <div class="faq-answer">
+              A: Lightning payments confirm in ~1 second.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Q: What are the payment fees?</div>
+            <div class="faq-answer">
+              A: Lightning Network fees are typically less than 1% (often just a
+              few sats).
+            </div>
+          </div>
+        </section>
+
+        <!-- Support -->
+        <section id="support">
+          <h2>Support</h2>
+
+          <h3>Getting Help</h3>
+          <ul>
+            <li>
+              📖 <strong>Documentation:</strong>
+              <a href="https://docs.bnos.space">docs.bnos.space</a>
+            </li>
+            <li>💬 <strong>Community:</strong> Join our Nostr community</li>
+            <li>📧 <strong>Email:</strong> support@bnos.space</li>
+            <li>
+              🐛 <strong>Bug Reports:</strong>
+              <a
+                href="https://github.com/locobit-space/bitspace-pos/issues"
+                target="_blank"
+                >GitHub Issues</a
+              >
+            </li>
+          </ul>
+
+          <h3>Feature Requests</h3>
+          <p>Have an idea? We'd love to hear it!</p>
+          <ol>
+            <li>Go to <strong>Help > Feature Request</strong></li>
+            <li>Describe your idea</li>
+            <li>Submit</li>
+          </ol>
+
+          <h3>Reporting Issues</h3>
+          <p>If you encounter a problem:</p>
+          <ol>
+            <li>Go to <strong>Help > Report a Bug</strong></li>
+            <li>Describe the issue</li>
+            <li>Include screenshots if possible</li>
+            <li>Submit</li>
+          </ol>
+
+          <h3>Version History</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Date</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.0.0</td>
+                <td>Jan 1, 2026</td>
+                <td>Initial release</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            ⚡ <strong>BNOS - Business Operating System</strong><br />
+            Built with ❤️ on Nostr & Lightning Network<br />
+            <a href="https://github.com/locobit-space">GitHub</a> •
+            <a href="https://bnos.space">Website</a>
+          </p>
+          <p style="margin-top: 16px">© 2026 BNOS. All rights reserved.</p>
+        </footer>
+      </main>
+    </div>
+
+    <script>
+      // Highlight active sidebar link on scroll
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".sidebar-nav a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

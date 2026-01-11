@@ -1,0 +1,46 @@
+{
+  "delivery": {
+    "title": "ການຈັດສົ່ງ",
+    "description": "ຕິດຕາມແລະຈັດການການຈັດສົ່ງ",
+    "newDelivery": "ສົ່ງໃໝ່",
+    "assignDriver": "ມອບຄົນຂັບ",
+    "manageDrivers": "ຈັດການຄົນຂັບ",
+    "addDriver": "ເພີ່ມຄົນຂັບ",
+    "editDriver": "ແກ້ໄຂຄົນຂັບ",
+    "driverName": "ຊື່ຄົນຂັບ",
+    "driverPhone": "ເບີໂທ",
+    "vehicle": "ລົດ",
+    "availability": "ຄວາມພ້ອມ",
+    "available": "ວ່າງ",
+    "busy": "ຫຍຸ້ງ",
+    "offline": "ອອຟໄລນ໌",
+    "status": {
+      "pending": "ລໍຖ້າ",
+      "assigned": "ມອບແລ້ວ",
+      "pickedUp": "ຮັບສິນຄ້າແລ້ວ",
+      "inTransit": "ກຳລັງສົ່ງ",
+      "delivered": "ສົ່ງແລ້ວ",
+      "cancelled": "ຍົກເລີກ"
+    },
+    "tabs": {
+      "orders": "ອໍເດີ້",
+      "drivers": "ຄົນຂັບ"
+    },
+    "stats": {
+      "pending": "ລໍຖ້າ",
+      "inProgress": "ກຳລັງດຳເນີນ",
+      "delivered": "ສົ່ງແລ້ວມື້ນີ້",
+      "drivers": "ຄົນຂັບເປີດງານ"
+    },
+    "bumpToNext": "ເລື່ອນສະຖານະຕໍ່ໄປ",
+    "customerAddress": "ທີ່ຢູ່ລູກຄ້າ",
+    "estimatedTime": "ເວລາຄາດໝາຍ",
+    "notes": "ໝາຍເຫດການສົ່ງ",
+    "noDeliveries": "ຍັງບໍ່ມີການຈັດສົ່ງ",
+    "noDrivers": "ຍັງບໍ່ມີຄົນຂັບ",
+    "addFirstDriver": "ເພີ່ມຄົນຂັບຄົນທຳອິດ",
+    "viewMap": "ເບິ່ງແຜນທີ່",
+    "callCustomer": "ໂທຫາລູກຄ້າ",
+    "callDriver": "ໂທຫາຄົນຂັບ"
+  }
+}

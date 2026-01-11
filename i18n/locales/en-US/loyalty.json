@@ -1,0 +1,19 @@
+{
+  "loyalty": {
+    "title": "Loyalty Program",
+    "member": "Member",
+    "members": "Members",
+    "points": "Points",
+    "totalPoints": "Total Points",
+    "bronze": "Bronze",
+    "silver": "Silver",
+    "gold": "Gold",
+    "platinum": "Platinum",
+    "tier": "Tier",
+    "rewards": "Rewards",
+    "stats": "Loyalty Stats",
+    "sendReward": "Send Reward",
+    "viewHistory": "View History",
+    "loginNostr": "Login with Nostr"
+  }
+}

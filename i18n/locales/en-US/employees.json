@@ -1,0 +1,246 @@
+{
+  "employees": {
+    "title": "Employees",
+    "total": "Total",
+    "employee": "Employee",
+    "addEmployee": "Add Employee",
+    "editEmployee": "Edit Employee",
+    "addFirstEmployee": "Add First Employee",
+    "searchPlaceholder": "Search employees...",
+    "noEmployees": "No Employees Yet",
+    "noEmployeesDescription": "Start by adding your first team member",
+    "noPosition": "No position",
+    "createSuccess": "Employee added successfully",
+    "updateSuccess": "Employee updated successfully",
+    "deleteSuccess": "Employee terminated successfully",
+    "hardDeleteSuccess": "Employee permanently deleted",
+
+    "status": {
+      "label": "Status",
+      "all": "All Status",
+      "active": "Active",
+      "inactive": "Inactive",
+      "on-leave": "On Leave",
+      "onLeave": "On Leave",
+      "terminated": "Terminated"
+    },
+
+    "type": {
+      "fullTime": "Full-time",
+      "partTime": "Part-time",
+      "contract": "Contract",
+      "intern": "Intern",
+      "freelance": "Freelance"
+    },
+
+    "salaryType": {
+      "label": "Salary Type",
+      "hourly": "Hourly",
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly"
+    },
+
+    "paymentMethod": {
+      "cash": "Cash",
+      "bank": "Bank Transfer",
+      "lightning": "Lightning"
+    },
+
+    "gender": {
+      "label": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other"
+    },
+
+    "tabs": {
+      "basic": "Basic Info",
+      "employment": "Employment",
+      "compensation": "Compensation",
+      "access": "Access"
+    },
+
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Enter first name",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Enter last name",
+    "displayName": "Display Name",
+    "displayNamePlaceholder": "Nickname or alias",
+    "email": "Email",
+    "phone": "Phone",
+    "dateOfBirth": "Date of Birth",
+    "nationalId": "National ID",
+    "nationalIdPlaceholder": "ID card number",
+    "address": "Address",
+
+    "emergencyContact": "Emergency Contact",
+    "contactName": "Name",
+    "contactPhone": "Phone",
+    "contactRelation": "Relation",
+
+    "department": "Department",
+    "departmentPlaceholder": "e.g. Sales, Kitchen",
+    "position": "Position",
+    "positionPlaceholder": "e.g. Manager, Cashier",
+    "employmentType": "Employment Type",
+    "hireDate": "Hire Date",
+    "notes": "Notes",
+    "notesPlaceholder": "Additional notes...",
+
+    "salary": "Salary",
+    "baseSalary": "Base Salary",
+    "currency": "Currency",
+    "overtimeRate": "Overtime Rate",
+    "paymentInfo": "Payment Information",
+    "preferredPayment": "Preferred Method",
+    "bankName": "Bank Name",
+    "bankAccount": "Account Number",
+    "lightningAddress": "Lightning Address",
+
+    "commission": "Commission",
+    "commissionRate": "Commission Rate",
+
+    "leaveBalances": "Leave Balances",
+    "annualLeave": "Annual Leave",
+    "sickLeave": "Sick Leave",
+    "personalLeave": "Personal Leave",
+    "leaveType": "Leave Type",
+    "adjustmentAmount": "Adjustment Amount",
+    "adjustmentHelp": "Positive to add, negative to deduct",
+    "leaveUpdated": "Leave Balance Updated",
+    "leaveAdjustedBy": "Leave adjusted",
+    "monthlyEstimate": "Monthly Estimate",
+    "calculatedMonthly": "Calculated monthly",
+    "perSale": "Per sale",
+
+    "posAccess": "POS Access",
+    "posAccessDescription": "Allow this employee to access the POS system",
+    "posAccessDesc": "Allow this employee to access the POS system and create orders",
+    "posAccessEnabled": "POS access enabled",
+    "posAccessDisabled": "POS access disabled",
+    "credentialsSaved": "POS credentials saved",
+    "pin": "PIN Code",
+    "pinPlaceholder": "4-6 digit PIN",
+    "pinHelp": "Staff can login with PIN",
+    "npub": "Nostr Public Key (npub)",
+    "npubPlaceholder": "npub1...",
+    "npubHelp": "For Nostr-based authentication",
+    "pinHint": "Used for clock in and POS access",
+    "storeUserAccount": "StoreUser Account",
+    "linkedToUser": "Linked to user",
+    "noUserLinked": "No StoreUser account linked",
+    "createAccount": "Create Account",
+    "userCreated": "StoreUser Created",
+    "userCreatedWithRole": "User created with role",
+    "failedCreateUser": "Failed to create user",
+    "creationFailed": "Creation Failed",
+    "nostrSync": "Nostr Sync",
+    "nostrSyncDesc": "Sync employee data to Nostr relays for cross-device access",
+    "syncedToNostr": "Synced to Nostr",
+    "dataPublishedToRelays": "Employee data published to relays",
+    "syncFailed": "Sync Failed",
+    "synced": "Synced",
+    "notSynced": "Not synced",
+    "syncNow": "Sync Now",
+    "encryptedBeforeSync": "Employee data is encrypted before syncing",
+    "accessibleAnyDevice": "Accessible from any device with company code",
+    "autoSyncsOnUpdate": "Auto-syncs on create and update",
+    "howToLogin": "How Staff Can Login",
+    "withPin": "With PIN",
+    "pinLoginInstructions": "Enter employee code or select staff name, then enter PIN",
+    "withNsec": "With nsec",
+    "nsecLoginInstructions": "Staff enters their Nostr private key (nsec1...) to login",
+    "withNIP07": "With NIP-07",
+    "nip07Instructions": "Use Alby or nos2x browser extension for one-click login",
+
+    "access": {
+      "title": "Access Management",
+      "active": "Access Active",
+      "revoked": "Access Revoked",
+      "expired": "Access Expired",
+      "none": "No Access",
+      "noNostrKey": "No Nostr Key Linked",
+      "nostrPublicKey": "Nostr Public Key (npub)",
+      "expiryDate": "Access Expiry Date",
+      "noExpiry": "No expiry (permanent access)",
+      "expiryHint": "Leave empty for permanent access, or set a date to automatically expire access",
+      "expiresOn": "Expires",
+      "expiredOn": "Expired",
+      "reason": "Reason",
+      "revokeReason": "Revoke Reason (Optional)",
+      "revokeReasonPlaceholder": "e.g. Left company, security concern",
+      "revoke": "Revoke Access",
+      "restore": "Restore Access",
+      "saveSettings": "Save Access Settings",
+      "manageAccess": "Manage Access",
+      "granted": "Access Granted",
+      "grantSuccess": "Access settings saved",
+      "revokedSuccess": "Access revoked successfully",
+      "restoreSuccess": "Access restored successfully",
+      "restored": "Access Restored"
+    },
+
+    "employmentInfo": "Employment Information",
+    "contactInfo": "Contact Information",
+    "tenure": "Tenure",
+
+    "actions": {
+      "view": "View Details",
+      "edit": "Edit Employee",
+      "duplicate": "Duplicate",
+      "terminate": "Terminate",
+      "deletePermanently": "Delete Permanently",
+      "export": "Export to Excel"
+    },
+
+    "confirm": {
+      "terminateTitle": "Terminate Employee",
+      "terminateMessage": "Are you sure you want to terminate {name}? This will mark the employee as terminated but keep their records.",
+      "deleteTitle": "Delete Permanently",
+      "deleteMessage": "Are you sure you want to permanently delete {name}? This action cannot be undone.",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
+    },
+
+    "stats": {
+      "totalEmployees": "Total Employees",
+      "activeEmployees": "Active",
+      "onLeaveEmployees": "On Leave",
+      "newThisMonth": "New This Month"
+    },
+
+    "sort": {
+      "name": "Name",
+      "position": "Position",
+      "department": "Department",
+      "status": "Status",
+      "salary": "Salary",
+      "hireDate": "Hire Date"
+    },
+
+    "export": {
+      "title": "Export Employees",
+      "fileName": "employees",
+      "success": "Employee list exported successfully"
+    },
+
+    "duplicateSuccess": "Employee duplicated successfully",
+
+    "productAssignment": "Product Assignment",
+    "productAssignmentDesc": "Control which products this staff can view and sell on POS",
+    "assignProducts": "Assign Products",
+    "assignCategories": "Assign Categories",
+    "selectProducts": "Select Products",
+    "selectCategories": "Select Categories",
+    "selectProductsPlaceholder": "Choose products...",
+    "selectCategoriesPlaceholder": "Choose categories...",
+    "assignmentMode": "Assignment Mode",
+    "allProducts": "All Products",
+    "assignedOnly": "Assigned Products Only",
+    "byCategory": "By Category",
+    "noAssignment": "No restrictions - all products visible",
+    "assigned": "assigned",
+    "assignmentSaved": "Product assignment saved"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "tables": {
+    "title": "ຈັດການໂຕະ",
+    "subtitle": "ໂຕະ ແລະ ບ່ອນນັ່ງ",
+    "description": "ຈັດການໂຕະ ແລະ ການສັ່ງອາຫານຜ່ານ QR code",
+    "addTable": "ເພີ່ມໂຕະ",
+    "editTable": "ແກ້ໄຂໂຕະ",
+    "totalTables": "ຈຳນວນໂຕະທັງໝົດ",
+    "totalCapacity": "ຄວາມຈຸທັງໝົດ",
+    "qrEnabled": "ເປີດໃຊ້ QR",
+    "occupancy": "ອັດຕາການນັ່ງ",
+    "status": {
+      "available": "ຫວ່າງ",
+      "occupied": "ບໍ່ຫວ່າງ",
+      "reserved": "ຈອງແລ້ວ",
+      "cleaning": "ກຳລັງອະນາໄມ",
+      "unavailable": "ໃຊ້ງານບໍ່ໄດ້"
+    },
+    "shapes": {
+      "square": "ສີ່ຫຼ່ຽມ",
+      "round": "ວົງມົນ",
+      "rectangle": "ສີ່ຫຼ່ຽມຜືນຜ້າ",
+      "oval": "ວົງຮີ"
+    },
+    "capacity": "ຄວາມຈຸ",
+    "minCapacity": "ຄວາມຈຸຕ່ຳສຸດ",
+    "shape": "ຮູບຮ່າງ",
+    "qrOrdering": "ສັ່ງອາຫານຜ່ານ QR",
+    "qrOrderingDesc": "ອະນຸຍາດໃຫ້ລູກຄ້າສັ່ງອາຫານໂດຍການສະແກນ QR",
+    "active": "ເປີດໃຊ້ງານ",
+    "activeDesc": "ໂຕະທີ່ປິດໃຊ້ງານຈະຖືກເຊື່ອງຈາກແຜນຜັງ",
+    "tableNumber": "ໝາຍເລກໂຕະ",
+    "tableName": "ຊື່ໂຕະ (ທາງເລືອກ)",
+    "namePlaceholder": "ຕົວຢ່າງ: ໂຕະຕິດປ່ອງຢ້ຽມ",
+    "zone": "ໂຊນ",
+    "manageZones": "ຈັດການໂຊນ",
+    "floorSettings": "ການຕັ້ງຄ່າໂຊນ",
+    "noTables": "ຍັງບໍ່ມີໂຕະ",
+    "noTablesDesc": "ສ້າງໂຕະເພື່ອເປີດໃຊ້ການສັ່ງອາຫານຜ່ານ QR code",
+    "createDemo": "ສ້າງຂໍ້ມູນທົດລອງ",
+    "scanToOrder": "ສະແກນເພື່ອເບິ່ງເມນູ ແລະ ສັ່ງອາຫານ",
+    "orderingUrl": "URL ເມນູ",
+    "confirmDelete": "ຕ້ອງການລຶບໂຕະນີ້ບໍ່?",
+    "numberRequired": "ຕ້ອງການໝາຍເລກໂຕະ",
+    "updated": "ອັບເດດໂຕະແລ້ວ",
+    "created": "ສ້າງໂຕະແລ້ວ",
+    "deleted": "ລຶບໂຕະແລ້ວ",
+    "demoCreated": "ສ້າງໂຕະທົດລອງແລ້ວ",
+    "timer": {
+      "occupiedFor": "ນັ່ງມາ",
+      "longWait": "ລໍຖ້າດົນ",
+      "quickTurn": "ໝູນວຽນໄວ",
+      "normalPace": "ປົກກະຕິ"
+    }
+  }
+}

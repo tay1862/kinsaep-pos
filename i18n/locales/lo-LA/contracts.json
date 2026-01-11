@@ -1,0 +1,252 @@
+{
+  "contracts": {
+    "title": "ສັນຍາ & ການເຊົ່າ",
+    "description": "ຈັດການສັນຍາ, ຊັບສິນ, ແລະການຈອງ",
+    "newContract": "ສັນຍາໃໝ່",
+    "editContract": "ແກ້ໄຂສັນຍາ",
+    "addAsset": "ເພີ່ມຊັບສິນ",
+    "editAsset": "ແກ້ໄຂຊັບສິນ",
+    "newBooking": "ຈອງໃໝ່",
+    "contracts": "ສັນຍາ",
+    "assets": "ຊັບສິນ",
+    "bookings": "ການຈອງ",
+    "contractNumber": "ເລກສັນຍາ",
+    "customer": "ລູກຄ້າ",
+    "customerName": "ຊື່ລູກຄ້າ",
+    "customerPhone": "ເບີໂທລູກຄ້າ",
+    "customerEmail": "ອີເມວລູກຄ້າ",
+    "type": "ປະເພດ",
+    "asset": "ຊັບສິນ",
+    "amount": "ຈຳນວນເງິນ",
+    "deposit": "ເງິນມັດຈຳ",
+    "depositAmount": "ຈຳນວນເງິນມັດຈຳ",
+    "depositStatus": "ສະຖານະມັດຈຳ",
+    "collectDeposit": "ເກັບເງິນມັດຈຳ",
+    "returnDeposit": "ຄືນເງິນມັດຈຳ",
+    "startDate": "ວັນເລີ່ມ",
+    "endDate": "ວັນສິ້ນສຸດ",
+    "autoRenew": "ຕໍ່ອາຍຸອັດຕະໂນມັດ",
+    "autoRenewDesc": "ຕໍ່ອາຍຸອັດຕະໂນມັດເມື່ອໝົດ",
+    "paymentSchedule": "ຕາຕະລາງຈ່າຍ",
+    "notes": "ໝາຍເຫດ",
+    "terms": "ເງື່ອນໄຂ",
+    "noAsset": "ບໍ່ມີຊັບສິນ",
+    "contractType": "ປະເພດສັນຍາ",
+    "types": {
+      "rental": "ເຊົ່າ",
+      "lease": "ສັນຍາເຊົ່າ",
+      "service": "ບໍລິການ",
+      "subscription": "ສະມາຊິກ"
+    },
+    "status": {
+      "draft": "ຮ່າງ",
+      "pending": "ລໍຖ້າ",
+      "active": "ກຳລັງໃຊ້ງານ",
+      "expired": "ໝົດອາຍຸ",
+      "terminated": "ຍົກເລີກ",
+      "cancelled": "ຍົກເລີກແລ້ວ"
+    },
+    "schedules": {
+      "once": "ຄັ້ງດຽວ",
+      "daily": "ປະຈຳວັນ",
+      "weekly": "ປະຈຳອາທິດ",
+      "monthly": "ປະຈຳເດືອນ",
+      "yearly": "ປະຈຳປີ"
+    },
+    "assetTypes": {
+      "room": "ຫ້ອງ",
+      "equipment": "ອຸປະກອນ",
+      "vehicle": "ລົດ",
+      "locker": "ຕູ້ເກັບເຄື່ອງ",
+      "space": "ພື້ນທີ່",
+      "other": "ອື່ນໆ"
+    },
+    "assetFields": {
+      "name": "ຊື່ຊັບສິນ",
+      "nameEnglish": "ຊື່ (ອັງກິດ)",
+      "nameLao": "ຊື່ (ລາວ)",
+      "hourlyRate": "ລາຄາຕໍ່ຊົ່ວໂມງ",
+      "dailyRate": "ລາຄາຕໍ່ວັນ",
+      "monthlyRate": "ລາຄາຕໍ່ເດືອນ",
+      "location": "ທີ່ຕັ້ງ",
+      "locationPlaceholder": "ເຊັ່ນ: ຕຶກ A, ຊັ້ນ 2",
+      "capacity": "ຄວາມຈຸ",
+      "capacityPlaceholder": "ເຊັ່ນ: 10 ຄົນ"
+    },
+    "bookingStatus": {
+      "reserved": "ຈອງແລ້ວ",
+      "checkedOut": "ເຊັກອອກແລ້ວ",
+      "returned": "ສົ່ງຄືນແລ້ວ",
+      "cancelled": "ຍົກເລີກ",
+      "noShow": "ບໍ່ມາ"
+    },
+    "actions": {
+      "activate": "ເປີດໃຊ້ງານ",
+      "terminate": "ຍົກເລີກ",
+      "renew": "ຕໍ່ອາຍຸ",
+      "checkOut": "ເຊັກອອກ",
+      "return": "ສົ່ງຄືນ",
+      "edit": "ແກ້ໄຂ",
+      "delete": "ລຶບ",
+      "book": "ຈອງ"
+    },
+    "stats": {
+      "active": "ກຳລັງໃຊ້ງານ",
+      "expiring": "ໃກ້ໝົດອາຍຸ",
+      "assets": "ຊັບສິນທັງໝົດ",
+      "todayBookings": "ການຈອງມື້ນີ້",
+      "monthlyRevenue": "ລາຍຮັບລາຍເດືອນ",
+      "overdue": "ເກີນກຳນົດ",
+      "pendingDeposits": "ມັດຈຳລໍຖ້າ",
+      "utilization": "ອັດຕາການໃຊ້ງານ"
+    },
+    "filters": {
+      "searchPlaceholder": "ຄົ້ນຫາສັນຍາ...",
+      "allStatus": "ທຸກສະຖານະ"
+    },
+    "table": {
+      "contractNumber": "ເລກສັນຍາ",
+      "customer": "ລູກຄ້າ",
+      "type": "ປະເພດ",
+      "asset": "ຊັບສິນ",
+      "amount": "ຈຳນວນ",
+      "deposit": "ມັດຈຳ",
+      "status": "ສະຖານະ",
+      "ends": "ສິ້ນສຸດ",
+      "actions": "ຕົວເລືອກ"
+    },
+    "booking": {
+      "bookingNumber": "ເລກຈອງ",
+      "asset": "ຊັບສິນ",
+      "customer": "ລູກຄ້າ",
+      "start": "ເລີ່ມ",
+      "end": "ສິ້ນສຸດ",
+      "startTime": "ເວລາເລີ່ມ",
+      "endTime": "ເວລາສິ້ນສຸດ",
+      "amount": "ຈຳນວນ",
+      "status": "ສະຖານະ",
+      "actions": "ຕົວເລືອກ"
+    },
+    "assetCard": {
+      "hourly": "ຊົ່ວໂມງ",
+      "daily": "ວັນ",
+      "monthly": "ເດືອນ",
+      "deposit": "ມັດຈຳ",
+      "available": "ວ່າງ",
+      "inUse": "ກຳລັງໃຊ້"
+    },
+    "confirmations": {
+      "terminateContract": "ຍົກເລີກສັນຍານີ້ບໍ?",
+      "deleteContract": "ລຶບສັນຍານີ້ບໍ?",
+      "deleteAsset": "ລຶບຊັບສິນນີ້ບໍ?"
+    },
+    "messages": {
+      "contractCreated": "ສ້າງສັນຍາແລ້ວ",
+      "contractUpdated": "ອັບເດດສັນຍາແລ້ວ",
+      "contractActivated": "ເປີດໃຊ້ສັນຍາແລ້ວ",
+      "contractTerminated": "ຍົກເລີກສັນຍາແລ້ວ",
+      "contractRenewed": "ຕໍ່ອາຍຸສັນຍາແລ້ວ",
+      "contractDeleted": "ລຶບສັນຍາແລ້ວ",
+      "depositCollected": "ເກັບເງິນມັດຈຳແລ້ວ",
+      "assetAdded": "ເພີ່ມຊັບສິນແລ້ວ",
+      "assetUpdated": "ອັບເດດຊັບສິນແລ້ວ",
+      "assetDeleted": "ລຶບຊັບສິນແລ້ວ",
+      "bookingCreated": "ສ້າງການຈອງແລ້ວ",
+      "checkedOut": "ເຊັກອອກແລ້ວ",
+      "assetReturned": "ສົ່ງຄືນຊັບສິນແລ້ວ"
+    },
+    "validation": {
+      "customerNameRequired": "ຕ້ອງການຊື່ລູກຄ້າ ແລະຈຳນວນເງິນ",
+      "assetNameRequired": "ຕ້ອງການຊື່ຊັບສິນ",
+      "assetCustomerRequired": "ຕ້ອງການຊັບສິນ ແລະຊື່ລູກຄ້າ"
+    },
+    "empty": {
+      "noContracts": "ຍັງບໍ່ມີສັນຍາ",
+      "createFirst": "ສ້າງສັນຍາທຳອິດ",
+      "noAssets": "ຍັງບໍ່ມີຊັບສິນ",
+      "addFirst": "ເພີ່ມຊັບສິນເຊົ່າທຳອິດ",
+      "noBookings": "ຍັງບໍ່ມີການຈອງ",
+      "bookFirst": "ຈອງຊັບສິນເພື່ອເລີ່ມຕົ້ນ"
+    },
+    "modal": {
+      "saveContract": "ບັນທຶກສັນຍາ",
+      "saveAsset": "ບັນທຶກຊັບສິນ",
+      "createBooking": "ສ້າງການຈອງ"
+    },
+    "sync": {
+      "synced": "ຊິ້ງແລ້ວ",
+      "syncing": "ກຳລັງຊິ້ງ...",
+      "error": "ຊິ້ງຜິດພາດ",
+      "idle": "ຍັງບໍ່ໄດ້ຊິ້ງ",
+      "lastSync": "ຊິ້ງຫຼ້າສຸດ",
+      "manualSync": "ຊິ້ງດຽວນີ້"
+    },
+    "history": {
+      "title": "ປະຫວັດ",
+      "viewHistory": "ເບິ່ງປະຫວັດ",
+      "created": "ສ້າງແລ້ວ",
+      "updated": "ອັບເດດແລ້ວ",
+      "activated": "ເປີດໃຊ້ງານແລ້ວ",
+      "terminated": "ຍົກເລີກແລ້ວ",
+      "renewed": "ຕໍ່ອາຍຸແລ້ວ",
+      "deleted": "ລຶບແລ້ວ",
+      "depositCollected": "ເກັບມັດຈຳແລ້ວ",
+      "depositReturned": "ຄືນມັດຈຳແລ້ວ",
+      "checkedOut": "ເຊັກອອກແລ້ວ",
+      "returned": "ສົ່ງຄືນແລ້ວ",
+      "by": "ໂດຍ",
+      "noHistory": "ຍັງບໍ່ມີປະຫວັດ"
+    },
+    "detail": {
+      "title": "ລາຍລະອຽດສັນຍາ",
+      "overview": "ພາບລວມ",
+      "payments": "ການຊຳລະ",
+      "renewals": "ການຕໍ່ອາຍຸ",
+      "history": "ປະຫວັດ",
+      "backToList": "ກັບໄປລາຍການສັນຍາ",
+      "balance": "ຍອດຄ້າງຊຳລະ",
+      "totalPaid": "ຊຳລະແລ້ວ",
+      "daysRemaining": "ວັນທີ່ເຫຼືອ",
+      "daysOverdue": "ວັນເກີນກຳນົດ",
+      "nextPayment": "ການຊຳລະຄັ້ງຕໍ່ໄປ",
+      "recordPayment": "ບັນທຶກການຊຳລະ",
+      "noPayments": "ຍັງບໍ່ມີການຊຳລະ",
+      "contractInfo": "ຂໍ້ມູນສັນຍາ",
+      "customerInfo": "ຂໍ້ມູນລູກຄ້າ",
+      "assetInfo": "ຂໍ້ມູນຊັບສິນ",
+      "billingInfo": "ຂໍ້ມູນການເງິນ",
+      "timeline": "ໄລຍະເວລາ",
+      "print": "ພິມ",
+      "renewNow": "ຕໍ່ອາຍຸດຽວນີ້"
+    },
+    "payment": {
+      "title": "ບັນທຶກການຊຳລະ",
+      "amount": "ຈຳນວນເງິນ",
+      "enterAmount": "ໃສ່ຈຳນວນເງິນ",
+      "fullBalance": "ຈ່າຍທັງໝົດ",
+      "method": "ວິທີການຊຳລະ",
+      "date": "ວັນທີຊຳລະ",
+      "reference": "ອ້າງອີງ",
+      "period": "ໄລຍະເວລາຊຳລະ",
+      "periodStart": "ເລີ່ມຕົ້ນ",
+      "periodEnd": "ສິ້ນສຸດ",
+      "notes": "ໝາຍເຫດ",
+      "save": "ບັນທຶກການຊຳລະ",
+      "methods": {
+        "cash": "ເງິນສົດ",
+        "card": "ບັດ",
+        "bank": "ໂອນເງິນ",
+        "qr": "QR",
+        "crypto": "ຄຣິບໂຕ"
+      }
+    },
+    "renewal": {
+      "title": "ປະຫວັດການຕໍ່ອາຍຸ",
+      "renewedFrom": "ຕໍ່ອາຍຸຈາກ",
+      "renewedTo": "ຫາ",
+      "autoRenew": "ຕໍ່ອາຍຸອັດຕະໂນມັດ",
+      "noRenewals": "ຍັງບໍ່ມີການຕໍ່ອາຍຸ",
+      "nextRenewal": "ການຕໍ່ອາຍຸຄັ້ງຕໍ່ໄປ"
+    }
+  }
+}

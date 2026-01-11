@@ -1,0 +1,17 @@
+{
+  "reports": {
+    "title": "รายงาน",
+    "description": "รายงานและการวิเคราะห์",
+    "salesReport": "รายงานยอดขาย",
+    "inventoryReport": "รายงานคลัง",
+    "financialReport": "รายงานการเงิน",
+    "dailySales": "ยอดขายรายวัน",
+    "weeklySales": "ยอดขายรายสัปดาห์",
+    "monthlySales": "ยอดขายรายเดือน",
+    "topProducts": "สินค้าขายดี",
+    "topCategories": "หมวดหมู่ยอดนิยม",
+    "paymentMethods": "วิธีชำระเงิน",
+    "exportPDF": "ส่งออก PDF",
+    "exportExcel": "ส่งออก Excel"
+  }
+}

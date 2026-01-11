@@ -1,0 +1,25 @@
+{
+  "navigation": {
+    "dashboard": "ໜ້າຫຼັກ",
+    "pos": "ຈຸດຂາຍ",
+    "orders": "ອໍເດີ້",
+    "products": "ສິນຄ້າ",
+    "customers": "ລູກຄ້າ",
+    "inventory": "ຄົງຄັງ",
+    "recipes": "ສູດອາຫານ",
+    "ingredients": "ວັດຖຸດິບ",
+    "reports": "ລາຍງານ",
+    "accounting": "ບັນຊີ",
+    "invoicing": "ໃບແຈ້ງໜີ້",
+    "delivery": "ການຈັດສົ່ງ",
+    "contracts": "ສັນຍາ",
+    "employees": "ພະນັກງານ",
+    "settings": "ການຕັ້ງຄ່າ",
+    "kitchen": "ເຮືອນຄົວ",
+    "menu": "ເມນູ",
+    "main": "ໜ້າຫຼັກ",
+    "business": "ທຸລະກິດ",
+    "management": "ການຈັດການ",
+    "more": "ເພີ່ມເຕີມ"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "memberships": {
+    "title": "สมาชิก",
+    "plans": "แผนสมาชิก",
+    "addPlan": "เพิ่มแผน",
+    "member": "สมาชิก",
+    "members": "สมาชิก",
+    "active": "ใช้งาน",
+    "expired": "หมดอายุ"
+  }
+}

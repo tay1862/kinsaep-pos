@@ -1,0 +1,178 @@
+{
+  "promotions": {
+    "title": "ໂປຣໂມຊັນ",
+    "subtitle": "ຈັດການ BOGO, ສ່ວນຫຼຸດ ແລະ ຂໍ້ສະເໜີພິເສດ",
+    "promotion": "ໂປຣໂມຊັນ",
+    "addPromotion": "ເພີ່ມໂປຣໂມຊັນ",
+    "editPromotion": "ແກ້ໄຂໂປຣໂມຊັນ",
+    "create": "ສ້າງໂປຣໂມຊັນ",
+    "searchPlaceholder": "ຄົ້ນຫາໂປຣໂມຊັນ...",
+    "noPromotions": "ຍັງບໍ່ມີໂປຣໂມຊັນ",
+    "noPromotionsDescription": "ສ້າງໂປຣໂມຊັນທຳອິດຂອງທ່ານເພື່ອເພີ່ມຍອດຂາຍ",
+    "createSuccess": "ສ້າງໂປຣໂມຊັນສຳເລັດ",
+    "createSuccessDesc": "ໂປຣໂມຊັນຂອງທ່ານຖືກສ້າງສຳເລັດແລ້ວ",
+    "updateSuccess": "ອັບເດດໂປຣໂມຊັນສຳເລັດ",
+    "updateSuccessDesc": "ການຕັ້ງຄ່າໂປຣໂມຊັນຖືກບັນທຶກແລ້ວ",
+    "deleteSuccess": "ລຶບໂປຣໂມຊັນສຳເລັດ",
+    "deleteSuccessDesc": "ໂປຣໂມຊັນຖືກລຶບອອກແລ້ວ",
+    "statusUpdated": "ອັບເດດສະຖານະແລ້ວ",
+    "statusUpdatedDesc": "ສະຖານະໂປຣໂມຊັນຖືກປ່ຽນແລ້ວ",
+    "preselected": "ຜະລິດຕະພັນຖືກເລືອກແລ້ວ",
+    "activePromotions": "ໂປຣໂມຊັນທີ່ໃຊ້ງານ",
+    "manage": "ຈັດການໂປຣໂມຊັນ",
+
+    "type": {
+      "label": "ປະເພດໂປຣໂມຊັນ",
+      "bogo": "ຊື້ 1 ແຖມ 1",
+      "discount": "ສ່ວນຫຼຸດ",
+      "bundle": "ຊຸດພິເສດ",
+      "freebie": "ຂອງແຖມຟຣີ",
+      "tiered": "ສ່ວນຫຼຸດແບບຊັ້ນ",
+      "bogoDesc": "ຊື້ X ແຖມ Y ຟຣີ",
+      "discountDesc": "ສ່ວນຫຼຸດເປັນເປີເຊັນ ຫຼື ຈຳນວນເງິນ",
+      "bundleDesc": "ສ່ວນຫຼຸດເມື່ອຊື້ຫຼາຍຜະລິດຕະພັນພ້ອມກັນ",
+      "freebieDesc": "ສິນຄ້າຟຣີເມື່ອຊື້ຕາມເງື່ອນໄຂ",
+      "tieredDesc": "ຊື້ຫຼາຍ ຫຼຸດຫຼາຍ"
+    },
+
+    "scope": {
+      "label": "ນຳໃຊ້ກັບ",
+      "product": "ຜະລິດຕະພັນສະເພາະ",
+      "category": "ໝວດໝູ່ສິນຄ້າ",
+      "order": "ທັງໝົດຄຳສັ່ງ"
+    },
+
+    "discountType": {
+      "label": "ປະເພດສ່ວນຫຼຸດ",
+      "percentage": "ສ່ວນຫຼຸດເປັນເປີເຊັນ",
+      "fixed": "ສ່ວນຫຼຸດເປັນຈຳນວນເງິນ"
+    },
+
+    "status": {
+      "label": "ສະຖານະ",
+      "active": "ໃຊ້ງານຢູ່",
+      "inactive": "ບໍ່ໃຊ້ງານ",
+      "scheduled": "ກຳນົດການແລ້ວ",
+      "expired": "ໝົດອາຍຸ"
+    },
+
+    "fields": {
+      "name": "ຊື່ໂປຣໂມຊັນ",
+      "namePlaceholder": "ຕົວຢ່າງ: ຊື້ກາເຟ 1 ແຖມ 1",
+      "description": "ລາຍລະອຽດ",
+      "descriptionPlaceholder": "ລາຍລະອຽດໂປຣໂມຊັນ...",
+      "triggerProducts": "ສິນຄ້າທີ່ກະຕຸ້ນ",
+      "triggerProductsHint": "ສິນຄ້າທີ່ເປີດໃຊ້ໂປຣໂມຊັນນີ້",
+      "triggerCategories": "ໝວດໝູ່ທີ່ກະຕຸ້ນ",
+      "triggerQuantity": "ຈຳນວນທີ່ກະຕຸ້ນ",
+      "triggerQuantityHint": "ຕ້ອງຊື້ກີ່ອັນເພື່ອເປີດໃຊ້",
+      "rewardProducts": "ສິນຄ້າຟຣີ/ລາງວັນ",
+      "rewardProductsHint": "ສິນຄ້າທີ່ໄດ້ເປັນລາງວັນ",
+      "rewardQuantity": "ຈຳນວນລາງວັນ",
+      "rewardQuantityHint": "ຈຳນວນສິນຄ້າຟຣີ",
+      "discountValue": "ມູນຄ່າສ່ວນຫຼຸດ",
+      "discountPercent": "ເປີເຊັນສ່ວນຫຼຸດ",
+      "discountAmount": "ຈຳນວນເງິນສ່ວນຫຼຸດ",
+      "priority": "ລຳດັບຄວາມສຳຄັນ",
+      "priorityHint": "ໂປຣໂມຊັນທີ່ມີລຳດັບສູງກວ່າຈະນຳໃຊ້ກ່ອນ",
+      "badgeText": "ຂໍ້ຄວາມປ້າຍ",
+      "badgeTextPlaceholder": "ຕົວຢ່າງ: ຊື້ 1 ແຖມ 1 ຟຣີ",
+      "badgeColor": "ສີປ້າຍ"
+    },
+
+    "conditions": {
+      "title": "ເງື່ອນໄຂ",
+      "minOrderValue": "ມູນຄ່າຄຳສັ່ງຕ່ຳສຸດ",
+      "minOrderValueHint": "ຕະກ້າຕ້ອງມີມູນຄ່າຢ່າງໜ້ອຍ",
+      "minQuantity": "ຈຳນວນຕ່ຳສຸດ",
+      "minQuantityHint": "ຕ້ອງຊື້ຢ່າງໜ້ອຍ",
+      "customerTier": "ລະດັບລູກຄ້າ",
+      "customerTierHint": "ຈຳກັດສະເພາະລະດັບລູກຄ້າ",
+      "allCustomers": "ລູກຄ້າທັງໝົດ",
+      "firstOrderOnly": "ຄຳສັ່ງທຳອິດເທົ່ານັ້ນ",
+      "firstOrderOnlyHint": "ໃຊ້ໄດ້ກັບລູກຄ້າໃໝ່ເທົ່ານັ້ນ",
+      "maxItemsAffected": "ສິນຄ້າສູງສຸດທີ່ໄດ້ຮັບຜົນ",
+      "maxItemsAffectedHint": "ຈຳນວນສູງສຸດທີ່ໂປຣໂມຊັນນີ້ໃຊ້ໄດ້"
+    },
+
+    "tiers": {
+      "title": "ລະດັບຊັ້ນ",
+      "addTier": "ເພີ່ມລະດັບ",
+      "removeTier": "ລຶບລະດັບ",
+      "quantity": "ຊື້",
+      "discount": "ໄດ້ຮັບ",
+      "example": "ຕົວຢ່າງ: ຊື້ 2 ຫຼຸດ 10%, ຊື້ 3 ຫຼຸດ 20%"
+    },
+
+    "schedule": {
+      "title": "ກຳນົດການ",
+      "startDate": "ວັນທີເລີ່ມ",
+      "endDate": "ວັນທີສິ້ນສຸດ",
+      "daysOfWeek": "ວັນໃນອາທິດ",
+      "allDays": "ທຸກວັນ",
+      "specificDays": "ວັນທີກຳນົດ",
+      "timeRange": "ຊ່ວງເວລາ",
+      "startTime": "ເວລາເລີ່ມ",
+      "endTime": "ເວລາສິ້ນສຸດ",
+      "allDay": "ຕະຫຼອດວັນ"
+    },
+
+    "limits": {
+      "title": "ຂໍ້ຈຳກັດການນຳໃຊ້",
+      "perOrder": "ນຳໃຊ້ສູງສຸດຕໍ່ຄຳສັ່ງ",
+      "perCustomer": "ນຳໃຊ້ສູງສຸດຕໍ່ລູກຄ້າ",
+      "total": "ຈຳກັດການນຳໃຊ້ທັງໝົດ",
+      "unlimited": "ບໍ່ຈຳກັດ",
+      "usageCount": "ຄັ້ງທີ່ໃຊ້"
+    },
+
+    "stacking": {
+      "title": "ກົດການຮ່ວມກັນ",
+      "stackable": "ສາມາດລວມກັນໄດ້",
+      "stackableHint": "ສາມາດໃຊ້ຮ່ວມກັບໂປຣໂມຊັນອື່ນໄດ້",
+      "exclusive": "ໃຊ້ເດີ່ຍວ",
+      "exclusiveHint": "ບໍ່ສາມາດໃຊ້ຮ່ວມກັບໂປຣໂມຊັນອື່ນໄດ້",
+      "excludePromotions": "ຍົກເວັ້ນໂປຣໂມຊັນ",
+      "excludePromotionsHint": "ບໍ່ສາມາດໃຊ້ຮ່ວມກັບໂປຣໂມຊັນເຫຼົ່ານີ້"
+    },
+
+    "display": {
+      "title": "ຕົວເລືອກການສະແດງ",
+      "highlightOnPOS": "ໄຮໄລທ໌ໃນ POS",
+      "highlightOnPOSHint": "ສະແດງປ້າຍໂປຣໂມຊັນໃນຕາຕະລາງສິນຄ້າ"
+    },
+
+    "trigger": "ກະຕຸ້ນ",
+    "reward": "ລາງວັນ",
+    "uses": "ການນຳໃຊ້",
+    "totalUses": "ນຳໃຊ້ທັງໝົດ",
+    "bogo": "ຊື້ 1 ແຖມ 1",
+    "bogoFree": "ຊື້ 1 ແຖມ 1 ຟຣີ",
+    "triggerProduct": "ເມື່ອຊື້",
+    "rewardProduct": "ໄດ້ຟຣີ",
+    "freeProduct": "ໄດ້ຟຣີ",
+    "applied": "ໃຊ້ໂປຣໂມຊັນແລ້ວ!",
+    "free": "ຟຣີ",
+    "savings": "ທ່ານປະຫຍັດ",
+    "deleteConfirmation": "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບ \"{name}\"?",
+
+    "form": {
+      "basicInfo": "ຂໍ້ມູນພື້ນຖານ",
+      "typeSetup": "ເລືອກປະເພດ",
+      "setupSetup": "ຕັ້ງຄ່າ",
+      "conditionsSetup": "ເງື່ອນໄຂ",
+      "displaySetup": "ການສະແດງ",
+      "triggerSetup": "ຕັ້ງຄ່າກະຕຸ້ນ",
+      "rewardSetup": "ຕັ້ງຄ່າລາງວັນ",
+      "discountSetup": "ຕັ້ງຄ່າສ່ວນຫຼຸດ",
+      "tierSetup": "ຕັ້ງຄ່າລະດັບ",
+      "scheduleSetup": "ກຳນົດການ",
+      "limitsSetup": "ຂໍ້ຈຳກັດ"
+    },
+
+    "confirm": {
+      "deleteTitle": "ລຶບໂປຣໂມຊັນ",
+      "deleteMessage": "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບໂປຣໂມຊັນນີ້? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້."
+    }
+  }
+}

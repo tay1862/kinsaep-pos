@@ -1,0 +1,46 @@
+{
+  "delivery": {
+    "title": "Delivery",
+    "description": "Track and manage deliveries",
+    "newDelivery": "New Delivery",
+    "assignDriver": "Assign Driver",
+    "manageDrivers": "Manage Drivers",
+    "addDriver": "Add Driver",
+    "editDriver": "Edit Driver",
+    "driverName": "Driver Name",
+    "driverPhone": "Phone",
+    "vehicle": "Vehicle",
+    "availability": "Availability",
+    "available": "Available",
+    "busy": "Busy",
+    "offline": "Offline",
+    "status": {
+      "pending": "Pending",
+      "assigned": "Assigned",
+      "pickedUp": "Picked Up",
+      "inTransit": "In Transit",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+    "tabs": {
+      "orders": "Orders",
+      "drivers": "Drivers"
+    },
+    "stats": {
+      "pending": "Pending",
+      "inProgress": "In Progress",
+      "delivered": "Delivered Today",
+      "drivers": "Active Drivers"
+    },
+    "bumpToNext": "Bump to Next Status",
+    "customerAddress": "Customer Address",
+    "estimatedTime": "Estimated Time",
+    "notes": "Delivery Notes",
+    "noDeliveries": "No deliveries yet",
+    "noDrivers": "No drivers yet",
+    "addFirstDriver": "Add your first driver",
+    "viewMap": "View Map",
+    "callCustomer": "Call Customer",
+    "callDriver": "Call Driver"
+  }
+}

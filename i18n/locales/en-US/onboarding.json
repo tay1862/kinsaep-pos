@@ -1,0 +1,19 @@
+{
+  "onboarding": {
+    "getStarted": "Get Started with Your Shop",
+    "completeSetup": "Complete these steps to get the most out of Bitspace POS",
+    "progress": "Setup Progress",
+    "coreSetup": "Core Setup Complete",
+    "recommendedSteps": "Recommended Next Steps",
+    "addProducts": "Add your first products",
+    "addProductsDesc": "Start building your product catalog",
+    "configureTax": "Configure tax settings",
+    "configureTaxDesc": "Set up tax rates for your business",
+    "inviteTeam": "Invite team members",
+    "inviteTeamDesc": "Share your company code with staff",
+    "customizeReceipt": "Customize receipt template",
+    "customizeReceiptDesc": "Add your branding to receipts",
+    "allComplete": "Congratulations! You're all set up!",
+    "readyToSell": "Your shop is ready to start making sales."
+  }
+}

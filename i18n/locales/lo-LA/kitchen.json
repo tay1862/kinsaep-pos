@@ -1,0 +1,29 @@
+{
+  "kitchen": {
+    "title": "ຈໍສະແດງຜົນເຮືອນຄົວ",
+    "noOrders": "ບໍ່ມີອໍເດີ້",
+    "noOrdersDesc": "ອໍເດີ້ໃໝ່ຈະປະກົດຢູ່ທີ່ນີ້ໂດຍອັດຕະໂນມັດ",
+    "new": "ໃໝ່",
+    "preparing": "ກຳລັງກະກຽມ",
+    "ready": "ພ້ອມເສີບ",
+    "served": "ເສີບແລ້ວ",
+    "start": "ເລີ່ມ",
+    "recall": "ເອົາກັບຄືນ",
+    "bump": "ປ່ຽນສະຖານະ",
+    "lastUpdate": "ອັບເດດລ່າສຸດ",
+    "statusUpdated": "ສະຖານະຄົວອັບເດດແລ້ວ",
+    "markedAs": "ອໍເດີ້ຖືກໝາຍເປັນ {status}",
+    "newOrder": "ອໍເດີ້ໃໝ່!",
+    "orderReady": "ອໍເດີ້ພ້ອມແລ້ວ!",
+    "orderReadyMessage": "ອໍເດີ້ {order} - {customer} ພ້ອມເສີບແລ້ວ",
+    "orderServed": "ເສີບແລ້ວ",
+    "orderServedMessage": "ອໍເດີ້ {order} - {customer} ເສີບສຳເລັດ",
+    "status": {
+      "title": "ສະຖານະຄົວ",
+      "new": "ໃໝ່",
+      "preparing": "ກຳລັງກະກຽມ",
+      "ready": "ພ້ອມເສີບ",
+      "served": "ເສີບແລ້ວ"
+    }
+  }
+}
